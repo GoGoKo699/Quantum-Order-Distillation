@@ -29,7 +29,7 @@ Conditioned on any nonzero accepted event, the normalized target channel consequ
  \mathcal N_{\pi_1}\circ\cdots\circ\mathcal N_{\pi_m},
 \qquad
 r_\pi\ge0,\qquad \sum_\pi r_\pi=1.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The rightmost channel acts first, consistently with the [word convention](model.md#2-compulsory-traversals-and-word-order). For identical slots, every term is $`\mathcal N^m`$. Postselecting the independent classical record cannot change that channel.
@@ -45,7 +45,7 @@ The unnormalized Choi convention gives a channel decomposition
 ```math
 \mathcal N_j
 =\eta_j\Delta+(1-\eta_j)\mathcal M_j.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 When $`\eta_j<1`$, positivity follows from
@@ -69,7 +69,7 @@ The first depolarizer removes dependence on the input; subsequent trace-preservi
 
 ```math
 \mathcal C=(1-w)\mathcal T+w\mathcal R_\sigma
-\tag{3}
+\qquad\text{(3)}
 ```
 
 for a channel $`\mathcal T`$ and a state $`\sigma`$.
@@ -93,7 +93,7 @@ Every replacer has $`F_e(\mathcal R_\sigma)=1/d^2`$, and $`F_e(\mathcal T)\le1`$
 \left[1-\prod_{j=1}^m(1-\eta_j)\right]
 \left(1-\frac1{d^2}\right).
 }
-\tag{4}
+\qquad\text{(4)}
 ```
 
 The same right side lower-bounds
@@ -120,7 +120,7 @@ Choose $`\mu\in\{0,1,2,3\}`$ uniformly once per trial, and let all four slots ap
 ```math
 \mathcal N(\rho)
 =\frac14\sum_{\mu=0}^3U_\mu\rho U_\mu^\dagger.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 The four matrices span $`M_2(\mathbb C)`$: subtracting the appropriate multiple of $`U_0`$ from $`U_j`$ gives a nonzero multiple of each Pauli matrix. Thus (5) has full Choi rank.
@@ -137,7 +137,7 @@ the complete target channel is
 \frac14\left(\rho+\sigma_x\rho\sigma_x+
 \sigma_y\rho\sigma_y+\sigma_z\rho\sigma_z\right)
 =\Delta(\rho).
-\tag{6}
+\qquad\text{(6)}
 ```
 
 For each shared label, all order words are identical. The target therefore stays independent of the controller, and every nonzero control-only accepted branch is proportional to $`\Delta`$. No herald can restore identity.
@@ -173,7 +173,7 @@ If known output postprocessing may be attached inside each coherently routed box
 \widetilde{\mathcal N}_j
 =\Delta\circ\mathcal N_j
 =\Delta.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 Applying a central-polynomial controller to these composite slots gives an exact positive-probability branch for arbitrary original CPTP channels. Every order still uses each original channel and its attached randomizer once. This introduces no protected target-carrying bypass.
@@ -210,7 +210,7 @@ If $`p>\delta`$, normalization and the triangle inequality give
 \frac{\|\widetilde\sigma-p\rho\|_1+|p-\widetilde p|}
 {\widetilde p}
 \le\frac{2\delta}{p-\delta}.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 The normalized successful transformation can depend nonlinearly on its input through its success probability, so (8) is a bound for each input, including references, rather than a diamond distance between normalized channels.

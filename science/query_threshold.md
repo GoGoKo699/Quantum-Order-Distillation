@@ -54,7 +54,7 @@ Suppose the successful map is $`p\,\mathrm{id}_d`$, with $`p>0`$. Its unnormaliz
  \lvert B_{\boldsymbol a}\rangle\!\rangle
  \langle\!\langle B_{\boldsymbol a}\rvert
 =p\,\lvert I\rangle\!\rangle\langle\!\langle I\rvert.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 For every vector $`v`$ orthogonal to $`\lvert I\rangle\!\rangle`$, taking the quadratic form of (3) gives a sum of nonnegative terms,

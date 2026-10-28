@@ -15,7 +15,7 @@ The physical temporal order is reversed. The switch Kraus operator is
 
 ```math
 W_{\boldsymbol a}=\sum_{\pi}K_{\boldsymbol a,\pi}\otimes|\pi\rangle\langle\pi|.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 This is the arbitrary-order construction in Kechrimparis–Moran–Kwon, published Appendix A, Eqs. (A1)–(A4). Their controller preparation and measurement basis are freely chosen. [Kechrimparis, Moran and Kwon](../references/RELATED_WORK.md#kechrimparis2025)
@@ -32,7 +32,7 @@ Identical formal words must first be combined. Initialize and postselect the con
 ```math
 \alpha_\pi=\sqrt{|c_\pi|/L},\qquad
 \beta_\pi=e^{-i\arg c_\pi}\sqrt{|c_\pi|/L}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 Both vectors have unit norm. The successful target Kraus operators are exactly
@@ -40,7 +40,7 @@ Both vectors have unit norm. The successful target Kraus operators are exactly
 ```math
 B_{\boldsymbol a}=\langle\beta|W_{\boldsymbol a}|\alpha\rangle
 =\frac{P(K^{(1)}_{a_1},\ldots,K^{(m)}_{a_m})}{L}.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 If $`P`$ is central, write its value as $`\lambda_{\boldsymbol a}I_d`$. The successful operation and its probability are
@@ -49,7 +49,7 @@ If $`P`$ is central, write its value as $`\lambda_{\boldsymbol a}I_d`$. The succ
 \mathcal S(\rho)=p\rho,
 \qquad
 p=\frac{1}{L^2}\sum_{\boldsymbol a}|\lambda_{\boldsymbol a}|^2.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 The probability is independent of the input and $`0\le p\le1`$, because the construction is a branch of a trace-preserving switch followed by a valid measurement. For every reference system $`R`$,
@@ -62,7 +62,7 @@ Suppose a pure preparation and one rank-one success effect implement coefficient
 ```math
 |t|L=\sum_\pi|\alpha_\pi\beta_\pi^*|
 \le\|\alpha\|_2\|\beta\|_2\le1.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 Equation (2) saturates the bound. Thus $`|t|=1/L`$ is optimal for this **fixed formal coefficient ray**, and Eq. (4) is its maximal single-outcome probability within this preparation/postselection class. This does not optimize over other central polynomials, alternative representatives differing by matrix identities, mixed controllers, or several accepted outcomes. In particular, the explicit qubit and qutrit probabilities below are not asserted to be globally optimal over all allowed controllers.
@@ -77,7 +77,7 @@ Use the **unnormalized** Choi matrix
 J_{\mathcal N}=(\mathcal N\otimes\mathrm{id})(|\Omega_d\rangle\langle\Omega_d|)
 =\sum_a|K_a\rangle\!\rangle\langle\!\langle K_a|,
 \quad |\Omega_d\rangle=\sum_{i=1}^d|i\rangle|i\rangle.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 Thus $`\mathrm{Tr}J_{\mathcal N}=d`$, $`J_\Delta=I_{d^2}/d`$ for the completely depolarizing channel, and
@@ -92,14 +92,14 @@ For a full-Choi-rank channel define
 
 ```math
 \eta_j=d\,\lambda_{\min}(J_{\mathcal N_j})\in(0,1].
-\tag{8}
+\qquad\text{(8)}
 ```
 
 Then $`J_{\mathcal N_j}-\eta_jJ_\Delta\ge0`$, so
 
 ```math
 \mathcal N_j=\eta_j\Delta+(1-\eta_j)\mathcal R_j
-\tag{9}
+\qquad\text{(9)}
 ```
 
 with $`\mathcal R_j`$ CPTP when $`\eta_j<1`$. The case $`\eta_j=1`$ is $`\mathcal N_j=\Delta`$. With normalized Choi states $`\rho_{\mathcal N}=J_{\mathcal N}/d`$, the same parameter is $`d^2\lambda_{\min}(\rho_{\mathcal N})`$.
@@ -111,7 +111,7 @@ The switch branch is multilinear in independent slots. Expanding Eq. (9) produce
 p(\mathcal N_1,\ldots,\mathcal N_m)
 \ge p(\Delta,\ldots,\Delta)\prod_{j=1}^m\eta_j.
 \quad}
-\tag{10}
+\qquad\text{(10)}
 ```
 
 The bound applies to a fixed valid controller, including a general controller instrument whose successful map is an identity branch. For a nonidentity central-polynomial controller, its depolarizing probability is strictly positive because the depolarizer's matrix-unit Kraus operators span the full matrix algebra. The inequality is a uniform guarantee on classes with a Choi eigenvalue floor, not a claim of an appreciable rate near the Choi boundary.
@@ -123,7 +123,7 @@ Let $`c(d)`$ be the least positive degree of a nonidentity multilinear central p
 ```math
 \mathcal N_\epsilon=(1-\epsilon)\mathrm{id}+\epsilon\Delta,
 \qquad 0<\epsilon\le1.
-\tag{11}
+\qquad\text{(11)}
 ```
 
 For $`m=c(d)`$, every exact successful controller satisfies
@@ -133,7 +133,7 @@ For $`m=c(d)`$, every exact successful controller satisfies
 p_{\mathcal C}(\mathcal N_\epsilon,\ldots,\mathcal N_\epsilon)
 =\epsilon^{c(d)}p_{\mathcal C}(\Delta,\ldots,\Delta).
 \quad}
-\tag{12}
+\qquad\text{(12)}
 ```
 
 **Proof.** Resolve mixed preparation and a general success effect into pure components. Choi positivity and the full-rank converse imply that each component is a central polynomial, or a matrix identity, of degree $`m`$. Substituting $`I`$ for any one variable leaves a multilinear central polynomial of degree $`m-1`$. By minimality it must vanish identically. In the Kraus representation consisting of $`\sqrt{1-\epsilon}I`$ and the depolarizing Kraus operators multiplied by $`\sqrt\epsilon`$, every history containing an identity Kraus operator therefore contributes zero. The all-depolarizing histories have amplitudes multiplied by $`\epsilon^{m/2}`$, proving Eq. (12) componentwise and after summation.
@@ -144,7 +144,7 @@ The same law holds for the optimized probability, with optimization interpreted 
 p_{\mathrm{opt},c(d)}(\mathcal N_\epsilon)
 =\epsilon^{c(d)}p_{\mathrm{opt},c(d)}(\Delta),
 \qquad \epsilon>0.
-\tag{13}
+\qquad\text{(13)}
 ```
 
 Indeed, every $`\mathcal N_\epsilon`$ with $`\epsilon>0`$ and $`\Delta`$ has full Choi rank. The converse identifies the same feasible exact-identity controller class for all these channels. Equation (12) holds for every member of that common class, so it survives taking the supremum; existence of a maximizing controller is unnecessary.
@@ -156,7 +156,7 @@ For completeness, a related upper bound holds for any fixed number $`m`$ of call
 ```math
 p_{\mathrm{opt},m}(\mathcal N_\epsilon)
 \le\Pr\{\mathrm{Binomial}(m,\epsilon)\ge c(d)\}.
-\tag{14}
+\qquad\text{(14)}
 ```
 
 Here $`p_{\mathrm{opt},m}=0`$ when no positive-probability exact identity controller exists, including $`m<c(d)`$.
@@ -173,7 +173,7 @@ The minimum-call probability law does not imply that $`\epsilon^{-c(d)}`$ attemp
 \mathcal S_{\mathcal C}(\mathcal N_\epsilon,\ldots,\mathcal N_\epsilon)
 =p_{\mathcal C}\,\mathrm{id}_d}}
 \frac{m}{p_{\mathcal C}}.
-\tag{14a}
+\qquad\text{(14a)}
 ```
 
 Here each attempt has a fixed batch size $`m`$; the infimum may choose that size and controller as functions of the known parameter $`\epsilon`$. Additional depolarizing gadgets or other target processing are outside this model and outside the following lower bound.
@@ -186,7 +186,7 @@ Let $`c=c(d)`$, and choose any degree-$`c`$ central controller with depolarizing
 \le\frac{c(1+\epsilon)}{p_D(1-e^{-1})^c\,\epsilon}
 \le\frac{2c}{p_D(1-e^{-1})^c\,\epsilon}.
 \quad}
-\tag{14b}
+\qquad\text{(14b)}
 ```
 
 In particular, $`\mathcal Q_d(\epsilon)=\Theta_d(\epsilon^{-1})`$ for each fixed $`d`$. The constants are dimension dependent and can be large; no optimal prefactor or uniform-in-d efficiency is asserted.
@@ -200,7 +200,7 @@ Every positive-probability fixed-batch protocol therefore has $`m/p\ge c/\epsilo
 ```math
 P(X_1\cdots X_k,\ X_{k+1}\cdots X_{2k},\ldots,
   X_{(c-1)k+1}\cdots X_{ck}),
-\tag{14c}
+\qquad\text{(14c)}
 ```
 
 a degree-$`ck`$ multilinear central polynomial implemented by a subset of the $`(ck)`$-switch orders. Its active coefficient support and controller vectors are the same as those of the base polynomial; the longer paths still have to be physically implemented and charged.
@@ -222,7 +222,7 @@ The [four-call qubit construction](qubit.md) uses
 
 ```math
 P_2=\{[X_1,X_2],[X_3,X_4]\},\qquad L=8.
-\tag{15}
+\qquad\text{(15)}
 ```
 
 Its eight order words and centrality proof are given on that page. It is the known qubit superswitch branch of [Kechrimparis, Moran and Kwon](../references/RELATED_WORK.md#kechrimparis2025). The calculation here extends its probability formula to general, potentially nonunital qubit channels and to four different input channels.
@@ -238,7 +238,7 @@ The vector components are generally complex. Define the positive semidefinite co
 
 ```math
 Q_j=\sum_a\boldsymbol k^{(j)}_a\boldsymbol k^{(j)\dagger}_a.
-\tag{16}
+\qquad\text{(16)}
 ```
 
 The polynomial value and normalized Kraus scalar are
@@ -250,7 +250,7 @@ P_2(K_1,K_2,K_3,K_4)
 \qquad
 B=-[(\boldsymbol k_1\times\boldsymbol k_2)^T
       (\boldsymbol k_3\times\boldsymbol k_4)]I.
-\tag{17}
+\qquad\text{(17)}
 ```
 
 Define
@@ -259,14 +259,14 @@ Define
 S(Q_1,Q_2)_{ij}
 =\sum_{k,l,m,n}\varepsilon_{ikl}\varepsilon_{jmn}
  (Q_1)_{km}(Q_2)_{ln}.
-\tag{18}
+\qquad\text{(18)}
 ```
 
 It is the covariance of the cross products, so it is positive semidefinite. Summing Eq. (17) gives the exact formula for four possibly different channels:
 
 ```math
 p=\mathrm{Tr}\big[S(Q_1,Q_2)^T S(Q_3,Q_4)\big].
-\tag{19}
+\qquad\text{(19)}
 ```
 
 For identical channels, $`S(Q,Q)=2\mathrm{adj}(Q)^T`$, yielding
@@ -274,7 +274,7 @@ For identical channels, $`S(Q,Q)=2\mathrm{adj}(Q)^T`$, yielding
 ```math
 \boxed{\quad p=4\mathrm{Tr}\big[\mathrm{adj}(Q)
                                   \mathrm{adj}(Q)^T\big].\quad}
-\tag{20}
+\qquad\text{(20)}
 ```
 
 The transpose in these formulas is **not** an adjoint. It arises from the bilinear Pauli-vector dot product. Replacing it with an adjoint is incorrect for general nonunital channels. Positivity follows because $`\mathrm{adj}(Q)`$ and its transpose are positive semidefinite. Full Choi rank implies $`Q>0`$, making Eq. (20) strictly positive.
@@ -283,7 +283,7 @@ For a Pauli channel $`\mathcal N(\rho)=\sum_{i=0}^3p_i\sigma_i\rho\sigma_i`$, $`
 
 ```math
 p=4(p_1^2p_2^2+p_1^2p_3^2+p_2^2p_3^2).
-\tag{21}
+\qquad\text{(21)}
 ```
 
 This recovers [Kechrimparis, Moran and Kwon, Eq. (5)](../references/RELATED_WORK.md#kechrimparis2025). In particular,
@@ -291,7 +291,7 @@ This recovers [Kechrimparis, Moran and Kwon, Eq. (5)](../references/RELATED_WORK
 ```math
 p(\Delta_2)=\frac3{64},\qquad
 p((1-\epsilon)\mathrm{id}+\epsilon\Delta_2)=\frac{3\epsilon^4}{64}.
-\tag{22}
+\qquad\text{(22)}
 ```
 
 Full Choi rank is sufficient, not necessary: some rank-deficient Pauli channels have positive Eq. (21). Conversely, a unitary channel and ordinary amplitude damping make this particular central polynomial vanish. The numerical suite includes those boundary examples to test the complex-transpose issue and avoid overgeneralizing the full-rank theorem.
@@ -312,7 +312,7 @@ Let $`\#\mathrm{cyc}(g)`$ count all cycles of a permutation, including fixed poi
 g_{\pi\tau}:=\frac1d\sum_{\boldsymbol a}
  \mathrm{Tr}(K_{\boldsymbol a,\pi}^\dagger K_{\boldsymbol a,\tau})
 =d^{\#\mathrm{cyc}(C_\pi C_\tau^{-1})-m-1}.
-\tag{23}
+\qquad\text{(23)}
 ```
 
 **Derivation.** The $`\pi`$-product of matrix units supplies $`m-1`$ internal Kronecker constraints. After imposing them, label the $`m+1`$ remaining wire indices by $`x_0,\ldots,x_m`$, where $`x_j`$ for $`j\ge1`$ is the outgoing index of slot $`j`$, and $`x_0`$ is the first incoming index. The $`\tau`$-product and the trace identify
@@ -324,7 +324,7 @@ For any coefficient vector,
 ```math
 p_{I/d}=\frac1{L^2}\sum_{\pi,\tau}\overline{c_\pi}c_\tau
 d^{\#\mathrm{cyc}(C_\pi C_\tau^{-1})-m-1}.
-\tag{24}
+\qquad\text{(24)}
 ```
 
 For a central polynomial this is its input-independent identity success probability. For a noncentral polynomial it is only the success probability on the maximally mixed input.
@@ -333,7 +333,7 @@ If coefficients are real integers, collect the exact signed histogram
 
 ```math
 h_k=\sum_{\pi,\tau:\ \#\mathrm{cyc}(C_\pi C_\tau^{-1})=k}c_\pi c_\tau.
-\tag{25}
+\qquad\text{(25)}
 ```
 
 Then $`p=L^{-2}\sum_k h_kd^{k-m-1}`$. Checks include
@@ -357,7 +357,7 @@ Thus
 ```math
 \boxed{p(\Delta_3)=\frac1{43740}
 \simeq2.286236854\times10^{-5}.}
-\tag{26}
+\qquad\text{(26)}
 ```
 
 The same exact contraction expression vanishes at dimensions one and two, as required when the qutrit central polynomial is restricted to smaller matrix algebras.
@@ -368,7 +368,7 @@ There is also a structurally independent check. On $`3\times3`$ matrices the sca
 \lambda=2\sum_{\sigma\in S_4}\mathrm{sgn}(\sigma)
 \mathrm{Tr}(X_{\sigma_1}X_{\sigma_2}[X_5,X_6])
 \mathrm{Tr}(X_{\sigma_3}X_{\sigma_4}[X_7,X_8]).
-\tag{27}
+\qquad\text{(27)}
 ```
 
 Expanding this yields 96 trace terms. Their pairwise matrix-unit contractions use ordinary permutations on eight symbols, without the augmented boundary index. The exact weights at cycle counts $`4,6,8`$ are $`1536,-1920,384`$. Therefore
@@ -391,7 +391,7 @@ m_k(X)=X_{(k-1)^2+1}\cdots X_{k^2},
 \qquad
 R_d=\mathrm{Alt}_X\mathrm{Alt}_Y
   [m_1(X)m_1(Y)\cdots m_d(X)m_d(Y)].
-\tag{28}
+\qquad\text{(28)}
 ```
 
 Alternation here is the unnormalized signed sum. There are exactly
@@ -406,7 +406,7 @@ R_d(X;Y)=a_d\det[\mathrm{vec}X_1,\ldots,\mathrm{vec}X_r]
 a_d=\frac{(-1)^{d-1}C_d^2}{(d!)^2(2d-1)},
 \qquad
 C_d=\frac{\prod_{k=1}^d(2k-1)!}{\prod_{k=1}^{d-1}k!}.
-\tag{29}
+\qquad\text{(29)}
 ```
 
 The sign convention of $`\mathrm{vec}`$ does not affect probabilities. The same coordinate basis must be used in both determinants.
@@ -417,7 +417,7 @@ For identical slots $`\mathcal N`$, form the matrix $`V`$ with columns $`\mathrm
 \sum_{a_1,\ldots,a_r}
  |\det[\mathrm{vec}K_{a_1},\ldots,\mathrm{vec}K_{a_r}]|^2
 =r!\det J_{\mathcal N}.
-\tag{30}
+\qquad\text{(30)}
 ```
 
 Equations (4), (29), and (30) yield
@@ -425,7 +425,7 @@ Equations (4), (29), and (30) yield
 ```math
 \boxed{p_R(\mathcal N)
 =\frac{|a_d|^2\det(J_{\mathcal N})^2}{(r!)^2}.}
-\tag{31}
+\qquad\text{(31)}
 ```
 
 This particular protocol succeeds precisely when $`J_{\mathcal N}`$ has full rank. That equivalence does not characterize distillability by other polynomials or controllers.
@@ -435,7 +435,7 @@ Since $`J_{\mathcal N}\ge0`$ and $`\mathrm{Tr}J_{\mathcal N}=d`$, the arithmetic
 ```math
 p_R(\mathcal N)\le p_R(\Delta_d)
 =\frac{|a_d|^2}{(d^2!)^2d^{2d^2}}.
-\tag{32}
+\qquad\text{(32)}
 ```
 
 For example, $`a_2=-3`$, $`a_3=720`$, and
@@ -447,7 +447,7 @@ Stirling summation gives, with natural logarithms,
 ```math
 \log p_R(\Delta_d)
 =-4d^2\log d+(4\log2-1)d^2+O(d\log d).
-\tag{33}
+\qquad\text{(33)}
 ```
 
 One way to check the expansion is the identity
@@ -468,7 +468,7 @@ gives the sharper expression
 \log p_R(\Delta_d)
 =-4d^2\log d+(4\log2-1)d^2
 -2d\log d+(2\log2+2)d-\frac{35}{6}\log d+O(1).
-\tag{34}
+\qquad\text{(34)}
 ```
 
 The exact formula, rather than the asymptotic approximation, is used for all quoted finite-dimensional numbers. Equation (33) exhibits severe probability suppression; this construction is an existence proof with explicit constants, not a practical-rate proposal.

@@ -72,7 +72,7 @@ B_{\boldsymbol a}
 =\langle\beta|W_{\boldsymbol a}|\alpha\rangle
 =\frac{1}{L}
 P\!\left(K^{(1)}_{a_1},\ldots,K^{(m)}_{a_m}\right).
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Thus any multilinear polynomial using every variable once in each monomial has a physical realization as a trace-nonincreasing branch. The coefficient normalization is part of the construction.
@@ -106,7 +106,7 @@ Equation (1) therefore gives
 \sum_{\boldsymbol a}|\lambda_{\boldsymbol a}|^2\right)\rho,
 \qquad
 p=\frac{\sum_{\boldsymbol a}|\lambda_{\boldsymbol a}|^2}{L^2}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 This is an identity between linear maps, so for every reference system $`R`$ and every joint state $`\rho_{RT}`$,

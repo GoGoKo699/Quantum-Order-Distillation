@@ -32,7 +32,7 @@ A_{\boldsymbol a,\pi}
 W_{\boldsymbol a}
 =\sum_{\pi\in S_m}
 A_{\boldsymbol a,\pi}\otimes|\pi\rangle\langle\pi|.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The supplied switch is the channel
@@ -40,7 +40,7 @@ The supplied switch is the channel
 ```math
 \mathfrak S_{\mathcal N_1,\ldots,\mathcal N_m}(X)
 =\sum_{\boldsymbol a}W_{\boldsymbol a}XW_{\boldsymbol a}^{\dagger}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 The tuple $`\boldsymbol a=(a_1,\ldots,a_m)`$ uses the same environmental label $`a_j`$ for slot $`j`$ in every order branch. All $`m`$ slots occur exactly once in every word. Only a subset of the $`m!`$ order states need be populated.
@@ -67,7 +67,7 @@ The switch acts on $`T`$ and $`C`$, and as identity on $`R`$ and $`A`$. After th
  \otimes\mathrm{id}_A)(\rho\otimes\omega_{CA})
 (I_T\otimes F_{CA}^{1/2})
 \right].
-\tag{3}
+\qquad\text{(3)}
 ```
 
 This expression includes pure or mixed preparations, rank-one postselection, general positive effects, and coarse-grained successful events. The form of the final instrument matters only through its accepted effect when its quantum output is discarded. Its outcomes may supply a classical success flag.
@@ -98,7 +98,7 @@ An exact identity branch means equality of completely positive maps,
 
 ```math
 \mathcal E_F=p\,\mathrm{id}_d,\qquad p>0.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 Its success probability is $`p`$ on every normalized input. For every untouched reference $`R`$ and joint input,
@@ -131,7 +131,7 @@ J_{\mathcal N}
  =\sum_a|K_a\rangle\!\rangle\langle\!\langle K_a|,
 \qquad
 \mathrm{Tr}J_{\mathcal N}=d.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 Trace preservation is $`\mathrm{Tr}_{\mathrm{output}}J_{\mathcal N}=I_d`$.
