@@ -72,7 +72,7 @@ B_{\boldsymbol a}
 =\langle\beta|W_{\boldsymbol a}|\alpha\rangle
 =\frac{1}{L}
 P\!\left(K^{(1)}_{a_1},\ldots,K^{(m)}_{a_m}\right).
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Thus any multilinear polynomial using every variable once in each monomial has a physical realization as a trace-nonincreasing branch. The coefficient normalization is part of the construction.
@@ -106,7 +106,7 @@ Equation (1) therefore gives
 \sum_{\boldsymbol a}|\lambda_{\boldsymbol a}|^2\right)\rho,
 \qquad
 p=\frac{\sum_{\boldsymbol a}|\lambda_{\boldsymbol a}|^2}{L^2}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 This is an identity between linear maps, so for every reference system $`R`$ and every joint state $`\rho_{RT}`$,
@@ -124,11 +124,11 @@ Use the unnormalized Choi convention
 J(\mathcal N_j)
 =\sum_a\lvert K^{(j)}_a\rangle\!\rangle
        \langle\!\langle K^{(j)}_a\rvert,
-\qquad \operatorname{Tr}J(\mathcal N_j)=d.
+\qquad \mathrm{Tr}J(\mathcal N_j)=d.
 ```
 
 The range of this positive matrix is the span of its Kraus vectors. Full Choi rank is therefore equivalent to
-$`\operatorname{span}\{K^{(j)}_a\}=M_d(\mathbb C)`$.
+$`\mathrm{span}\{K^{(j)}_a\}=M_d(\mathbb C)`$.
 
 If every scalar in (2) vanished, write arbitrary $`X_j`$ as a linear combination of the Kraus operators of slot $`j`$. Multilinearity would then force $`P(X_1,\ldots,X_m)=0`$ for every matrix tuple, contradicting nonidentity. At least one scalar is nonzero, and hence $`p>0`$. No channel description enters the controller coefficients. $`\square`$
 

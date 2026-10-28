@@ -29,15 +29,15 @@ The controller occupies eight orthogonal order states, which fit in three qubits
 Every commutator is traceless. For a traceless $`2\times2`$ matrix $`C`$, Cayley–Hamilton gives
 
 ```math
-C^2=\frac12\operatorname{Tr}(C^2)I.
+C^2=\frac12\mathrm{Tr}(C^2)I.
 ```
 
 Apply this identity to $`C+D`$ and subtract its versions for $`C`$ and $`D`$. For traceless $`C,D`$,
 
 ```math
-CD+DC=\operatorname{Tr}(CD)I,
+CD+DC=\mathrm{Tr}(CD)I,
 \qquad
-P_2=\operatorname{Tr}\!\left([X_1,X_2][X_3,X_4]\right)I.
+P_2=\mathrm{Tr}\!\left([X_1,X_2][X_3,X_4]\right)I.
 ```
 
 The polynomial is nonidentity:

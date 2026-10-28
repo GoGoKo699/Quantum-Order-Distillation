@@ -54,7 +54,7 @@ Suppose the successful map is $`p\,\mathrm{id}_d`$, with $`p>0`$. Its unnormaliz
  \lvert B_{\boldsymbol a}\rangle\!\rangle
  \langle\!\langle B_{\boldsymbol a}\rvert
 =p\,\lvert I\rangle\!\rangle\langle\!\langle I\rvert.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 For every vector $`v`$ orthogonal to $`\lvert I\rangle\!\rangle`$, taking the quadratic form of (3) gives a sum of nonnegative terms,
@@ -101,7 +101,7 @@ This reduction concerns the controller of the supplied generalized switch. It do
 
 One can enlarge the successful event to include a known target unitary correction depending on the herald. The threshold for full-rank channels remains $`c(d)`$.
 
-Let $`h`$ label a successful herald and $`U_h`$ its final correction. Decompose its uncorrected branch into Kraus polynomials $`B_{\boldsymbol a,r,s,h}`$. The sum of the corrected branches has Choi matrix $`p\lvert I\rangle\!\rangle\langle\!\langle I\rvert`$. Positivity therefore forces every $`U_hB_{\boldsymbol a,r,s,h}`$ to be scalar. For each fixed $`r,s,h`$, spanning and multilinearity put the polynomial's values in $`\operatorname{span}(U_h^\dagger)`$ on arbitrary matrix tuples. Positive total success guarantees a nonzero such polynomial.
+Let $`h`$ label a successful herald and $`U_h`$ its final correction. Decompose its uncorrected branch into Kraus polynomials $`B_{\boldsymbol a,r,s,h}`$. The sum of the corrected branches has Choi matrix $`p\lvert I\rangle\!\rangle\langle\!\langle I\rvert`$. Positivity therefore forces every $`U_hB_{\boldsymbol a,r,s,h}`$ to be scalar. For each fixed $`r,s,h`$, spanning and multilinearity put the polynomial's values in $`\mathrm{span}(U_h^\dagger)`$ on arbitrary matrix tuples. Positive total success guarantees a nonzero such polynomial.
 
 To see why this line must be scalar, consider a nonzero polynomial whose values all belong to the line spanned by a unitary $`U`$. Simultaneous conjugation of its arguments obeys
 
@@ -113,8 +113,8 @@ P(VX_1V^\dagger,\ldots,VX_mV^\dagger)
 Choose an evaluation with nonzero value. The line spanned by $`U`$ must then be invariant under conjugation by every unitary $`V`$. Differentiating at $`V=e^{itH}`$ gives $`[H,U]=a_HU`$ for every Hermitian $`H`$. However,
 
 ```math
-\operatorname{Tr}\!\left(U^\dagger[H,U]\right)
-=\operatorname{Tr}(U^\dagger H U)-\operatorname{Tr}H=0.
+\mathrm{Tr}\!\left(U^\dagger[H,U]\right)
+=\mathrm{Tr}(U^\dagger H U)-\mathrm{Tr}H=0.
 ```
 
 Thus $`a_H=0`$. The unitary $`U`$ commutes with every Hermitian matrix and is scalar. Applying this argument separately to every nonzero corrected outcome recovers the central-polynomial lower bound.

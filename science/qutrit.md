@@ -20,9 +20,9 @@ For five possibly noncommuting gap factors U₀,…,U₄, define the alternating
 
 ```math
 \mathcal C_4(X_1,X_2,X_3,X_4;U_0,\ldots,U_4)
-=\sum_{\sigma\in S_4}\operatorname{sgn}(\sigma)
+=\sum_{\sigma\in S_4}\mathrm{sgn}(\sigma)
 U_0X_{\sigma(1)}U_1X_{\sigma(2)}U_2X_{\sigma(3)}U_3X_{\sigma(4)}U_4.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The slots are numbered **0 through 4**. For i≠j, define U⁽ⁱʲ⁾ by placing A in gap i, B in gap j, and identity factors in the other gaps. Define V⁽ᵏ⁾ by placing AB+BA in gap k and identities elsewhere. Let
@@ -41,7 +41,7 @@ p_8(X_1,\ldots,X_8)
 \mathcal C_4(X_1,\ldots,X_4;U^{(ij)})
 +\sum_{k=0}^{4}n_k\,
 \mathcal C_4(X_1,\ldots,X_4;V^{(k)}).
-\tag{2}
+\qquad\text{(2)}
 ```
 
 This is the explicit formula on printed page 747 of [DK85], with notation changed for readability. Every monomial contains each of X₁,…,X₈ exactly once. The identity gap factors in (1) are simply omitted when writing a monomial; they require no extra physical slot or target operation.
@@ -60,7 +60,7 @@ Every nonzero coefficient is ±1. Alternation in the first four variables pairs 
 
 ```math
 L=\sum_\pi|c_\pi|=2880.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 The control dimension 2,880 is a **sufficient explicit implementation**, not a minimality statement. It fits within a 12-qubit Hilbert space, but that observation does not supply an efficient routing circuit or account for the gates needed to prepare and measure the prescribed states.
@@ -71,17 +71,17 @@ For arbitrary complex 3×3 matrices X₁,…,X₈, the polynomial obeys
 
 ```math
 p_8(X_1,\ldots,X_8)=\lambda(X_1,\ldots,X_8)I_3,
-\tag{4}
+\qquad\text{(4)}
 ```
 
 where
 
 ```math
 \lambda(X_1,\ldots,X_8)
-=2\sum_{\sigma\in S_4}\operatorname{sgn}(\sigma)
-\operatorname{tr}\!\left(X_{\sigma(1)}X_{\sigma(2)}[X_5,X_6]\right)
-\operatorname{tr}\!\left(X_{\sigma(3)}X_{\sigma(4)}[X_7,X_8]\right).
-\tag{5}
+=2\sum_{\sigma\in S_4}\mathrm{sgn}(\sigma)
+\mathrm{tr}\!\left(X_{\sigma(1)}X_{\sigma(2)}[X_5,X_6]\right)
+\mathrm{tr}\!\left(X_{\sigma(3)}X_{\sigma(4)}[X_7,X_8]\right).
+\qquad\text{(5)}
 ```
 
 Equation (5), equivalent to the scalar formula on printed page 752 of [DK85], is convenient for exact evaluation and probability calculation. It is not a replacement for the actual order polynomial in a physical implementation: the switch implements (2), while (5) evaluates its resulting scalar.
@@ -106,7 +106,7 @@ and
 
 ```math
 F=P^4-XP^3X+P^2Q+PQP+QP^2.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 The coefficient of g₁g₂⋯g₈ in F is p₈. In particular, it is already multilinear; **no further polarization or factorial normalization is needed**.
@@ -118,19 +118,19 @@ The component contributing to the top exterior coefficient has four X factors, t
 The even subalgebra of G is commutative. Hence P and Q are 3×3 matrices over a commutative algebra, to which Cayley–Hamilton applies. For an even-length word of odd matrices, moving its first odd factor around the trace changes the sign. In particular,
 
 ```math
-\operatorname{tr}(X^{2k})=
-\operatorname{tr}(Y^{2k})=
-\operatorname{tr}(Z^{2k})=0.
+\mathrm{tr}(X^{2k})=
+\mathrm{tr}(Y^{2k})=
+\mathrm{tr}(Z^{2k})=0.
 ```
 
 A word with more than four X factors, more than two Y factors, or more than two Z factors vanishes, because it repeats an exterior generator from the corresponding group. Define the even scalar elements
 
 ```math
 \begin{aligned}
-a&=\operatorname{tr}(X^2Y^2),& b&=\operatorname{tr}(X^2Z^2),&
-c&=\operatorname{tr}(Y^2Z^2),\\
-u&=\operatorname{tr}(X^4Y^2),& v&=\operatorname{tr}(X^4Z^2),&
-w&=\operatorname{tr}(X^2Y^2Z^2)+\operatorname{tr}(X^2Z^2Y^2).
+a&=\mathrm{tr}(X^2Y^2),& b&=\mathrm{tr}(X^2Z^2),&
+c&=\mathrm{tr}(Y^2Z^2),\\
+u&=\mathrm{tr}(X^4Y^2),& v&=\mathrm{tr}(X^4Z^2),&
+w&=\mathrm{tr}(X^2Y^2Z^2)+\mathrm{tr}(X^2Z^2Y^2).
 \end{aligned}
 ```
 
@@ -138,22 +138,22 @@ Graded cyclicity and the degree restrictions yield
 
 ```math
 \begin{gathered}
-\operatorname{tr}P=0,\qquad \operatorname{tr}Q=-a-b,\qquad
-\tfrac12\operatorname{tr}P^2=a+b+c,\\
-\operatorname{tr}(PQ)=-u-v,\qquad
-\tfrac13\operatorname{tr}P^3=u+v+w,\qquad
-\operatorname{tr}(P^2Q)=0.
-\tag{7}
+\mathrm{tr}P=0,\qquad \mathrm{tr}Q=-a-b,\qquad
+\tfrac12\mathrm{tr}P^2=a+b+c,\\
+\mathrm{tr}(PQ)=-u-v,\qquad
+\tfrac13\mathrm{tr}P^3=u+v+w,\qquad
+\mathrm{tr}(P^2Q)=0.
+\qquad\text{(7)}
 \end{gathered}
 ```
 
 For clarity, the last cancellation is especially easy to track after discarding forbidden degrees. The remaining four traces are
 
 ```math
-\operatorname{tr}(X^2Y^2XZ^2X),\quad
-\operatorname{tr}(Y^2X^3Z^2X),\quad
-\operatorname{tr}(X^2Z^2XY^2X),\quad
-\operatorname{tr}(Z^2X^3Y^2X).
+\mathrm{tr}(X^2Y^2XZ^2X),\quad
+\mathrm{tr}(Y^2X^3Z^2X),\quad
+\mathrm{tr}(X^2Z^2XY^2X),\quad
+\mathrm{tr}(Z^2X^3Y^2X).
 ```
 
 Moving the last X of the first and third terms to the front produces a minus sign; moving the initial Y² or Z² of the second and fourth terms to the end produces no sign. They therefore cancel in pairs. Similarly, the mixed terms in tr(PQ) cancel because Y²X and Z²X both have odd degree.
@@ -161,20 +161,20 @@ Moving the last X of the first and third terms to the front produces a minus sig
 Cayley–Hamilton for traceless P gives
 
 ```math
-P^3=\tfrac12\operatorname{tr}(P^2)P+\tfrac13\operatorname{tr}(P^3)I.
-\tag{8}
+P^3=\tfrac12\mathrm{tr}(P^2)P+\tfrac13\mathrm{tr}(P^3)I.
+\qquad\text{(8)}
 ```
 
 The component linear in Q of Cayley–Hamilton for P+tQ gives
 
 ```math
 \begin{aligned}
-P^2Q+PQP+QP^2={}&\operatorname{tr}(Q)P^2+
-\operatorname{tr}(PQ)P+\tfrac12\operatorname{tr}(P^2)Q\\
-&+\left[\operatorname{tr}(P^2Q)-
-\tfrac12\operatorname{tr}(P^2)\operatorname{tr}(Q)\right]I.
+P^2Q+PQP+QP^2={}&\mathrm{tr}(Q)P^2+
+\mathrm{tr}(PQ)P+\tfrac12\mathrm{tr}(P^2)Q\\
+&+\left[\mathrm{tr}(P^2Q)-
+\tfrac12\mathrm{tr}(P^2)\mathrm{tr}(Q)\right]I.
 \end{aligned}
-\tag{9}
+\qquad\text{(9)}
 ```
 
 Using (7)–(8) and retaining only allowed exterior degrees,
@@ -185,7 +185,7 @@ P^4-XP^3X={}&
 a(X^2Z^2+Z^2X^2-XZ^2X)\\
 &+b(X^2Y^2+Y^2X^2-XY^2X)+uZ^2+vY^2.
 \end{aligned}
-\tag{10}
+\qquad\text{(10)}
 ```
 
 The nonscalar terms on the right of (9) are the negatives of (10). Its scalar term is
@@ -197,8 +197,8 @@ The nonscalar terms on the right of (9) are the negatives of (10). Its scalar te
 since a²=b²=ac=bc=0 by the degree restrictions. Thus
 
 ```math
-F=2\operatorname{tr}(X^2Y^2)\operatorname{tr}(X^2Z^2)I_3.
-\tag{11}
+F=2\mathrm{tr}(X^2Y^2)\mathrm{tr}(X^2Z^2)I_3.
+\qquad\text{(11)}
 ```
 
 Taking the top exterior coefficient proves (4)–(5). This proof follows the mechanism in [DK85], with the cancellations organized explicitly for this application.
@@ -210,14 +210,14 @@ Take the one-based matrix-unit tuple from printed page 751 of [DK85]:
 ```math
 (X_1,\ldots,X_8)=
 (E_{11},E_{12},E_{23},E_{31},E_{12},E_{23},E_{32},E_{21}).
-\tag{12}
+\qquad\text{(12)}
 ```
 
 Then A=E₁₃ and B=E₃₁. In (5), the first trace is nonzero only for the ordered pair (X₄,X₁), and the second trace for the remaining ordered pair (X₂,X₃). Both traces equal one. The contributing permutation is (4,1,2,3), whose sign is −1. Consequently
 
 ```math
 p_8(E_{11},E_{12},E_{23},E_{31},E_{12},E_{23},E_{32},E_{21})=-2I_3.
-\tag{13}
+\qquad\text{(13)}
 ```
 
 This exact evaluation proves that p₈ is not a polynomial identity. Repetition of some matrix values across different slots is permitted; the polynomial remains multilinear in its eight separate variables.
@@ -232,7 +232,7 @@ Prepare and postselect on
 |\alpha\rangle=\frac1{\sqrt{2880}}\sum_{\pi\in\mathrm{supp}(p_8)}|\pi\rangle,
 \qquad
 |\beta\rangle=\frac1{\sqrt{2880}}\sum_{\pi\in\mathrm{supp}(p_8)}c_\pi|\pi\rangle.
-\tag{14}
+\qquad\text{(14)}
 ```
 
 Both are normalized. The success Kraus operator for tuple $`\mathbf a=(a_1,\ldots,a_8)`$ is
@@ -240,7 +240,7 @@ Both are normalized. The success Kraus operator for tuple $`\mathbf a=(a_1,\ldot
 ```math
 A_{\mathbf a}=\frac{p_8(K_{a_1},\ldots,K_{a_8})}{2880}
 =\frac{\lambda(K_{a_1},\ldots,K_{a_8})}{2880}I_3.
-\tag{15}
+\qquad\text{(15)}
 ```
 
 Hence the unnormalized success map is exactly $`q(\mathcal N)\,\mathrm{id}_3`$, with
@@ -249,7 +249,7 @@ Hence the unnormalized success map is exactly $`q(\mathcal N)\,\mathrm{id}_3`$, 
 q(\mathcal N)=\frac1{2880^2}
 \sum_{a_1,\ldots,a_8}\left|
 \lambda(K_{a_1},\ldots,K_{a_8})\right|^2.
-\tag{16}
+\qquad\text{(16)}
 ```
 
 Equation (16) is input independent, including for an input entangled with a reference. Because the Kraus family spans all 3×3 matrices, multilinearity and (13) imply that at least one Kraus tuple has nonzero scalar. Thus $`q(\mathcal N)>0`$ for every full-rank qutrit channel. The scalar-tuple expression is Kraus-gauge invariant, as also follows directly from the channel-defined switch.
@@ -260,7 +260,7 @@ The [probability analysis](probability.md) obtains the exact depolarizing-channe
 
 ```math
 q(\Delta_3)=\frac1{43740}\approx2.28624\times10^{-5}.
-\tag{17}
+\qquad\text{(17)}
 ```
 
 Its two independent certificates are the complete 2,880-word contraction and the 96-term expansion of (5). Their derivations and exact cycle histograms are given in the probability account. The [trace-contraction script](../verification/qutrit_trace_crosscheck.py) and its [exact output](../verification/qutrit_trace_results.json) reproduce the second calculation. This is the probability for the explicitly stated control preparation and postselection; it is not an optimized probability claim.

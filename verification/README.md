@@ -48,7 +48,7 @@ The scripts with `--output` or `--report` flags can also be run individually. Th
 
 The exported qutrit word labels are one-based and specify **mathematical matrix multiplication from left to right**. Physical temporal order is reversed. Some Python routines convert labels to zero-based indices internally.
 
-The main switch check uses unnormalized Choi matrices with output-then-reference row-major vectorization, so $`\operatorname{Tr}J_{\mathcal N}=d`$ for a channel and $`p=\operatorname{Tr}J_{\mathrm{succ}}/d`$. The independent access-model check uses column-major vectorization consistently within its own Choi calculations. This change of coordinate convention leaves its probabilities, eigenvalues, and matrix-norm comparisons unchanged.
+The main switch check uses unnormalized Choi matrices with output-then-reference row-major vectorization, so $`\mathrm{Tr}J_{\mathcal N}=d`$ for a channel and $`p=\mathrm{Tr}J_{\mathrm{succ}}/d`$. The independent access-model check uses column-major vectorization consistently within its own Choi calculations. This change of coordinate convention leaves its probabilities, eigenvalues, and matrix-norm comparisons unchanged.
 
 The qubit prepared-switch check constructs the full eight-order channel before contracting the preparation and success vectors. Its inputs include a depolarizer, a full-rank Pauli channel, a generic nonunital channel, four distinct full-rank channels, amplitude damping, and a unitary channel. A three-dimensional reference is included in the state-preservation test. The Kraus-gauge test independently expands each of the four channels from four to six Kraus operators and compares the complete prepared output, including the unmeasured controller.
 
