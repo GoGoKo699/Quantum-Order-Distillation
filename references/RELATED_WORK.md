@@ -8,10 +8,10 @@ The [polynomial realization](../science/polynomial_realization.md) and [query th
 
 | Work | Supplied resource and relevant result | Relation to this task |
 |---|---|---|
-| [Navascués (2018)](#central-polynomial-quantum-resetting) | Controlled probes return after interacting with an uncontrolled target; probe interference realizes central polynomials. | Establishes the resetting mechanism in a model with accessible returned probes. |
-| [Chiribella, Wilson and Chau (2021)](#cyclic-orders-and-finite-heralded-noise) | Cyclic orders of completely depolarizing channels give heralded transmission with vanishing error as the number of calls grows. | Higher-dimensional communication activation is established; the displayed finite-call herald retains depolarization. |
-| [Kechrimparis, Moran and Kwon (2025)](#exact-qubit-distillation-with-superswitches) | Recursive superswitches distill qubit channels; the paper also defines the general permutation switch. | Supplies the channel-level architecture and the inherited four-call qubit branch. |
-| [Shen et al. (2026)](#coherent-kraus-polynomial-compilation) | A coherent Stinespring oracle with a specified environment basis permits Kraus-polynomial synthesis. | The returned environment is an additional resource; channel-only compilation is treated separately. |
+| [Navascués (2018)](RELATED_WORK.md#central-polynomial-quantum-resetting) | Controlled probes return after interacting with an uncontrolled target; probe interference realizes central polynomials. | Establishes the resetting mechanism in a model with accessible returned probes. |
+| [Chiribella, Wilson and Chau (2021)](RELATED_WORK.md#cyclic-orders-and-finite-heralded-noise) | Cyclic orders of completely depolarizing channels give heralded transmission with vanishing error as the number of calls grows. | Higher-dimensional communication activation is established; the displayed finite-call herald retains depolarization. |
+| [Kechrimparis, Moran and Kwon (2025)](RELATED_WORK.md#exact-qubit-distillation-with-superswitches) | Recursive superswitches distill qubit channels; the paper also defines the general permutation switch. | Supplies the channel-level architecture and the inherited four-call qubit branch. |
+| [Shen et al. (2026)](RELATED_WORK.md#coherent-kraus-polynomial-compilation) | A coherent Stinespring oracle with a specified environment basis permits Kraus-polynomial synthesis. | The returned environment is an additional resource; channel-only compilation is treated separately. |
 
 ## Exact qubit distillation with superswitches
 

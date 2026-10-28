@@ -8,7 +8,7 @@ This project asks what changes when a supplied quantum controller coherently cho
 \mathcal E_{\mathrm{succ}}(\rho)=\frac3{64}\rho.
 ```
 
-The coefficient is the probability of that outcome. Conditioned on success, every input state is preserved, including its entanglement with another system. The [worked example below](#4-complete-worked-example-four-depolarizing-qubit-slots) calculates the probability and specifies the preparation, routing labels, and measurement.
+The coefficient is the probability of that outcome. Conditioned on success, every input state is preserved, including its entanglement with another system. The [worked example below](WATROUS_BRIDGE.md#4-complete-worked-example-four-depolarizing-qubit-slots) calculates the probability and specifies the preparation, routing labels, and measurement.
 
 The general result concerns independent fresh channels with full Choi rank in a precise [order-only model](../science/model.md). It connects the minimum positive number of compulsory channel calls to the minimum degree of a central polynomial. Understanding that connection requires ordinary channel theory, a distinction between coherent and classical order control, and an additional algebraic idea.
 
