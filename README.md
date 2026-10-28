@@ -80,6 +80,14 @@ Start with the [scientific overview](science/README.md) for the connected argume
 
 The [LLM reading guide](llms.txt) maps questions to the same authoritative files.
 
+## Learning route
+
+The single educational anchor is John Watrous, [*The Theory of Quantum Information* (2018)](https://jhwatrous.github.io/books-and-courses.html). The [Watrous bridge](learning/WATROUS_BRIDGE.md) selects the relevant sections, translates channel and Choi conventions, and explains the steps from ordinary quantum channels to interference between their orders. Central-polynomial identities and the exact query characterization are supplied by the project and its cited research sources.
+
+The [30-milestone map](learning/MILESTONES.md) follows the scientific story through 13 background/preliminaries milestones and 17 narrative/innovation milestones. Each milestone states a central question, an understanding target, its earlier dependencies, and pointers to the relevant source and canonical scientific account. The map develops the mechanism, the converse, the explicit qubit and qutrit constructions, and the distinction between exactness and useful success rates. Its targets are defined by the project and apply to any reader.
+
+Use the bridge and map together, following links to the full proofs when needed. The [scientific overview](science/README.md) remains the direct route to the complete argument.
+
 ## Reproduce the checks
 
 From the repository root, with Python 3.11 or later:
