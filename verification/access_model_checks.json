@@ -1,0 +1,44 @@
+{
+  "random_heterogeneous_fullrank_success": 0.03613239046968239,
+  "identity_choi_residual": 1.2105748731112876e-17,
+  "expanded_kraus_gauge_success": 0.03613239046968244,
+  "kraus_gauge_choi_difference": 8.696896729730364e-17,
+  "depolarizing_success": 0.046875,
+  "depolarizing_identity_residual": 0.0,
+  "near_identity_scaling": [
+    {
+      "epsilon": 0.1,
+      "probability": 4.687500000000002e-06,
+      "expected_epsilon_four_scaling": 4.6875000000000004e-06,
+      "identity_residual": 0.0
+    },
+    {
+      "epsilon": 0.3,
+      "probability": 0.00037968749999999976,
+      "expected_epsilon_four_scaling": 0.0003796875,
+      "identity_residual": 0.0
+    },
+    {
+      "epsilon": 0.8,
+      "probability": 0.019199999999999995,
+      "expected_epsilon_four_scaling": 0.019200000000000002,
+      "identity_residual": 0.0
+    }
+  ],
+  "general_effect_ancillary_control_max_residual": 3.076929357823582e-16,
+  "switch_trace_preservation_residual": 7.553167094414218e-16,
+  "coefficient_gram_min_eigenvalue": 0.12702409035075582,
+  "slot_depolarizing_fractions": [
+    0.025047843103354752,
+    0.07568767547073496,
+    0.053524328241590986
+  ],
+  "classical_infidelity_lower_bound": 0.1103052787141916,
+  "minimum_infidelity_over_six_orders": 0.7539319550393024,
+  "depolarizer_infidelity": 0.75,
+  "single_slot_choi_min_eigenvalue": 0.019967238688869876,
+  "shared_noise_output_choi_distance_from_depolarizer": 2.3655475754009085e-16,
+  "independent_slot_success_probability": 2.15604869552193e-05,
+  "independent_slot_identity_residual": 0.0,
+  "shared_noise_central_polynomial_max_norm": 0.0
+}

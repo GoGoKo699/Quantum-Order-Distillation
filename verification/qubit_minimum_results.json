@@ -1,0 +1,209 @@
+{
+  "convention": "E00,E01,E10,E11; words multiply left to right",
+  "certificates": [
+    {
+      "degree": 1,
+      "coefficient_count": 1,
+      "rank": 1,
+      "determinant": "1",
+      "word_order": [
+        [
+          0
+        ]
+      ],
+      "row_labels": [
+        {
+          "matrix_unit_indices": [
+            0
+          ],
+          "coordinate": "M00-M11"
+        }
+      ],
+      "certificate_matrix": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "degree": 2,
+      "coefficient_count": 2,
+      "rank": 2,
+      "determinant": "-1",
+      "word_order": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "row_labels": [
+        {
+          "matrix_unit_indices": [
+            0,
+            0
+          ],
+          "coordinate": "M00-M11"
+        },
+        {
+          "matrix_unit_indices": [
+            0,
+            1
+          ],
+          "coordinate": "M01"
+        }
+      ],
+      "certificate_matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "degree": 3,
+      "coefficient_count": 6,
+      "rank": 6,
+      "determinant": "-1",
+      "word_order": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "row_labels": [
+        {
+          "matrix_unit_indices": [
+            0,
+            0,
+            0
+          ],
+          "coordinate": "M00-M11"
+        },
+        {
+          "matrix_unit_indices": [
+            0,
+            0,
+            1
+          ],
+          "coordinate": "M01"
+        },
+        {
+          "matrix_unit_indices": [
+            0,
+            0,
+            2
+          ],
+          "coordinate": "M10"
+        },
+        {
+          "matrix_unit_indices": [
+            0,
+            1,
+            0
+          ],
+          "coordinate": "M01"
+        },
+        {
+          "matrix_unit_indices": [
+            0,
+            1,
+            2
+          ],
+          "coordinate": "M00-M11"
+        },
+        {
+          "matrix_unit_indices": [
+            0,
+            2,
+            0
+          ],
+          "coordinate": "M10"
+        }
+      ],
+      "certificate_matrix": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ]
+    }
+  ]
+}

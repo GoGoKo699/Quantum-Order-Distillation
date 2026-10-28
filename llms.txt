@@ -1,0 +1,47 @@
+# Quantum Order Distillation
+
+> Exact heralded identity channels from coherent permutation order, with a central-polynomial characterization of the minimum compulsory channel uses.
+
+## Scientific question
+
+For a full-Choi-rank d-dimensional channel, how many independent uses suffice to herald p times the identity channel when only their permutation order and the independent controller are processed?
+
+The minimum positive use count is c(d), the least positive degree of a nonidentity multilinear central polynomial for M_d(C). A chosen polynomial gives one controller that works for all full-rank slots, including heterogeneous slots. The lower bound allows complete knowledge of the fixed channel. The precise access assumptions are part of the theorem.
+
+## Reading routes
+
+- [Overview](README.md): Principal results, explicit resource table, scope, reproduction, and contact.
+- [Connected scientific account](science/README.md): Motivation, proof dependencies, resource interpretation, and reading order.
+- [Model](science/model.md): Independent ordinary channel slots, compulsory traversals, controller access, Choi conventions, and excluded target resources.
+- [Polynomial realization](science/polynomial_realization.md): Normalized generalized switch, Kraus-representation invariance, centrality, full-rank positivity, and linearization.
+- [Minimum uses](science/query_threshold.md): Fixed-channel converse, mixed controls and ancillary controllers, final unitary corrections, known degrees, and dimension lower bound.
+- [Qubit](science/qubit.md): Four-call polynomial, inherited Pauli probability, and exact degree-one-through-three exclusion.
+- [Qutrit](science/qutrit.md): Explicit degree-eight placement formula, exterior-algebra proof, nonidentity witness, and channel construction.
+- [Probability and resources](science/probability.md): Coefficient normalization, Choi noise floor, minimum-call suppression, expected-call theorem, general qubit formula, exact depolarizing contractions, and Regev probability.
+- [Interpretation](science/interpretation.md): Heralded entanglement, classical-order separation, correlated-noise counterexample, rank-deficient cases, augmented randomization, and control errors.
+- [Related work](references/RELATED_WORK.md): Inherited ingredients and comparisons at matched access assumptions.
+- [Bibliography](references/references.bib): Structured primary-source metadata.
+- [Verification](verification/README.md): Reproduction commands, requirements, expected outputs, and the role of each check.
+
+## Essential distinctions
+
+- Matrix-product words are written left to right; the rightmost channel slot acts first.
+- Environment histories are inaccessible and are summed incoherently. Only orders interfere within each fixed tuple.
+- Exact success is equality of completely positive maps, including arbitrary reference systems. It is not merely correct output on a chosen input.
+- Full Choi rank means the Kraus operators span the full matrix algebra. It is sufficient for positive success; rank-deficient channels require separate analysis.
+- The threshold is the minimum positive number of compulsory uses. Do not infer feasibility for every integer above c(d).
+- c(2)=4 and c(3)=8 are inherited algebraic minima. c(4)<=13 is an upper bound, not a claimed equality.
+- A minimum call count does not optimize probability, controller support, routing, or gates.
+- The qubit success 3/64 and qutrit success 1/43740 concern specific displayed controllers on completely depolarizing channels.
+- The Theta_d(1/epsilon) expected-call theorem concerns fixed-batch repetition on fresh entangled pairs, original unmodified noisy slots, and known or comparably bounded epsilon.
+- Failed inputs cannot generally be reused. The result does not establish an unassisted capacity theorem.
+- Central-polynomial resetting, the qubit branch, and algebraic identities are credited antecedents. Preserve their attribution.
+- Finite checks support implementations; the general claims rest on the analytical proofs.
+
+## Reproduction
+
+From the root, install verification/requirements.txt and run:
+
+python3 verification/run_checks.py
+
+The verification guide documents the optional exhaustive all-word probability calculation. Do not treat stored numerical residuals as substitutes for checking a changed implementation.

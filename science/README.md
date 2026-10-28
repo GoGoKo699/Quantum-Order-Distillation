@@ -1,0 +1,53 @@
+# Scientific overview
+
+A noisy channel leaves information in an inaccessible environment. Choosing a classical order for independent uses generally cannot remove that noise exactly. A coherent order control changes the available amplitudes: for each fixed environment history, its successful effect combines different products of Kraus operators. This raises a precise question: **when can every successful history act as a scalar on an unknown target?**
+
+A central polynomial supplies exactly that condition. Its value is a scalar matrix for every tuple of matrices, even when the individual matrices do not commute. The same identity can therefore apply separately to every inaccessible noise history. The environment labels are still summed incoherently; within each fixed label tuple, the orders interfere.
+
+This account establishes the resulting channel capability and its exact minimum-use characterization. It also records the probability cost, an explicit qutrit construction, and the assumptions under which the characterization applies.
+
+## The argument in order
+
+1. **Fix the physical access.** The [model](model.md) supplies a generalized switch of independent ordinary CPTP channel slots. Every branch traverses every slot once. The target has no protected bypass, and only the initially independent controller is prepared and measured.
+2. **Realize an order polynomial.** The [construction](polynomial_realization.md) turns arbitrary multilinear coefficients into normalized control amplitudes. Centrality makes every successful Kraus operator scalar. Full Choi rank supplies the spanning property that makes at least one scalar nonzero.
+3. **Prove the converse.** The [query threshold](query_threshold.md) uses positivity of a rank-one successful Choi operator. Each contributing Kraus vector must lie in the identity line. Spanning and multilinearity then force centrality on all matrix tuples, even for a controller tailored to one known channel.
+4. **Make the first nontrivial cases explicit.** The [qubit account](qubit.md) gives the four-call commutator polynomial and an exact finite lower-degree certificate. The [qutrit account](qutrit.md) gives all 2,880 words of the eight-call Drensky–Kasparian polynomial through two independent coefficient constructions, a centrality proof, and a nonzero witness.
+5. **Charge success and failure.** The [probability account](probability.md) computes the chosen branches' success probabilities and separates calls per attempt from expected calls per heralded pair. It proves the small-noise suppression law and matching fixed-dimension expected-call scaling.
+6. **Interpret the boundary.** The [physical interpretation](interpretation.md) gives the operational use, a classical-order comparison, and examples showing why independence and the target-access restrictions matter.
+
+## Main claims and proof dependencies
+
+| Claim | Assumptions doing the work | Proof or construction |
+|---|---|---|
+| A dimension-dependent controller heralds an exact identity branch for arbitrary full-rank slots | Independent channels; multilinear central polynomial; full Kraus spans | [Universal exact branch](polynomial_realization.md#3-centrality-gives-exact-recovery) |
+| For a fixed full-rank channel, the minimum positive number of calls is $`c(d)`$ | Control-only processing; compulsory traversals; rank-one successful Choi operator | [Exact query characterization](query_threshold.md#theorem-2-exact-query-characterization) |
+| The minima are four calls for qubits and eight for qutrits | Characterization plus inherited central-degree facts | [Known degrees](query_threshold.md#5-known-degrees-and-their-quantum-meaning) |
+| General call counts obey $`2d-1\le c(d)\le(d-1)^2+4`$ for $`d>2`$ | Matrix-unit lower bound; inherited central-polynomial construction | [Dimension bounds](query_threshold.md#7-a-dimension-dependent-lower-bound) |
+| Minimum-call success on $`(1-\epsilon)\mathrm{id}+\epsilon\Delta`$ is suppressed by $`\epsilon^{c(d)}`$ | Minimal central degree; independent mixture expansion | [Noise approaching the identity](probability.md#noise-approaching-the-identity) |
+| Optimized fixed-batch expected calls scale as $`\Theta_d(1/\epsilon)`$ | Fresh entangled-pair attempts; known or comparably bounded noise; no extra target wrappers | [Expected charged calls](probability.md#expected-charged-calls) |
+
+The known algebraic degrees are not new polynomial-identity results. The characterization explains their operational meaning in this channel model. The qutrit lower-degree exclusion is an imported theorem; the repository separately proves and verifies the explicit degree-eight construction.
+
+## Why the success probability remains visible
+
+Exactness describes the normalized successful output, not how often that output occurs. The explicit qutrit protocol succeeds on completely depolarizing slots with probability $`1/43{,}740`$. Independent repetition on fresh entangled pairs therefore costs an average of 349,920 original channel calls per successful pair before routing and controller costs are charged.
+
+Approaching the identity creates a second resource distinction. A minimum-call central polynomial vanishes whenever one argument is the identity. Its exact branch consequently becomes rare as the noise strength tends to zero. Larger batches can first combine contiguous noisy uses into a channel with a constant amount of noise, then apply the central-polynomial controller to the blocks. This yields the matching expected-call scaling in the probability account. At the exactly noiseless endpoint, the channel itself is an identity, and the full-rank converse no longer applies.
+
+These statements explain capability and cost within one model. They do not estimate the engineering overhead of a generalized switch or establish a rate for an ordinary directed communication link.
+
+## Relation to the literature
+
+Central-polynomial resetting with returned quantum probes was already established by Navascués. Coherent cyclic orders already activate communication through complete depolarization and approach perfect heralded transmission with increasing uses. The qubit superswitch distillation branch is also prior work. The comparison here concerns **finite exact identity heralding from ordinary inaccessible-environment channel slots and its minimum compulsory traversal count**.
+
+The [related-work account](../references/RELATED_WORK.md) compares the physical access and exact claims of these sources, including current versions. It distinguishes the order-polynomial construction from a coherent Kraus-oracle compiler, whose environment access is stronger.
+
+## Verification route
+
+Read the [verification guide](../verification/README.md) before interpreting a numerical result. The evidence has three distinct roles:
+
+- The analytical proofs establish channel validity, centrality, positivity, the converse, and resource bounds.
+- Exact finite calculations verify the coefficient transcription, nonidentity witness, qubit lower-degree certificate, and rational success probabilities.
+- Numerical channel calculations check general nonunital instances, independent Kraus-isometry changes, reference preservation, and ancillary control decompositions.
+
+The [root overview](../README.md) supplies the shortest entry route. The [bibliography](../references/references.bib) supplies structured source metadata.

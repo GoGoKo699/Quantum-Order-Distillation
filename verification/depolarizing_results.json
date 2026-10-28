@@ -1,0 +1,35 @@
+{
+  "qubit": {
+    "degree": 4,
+    "dimension": 2,
+    "support_size": 8,
+    "l1_norm": 8,
+    "cycle_histogram": {
+      "1": 16,
+      "3": -24,
+      "5": 8
+    },
+    "success_probability_exact": "3/64",
+    "success_probability_float": 0.046875,
+    "success_at_dimension_1": "0",
+    "success_at_dimension_2": "3/64"
+  },
+  "qutrit": {
+    "degree": 8,
+    "dimension": 3,
+    "support_size": 2880,
+    "l1_norm": 2880,
+    "cycle_histogram": {
+      "1": 124416,
+      "3": -259200,
+      "5": 172224,
+      "7": -40320,
+      "9": 2880
+    },
+    "success_probability_exact": "1/43740",
+    "success_probability_float": 2.2862368541380887e-05,
+    "success_at_dimension_1": "0",
+    "success_at_dimension_2": "0",
+    "coefficient_source": "degree8_coefficients.json"
+  }
+}
