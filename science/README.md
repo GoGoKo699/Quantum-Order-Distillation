@@ -50,4 +50,4 @@ Read the [verification guide](../verification/README.md) before interpreting a n
 - Exact finite calculations verify the coefficient transcription, nonidentity witness, qubit lower-degree certificate, and rational success probabilities.
 - Numerical channel calculations check general nonunital instances, independent Kraus-isometry changes, reference preservation, and ancillary control decompositions.
 
-The [root overview](../README.md) supplies the shortest entry route. The [bibliography](../references/references.bib) supplies structured source metadata.
+The [root overview](../README.md) supplies the shortest entry route. For the prerequisites and their connection to this argument, use the [Watrous bridge](../learning/WATROUS_BRIDGE.md) with the [30-milestone map](../learning/MILESTONES.md). The [bibliography](../references/references.bib) supplies structured source metadata.

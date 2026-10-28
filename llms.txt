@@ -23,6 +23,13 @@ The minimum positive use count is c(d), the least positive degree of a nonidenti
 - [Bibliography](references/references.bib): Structured primary-source metadata.
 - [Verification](verification/README.md): Reproduction commands, requirements, expected outputs, and the role of each check.
 
+## Learning route
+
+- [Project map](learning/MILESTONES.md): Exactly M01–M30, with 13 background/preliminaries and 17 narrative/innovation milestones. Each record gives an understanding target, a central question, earlier dependencies and story role, a conceptual connection, and source pointers. The map is defined by the science and is independent of a reader's prior knowledge or progress.
+- [Watrous bridge](learning/WATROUS_BRIDGE.md): The single selected educational anchor, John Watrous's The Theory of Quantum Information (2018). Verified section pointers, notation and Choi normalization, a worked example, and the missing steps from channel representations to coherent order and central polynomials.
+
+For self-directed study, read the bridge alongside the milestones, then use their links to the authoritative scientific statements. For a theorem or specialist calculation, go directly through science/README.md to the appropriate proof and its source attribution. The bridge supplies an entry route; the canonical science pages retain the complete proofs. Watrous supplies quantum-information foundations; the project's coherent-order construction and central-polynomial characterization require additional arguments and credited primary research ingredients. Those research citations do not constitute additional educational anchors.
+
 ## Essential distinctions
 
 - Matrix-product words are written left to right; the rightmost channel slot acts first.
