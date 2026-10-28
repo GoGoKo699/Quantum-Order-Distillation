@@ -1,0 +1,26 @@
+{
+  "support_size": 2880,
+  "l1_norm": 2880,
+  "coefficient_histogram": {
+    "-1": 1440,
+    "1": 1440
+  },
+  "independent_generators_agree": true,
+  "source_matrix_unit_example_scalar": -2,
+  "exact_random_3x3_checks": 12,
+  "exact_random_scalars": [
+    -7508,
+    15102,
+    1046,
+    -180,
+    1968,
+    10182,
+    -55714,
+    1608,
+    11824,
+    -11260,
+    -2894,
+    6630
+  ],
+  "one_exact_2x2_zero_check": true
+}

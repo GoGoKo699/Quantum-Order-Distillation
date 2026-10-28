@@ -1,0 +1,188 @@
+{
+  "completely_depolarizing": {
+    "noise_histories": 256,
+    "success_probability": 0.04687500000000001,
+    "analytic_probability": 0.046875,
+    "cp_noise_floor_parameters": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "cp_noise_floor_bound": 0.046875,
+    "switch_tp_error": 0.0,
+    "maximum_scalar_kraus_residual": 5.849293819853178e-18,
+    "identity_choi_error": 1.2479626697854927e-33,
+    "choi_joint_projection_error": 1.3899063686808418e-17,
+    "input_independence_effect_error": 8.42137056897347e-35,
+    "reference_state_error": 9.945869955920988e-18,
+    "complete_prepared_switch_choi_trace": 2.0000000000000004,
+    "controller_dimension": 8,
+    "controller_norms": [
+      1.0,
+      1.0
+    ],
+    "adjugate_formula_probability": 0.046875
+  },
+  "pauli_full_rank": {
+    "noise_histories": 256,
+    "success_probability": 0.07045836,
+    "analytic_probability": 0.07045836000000001,
+    "cp_noise_floor_parameters": [
+      0.6799999999999999,
+      0.6799999999999999,
+      0.6799999999999999,
+      0.6799999999999999
+    ],
+    "cp_noise_floor_bound": 0.010022519999999997,
+    "switch_tp_error": 1.7763568394002505e-15,
+    "maximum_scalar_kraus_residual": 1.1811171063129955e-17,
+    "identity_choi_error": 1.0662396323838e-33,
+    "choi_joint_projection_error": 9.94444054264052e-17,
+    "input_independence_effect_error": 2.602267028916072e-34,
+    "reference_state_error": 9.665356043816473e-18,
+    "complete_prepared_switch_choi_trace": 2.0000000000000013,
+    "controller_dimension": 8,
+    "controller_norms": [
+      1.0,
+      1.0
+    ],
+    "adjugate_formula_probability": 0.07045836
+  },
+  "generic_full_rank": {
+    "noise_histories": 256,
+    "success_probability": 0.03389490601195301,
+    "analytic_probability": 0.033894906011953024,
+    "cp_noise_floor_parameters": [
+      0.01843970529224687,
+      0.01843970529224687,
+      0.01843970529224687,
+      0.01843970529224687
+    ],
+    "cp_noise_floor_bound": 5.419474583290037e-09,
+    "switch_tp_error": 1.583234205158136e-15,
+    "maximum_scalar_kraus_residual": 1.0899012697428482e-17,
+    "identity_choi_error": 6.607903036878368e-18,
+    "choi_joint_projection_error": 6.635852832782865e-17,
+    "input_independence_effect_error": 4.41946612034882e-18,
+    "reference_state_error": 1.314692810131268e-17,
+    "complete_prepared_switch_choi_trace": 1.9999999999999993,
+    "controller_dimension": 8,
+    "controller_norms": [
+      1.0,
+      1.0
+    ],
+    "adjugate_formula_probability": 0.03389490601195302
+  },
+  "four_distinct_full_rank": {
+    "noise_histories": 256,
+    "success_probability": 0.04165070391115144,
+    "analytic_probability": 0.04165070391115142,
+    "cp_noise_floor_parameters": [
+      0.032440454546103836,
+      0.04228149226428803,
+      0.07886553086842152,
+      0.04652471789805299
+    ],
+    "cp_noise_floor_bound": 2.359117095364491e-07,
+    "switch_tp_error": 2.4285058702119528e-15,
+    "maximum_scalar_kraus_residual": 1.736736478963641e-17,
+    "identity_choi_error": 2.825160120301895e-18,
+    "choi_joint_projection_error": 4.350878337102162e-17,
+    "input_independence_effect_error": 1.8640796043183374e-18,
+    "reference_state_error": 1.5429270045875855e-17,
+    "complete_prepared_switch_choi_trace": 2.0000000000000018,
+    "controller_dimension": 8,
+    "controller_norms": [
+      1.0,
+      1.0
+    ]
+  },
+  "amplitude_damping_boundary": {
+    "noise_histories": 16,
+    "success_probability": 3.7803355412540006e-33,
+    "analytic_probability": 0.0,
+    "cp_noise_floor_parameters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cp_noise_floor_bound": 0.0,
+    "switch_tp_error": 6.280369834735101e-16,
+    "maximum_scalar_kraus_residual": 3.143587399848537e-17,
+    "identity_choi_error": 5.869252065531877e-33,
+    "choi_joint_projection_error": 2.1360879209523994e-17,
+    "input_independence_effect_error": 3.692733153944882e-34,
+    "reference_state_error": 2.0737043443549808e-33,
+    "complete_prepared_switch_choi_trace": 2.000000000000001,
+    "controller_dimension": 8,
+    "controller_norms": [
+      1.0,
+      1.0
+    ],
+    "adjugate_formula_probability": 0.0
+  },
+  "unitary_boundary": {
+    "noise_histories": 1,
+    "success_probability": 4.041451206680681e-33,
+    "analytic_probability": 0.0,
+    "cp_noise_floor_parameters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cp_noise_floor_bound": 0.0,
+    "switch_tp_error": 0.0,
+    "maximum_scalar_kraus_residual": 0.0,
+    "identity_choi_error": 1.0386110280097765e-49,
+    "choi_joint_projection_error": 9.345147536966742e-34,
+    "input_independence_effect_error": 7.344089009208442e-50,
+    "reference_state_error": 2.4092840805288448e-49,
+    "complete_prepared_switch_choi_trace": 2.0000000000000004,
+    "controller_dimension": 8,
+    "controller_norms": [
+      1.0,
+      1.0
+    ],
+    "adjugate_formula_probability": 0.0
+  },
+  "rectangular_kraus_gauge_change": {
+    "noise_histories": 1296,
+    "success_probability": 0.041650703911151395,
+    "analytic_probability": 0.0416507039111514,
+    "cp_noise_floor_parameters": [
+      0.03244045454610396,
+      0.042281492264288026,
+      0.0788655308684213,
+      0.046524717898053215
+    ],
+    "cp_noise_floor_bound": 2.3591170953645043e-07,
+    "switch_tp_error": 3.603648113443905e-15,
+    "maximum_scalar_kraus_residual": 1.1270242843147327e-17,
+    "identity_choi_error": 1.0235103671259758e-17,
+    "choi_joint_projection_error": 9.782690252300378e-17,
+    "input_independence_effect_error": 2.1662491327971453e-18,
+    "reference_state_error": 3.116905109454929e-17,
+    "complete_prepared_switch_choi_trace": 1.9999999999999991,
+    "controller_dimension": 8,
+    "controller_norms": [
+      1.0,
+      1.0
+    ],
+    "slot_choi_gauge_errors": [
+      4.714619705836218e-16,
+      7.623946859836235e-16,
+      3.212940164695817e-16,
+      2.8635025298100677e-16
+    ],
+    "complete_prepared_switch_gauge_error": 1.0957689279099742e-15,
+    "success_choi_gauge_error": 9.058982837993507e-17
+  },
+  "coefficient_phase_check": {
+    "l1_norm": 7.479745576373175,
+    "branch_error": 1.7025858147202246e-17,
+    "sum_abs_alpha_beta": 1.0000000000000002
+  }
+}

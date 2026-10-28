@@ -1,0 +1,78 @@
+{
+  "exact_examples": [
+    {
+      "dimension": 2,
+      "queries": 8,
+      "support_size": 576,
+      "control_qubits": 10,
+      "C_d": "6",
+      "a_d": "-3",
+      "depolarizing_success_exact": "1/16384",
+      "depolarizing_success_float": 6.103515625e-05,
+      "ln_success": -9.704060527839228,
+      "expected_query_count_exact": "131072"
+    },
+    {
+      "dimension": 3,
+      "queries": 18,
+      "support_size": 131681894400,
+      "control_qubits": 37,
+      "C_d": "360",
+      "a_d": "720",
+      "depolarizing_success_exact": "1/98411002933824",
+      "depolarizing_success_float": 1.0161465386877981e-14,
+      "ln_success": -32.2201737321687,
+      "expected_query_count_exact": "1771398052808832"
+    },
+    {
+      "dimension": 4,
+      "queries": 32,
+      "support_size": 437763136697395052544000000,
+      "control_qubits": 89,
+      "C_d": "302400",
+      "a_d": "-22680000",
+      "depolarizing_success_exact": "25/392475741178215687449863230849024",
+      "depolarizing_success_float": 6.369820444175677e-32,
+      "ln_success": -71.83115169435018,
+      "expected_query_count_exact": "12559223717702901998395623387168768/25"
+    },
+    {
+      "dimension": 5,
+      "queries": 50,
+      "support_size": 240597637008332048087335626345604448256000000000000,
+      "control_qubits": 168,
+      "C_d": "4572288000",
+      "a_d": "161310320640000",
+      "depolarizing_success_exact": "49/40240497894252654077718034386634826660156250000000000000000",
+      "depolarizing_success_float": 1.2176787704954919e-57,
+      "ln_success": -131.0504039013825,
+      "expected_query_count_exact": "2012024894712632703885901719331741333007812500000000000000000/49"
+    }
+  ],
+  "asymptotic_checks": [
+    {
+      "dimension": 10,
+      "ln_success": -775.3277155825256,
+      "leading_residual_over_d_log_d": -1.3703098619412033,
+      "refined_residual": -5.932045984404795
+    },
+    {
+      "dimension": 30,
+      "ln_success": -10777.275957763366,
+      "leading_residual_over_d_log_d": -1.2573536061851325,
+      "refined_residual": -5.97190366958057
+    },
+    {
+      "dimension": 100,
+      "ln_success": -167096.17392836095,
+      "leading_residual_over_d_log_d": -1.3360064587994995,
+      "refined_residual": -5.985617397847818
+    },
+    {
+      "dimension": 300,
+      "ln_success": -1896274.3486306316,
+      "leading_residual_over_d_log_d": -1.4292520018347326,
+      "refined_residual": -5.989515086403117
+    }
+  ]
+}

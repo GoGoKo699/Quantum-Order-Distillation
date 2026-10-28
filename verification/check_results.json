@@ -1,0 +1,246 @@
+{
+  "passed": true,
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5",
+  "random_seeds": {
+    "probability_and_construction": 20261028,
+    "independent_access_model": 202610280314
+  },
+  "checks": {
+    "qubit_minimum": [
+      {
+        "degree": 1,
+        "rank": 1,
+        "determinant": "1"
+      },
+      {
+        "degree": 2,
+        "rank": 2,
+        "determinant": "-1"
+      },
+      {
+        "degree": 3,
+        "rank": 6,
+        "determinant": "-1"
+      }
+    ],
+    "qutrit_construction": {
+      "support_size": 2880,
+      "l1_norm": 2880,
+      "coefficient_histogram": {
+        "-1": 1440,
+        "1": 1440
+      },
+      "independent_generators_agree": true,
+      "source_matrix_unit_example_scalar": -2,
+      "exact_random_3x3_checks": 12,
+      "exact_random_scalars": [
+        -7508,
+        15102,
+        1046,
+        -180,
+        1968,
+        10182,
+        -55714,
+        1608,
+        11824,
+        -11260,
+        -2894,
+        6630
+      ],
+      "one_exact_2x2_zero_check": true,
+      "committed_coefficient_export_agrees": true
+    },
+    "actual_switch": {
+      "case_probabilities": {
+        "completely_depolarizing": 0.04687500000000001,
+        "pauli_full_rank": 0.07045836,
+        "generic_full_rank": 0.03389490601195301,
+        "four_distinct_full_rank": 0.04165070391115144,
+        "amplitude_damping_boundary": 3.7803355412540006e-33,
+        "unitary_boundary": 4.041451206680681e-33,
+        "rectangular_kraus_gauge_change": 0.041650703911151395
+      },
+      "maximum_residuals": {
+        "switch_tp_error": 3.603648113443905e-15,
+        "identity_choi_error": 1.0235103671259758e-17,
+        "reference_state_error": 3.116905109454929e-17,
+        "choi_joint_projection_error": 9.94444054264052e-17,
+        "input_independence_effect_error": 4.41946612034882e-18,
+        "maximum_scalar_kraus_residual": 3.143587399848537e-17
+      },
+      "full_prepared_switch_gauge_error": 1.0957689279099742e-15,
+      "coefficient_phase_error": 1.7025858147202246e-17
+    },
+    "access_model": {
+      "random_heterogeneous_fullrank_success": 0.03613239046968239,
+      "identity_choi_residual": 1.2105748731112876e-17,
+      "expanded_kraus_gauge_success": 0.03613239046968244,
+      "kraus_gauge_choi_difference": 8.696896729730364e-17,
+      "depolarizing_success": 0.046875,
+      "depolarizing_identity_residual": 0.0,
+      "near_identity_scaling": [
+        {
+          "epsilon": 0.1,
+          "probability": 4.687500000000002e-06,
+          "expected_epsilon_four_scaling": 4.6875000000000004e-06,
+          "identity_residual": 0.0
+        },
+        {
+          "epsilon": 0.3,
+          "probability": 0.00037968749999999976,
+          "expected_epsilon_four_scaling": 0.0003796875,
+          "identity_residual": 0.0
+        },
+        {
+          "epsilon": 0.8,
+          "probability": 0.019199999999999995,
+          "expected_epsilon_four_scaling": 0.019200000000000002,
+          "identity_residual": 0.0
+        }
+      ],
+      "general_effect_ancillary_control_max_residual": 3.076929357823582e-16,
+      "switch_trace_preservation_residual": 7.553167094414218e-16,
+      "coefficient_gram_min_eigenvalue": 0.12702409035075582,
+      "slot_depolarizing_fractions": [
+        0.025047843103354752,
+        0.07568767547073496,
+        0.053524328241590986
+      ],
+      "classical_infidelity_lower_bound": 0.1103052787141916,
+      "minimum_infidelity_over_six_orders": 0.7539319550393024,
+      "depolarizer_infidelity": 0.75,
+      "single_slot_choi_min_eigenvalue": 0.019967238688869876,
+      "shared_noise_output_choi_distance_from_depolarizer": 2.3655475754009085e-16,
+      "independent_slot_success_probability": 2.15604869552193e-05,
+      "independent_slot_identity_residual": 0.0,
+      "shared_noise_central_polynomial_max_norm": 0.0
+    },
+    "qutrit_trace_probability": {
+      "source": "Drensky--Kasparian (1985), printed page 752",
+      "trace_term_count": 96,
+      "trace_cycle_histogram": {
+        "2": 0,
+        "4": 1536,
+        "6": -1920,
+        "8": 384
+      },
+      "qutrit_success_exact": "1/43740",
+      "qutrit_success_float": 2.2862368541380887e-05
+    },
+    "depolarizing_histograms": {
+      "qubit_success_exact": "3/64",
+      "qutrit_success_exact": "1/43740",
+      "qutrit_cycle_histogram": {
+        "1": 124416,
+        "3": -259200,
+        "5": 172224,
+        "7": -40320,
+        "9": 2880
+      },
+      "exhaustive_qutrit_pairs_recomputed": true
+    },
+    "regev_probabilities": {
+      "exact_examples": [
+        {
+          "dimension": 2,
+          "queries": 8,
+          "support_size": 576,
+          "control_qubits": 10,
+          "C_d": "6",
+          "a_d": "-3",
+          "depolarizing_success_exact": "1/16384",
+          "depolarizing_success_float": 6.103515625e-05,
+          "ln_success": -9.704060527839228,
+          "expected_query_count_exact": "131072"
+        },
+        {
+          "dimension": 3,
+          "queries": 18,
+          "support_size": 131681894400,
+          "control_qubits": 37,
+          "C_d": "360",
+          "a_d": "720",
+          "depolarizing_success_exact": "1/98411002933824",
+          "depolarizing_success_float": 1.0161465386877981e-14,
+          "ln_success": -32.2201737321687,
+          "expected_query_count_exact": "1771398052808832"
+        },
+        {
+          "dimension": 4,
+          "queries": 32,
+          "support_size": 437763136697395052544000000,
+          "control_qubits": 89,
+          "C_d": "302400",
+          "a_d": "-22680000",
+          "depolarizing_success_exact": "25/392475741178215687449863230849024",
+          "depolarizing_success_float": 6.369820444175677e-32,
+          "ln_success": -71.83115169435018,
+          "expected_query_count_exact": "12559223717702901998395623387168768/25"
+        },
+        {
+          "dimension": 5,
+          "queries": 50,
+          "support_size": 240597637008332048087335626345604448256000000000000,
+          "control_qubits": 168,
+          "C_d": "4572288000",
+          "a_d": "161310320640000",
+          "depolarizing_success_exact": "49/40240497894252654077718034386634826660156250000000000000000",
+          "depolarizing_success_float": 1.2176787704954919e-57,
+          "ln_success": -131.0504039013825,
+          "expected_query_count_exact": "2012024894712632703885901719331741333007812500000000000000000/49"
+        }
+      ],
+      "asymptotic_checks": [
+        {
+          "dimension": 10,
+          "ln_success": -775.3277155825256,
+          "leading_residual_over_d_log_d": -1.3703098619412033,
+          "refined_residual": -5.932045984404795
+        },
+        {
+          "dimension": 30,
+          "ln_success": -10777.275957763366,
+          "leading_residual_over_d_log_d": -1.2573536061851325,
+          "refined_residual": -5.97190366958057
+        },
+        {
+          "dimension": 100,
+          "ln_success": -167096.17392836095,
+          "leading_residual_over_d_log_d": -1.3360064587994995,
+          "refined_residual": -5.985617397847818
+        },
+        {
+          "dimension": 300,
+          "ln_success": -1896274.3486306316,
+          "leading_residual_over_d_log_d": -1.4292520018347326,
+          "refined_residual": -5.989515086403117
+        }
+      ]
+    },
+    "regev_identity": {
+      "exact_matrix_unit_checks": [
+        {
+          "d": 2,
+          "basis_value": "-3",
+          "exact_depolarizing_success": "1/16384",
+          "success_float": 6.103515625e-05,
+          "dp_peak_states": 12
+        },
+        {
+          "d": 3,
+          "basis_value": "720",
+          "exact_depolarizing_success": "1/98411002933824",
+          "success_float": 1.0161465386877981e-14,
+          "dp_peak_states": 4578
+        }
+      ],
+      "d2_random_tuple_checks": 6,
+      "maximum_relative_residual": 5.5674044934709455e-14,
+      "choi_determinant": 0.03954000254812863,
+      "ordered_tuple_determinant_sum": 0.9489600611550852,
+      "success_from_tuple_sum": 2.442830939853144e-05,
+      "success_from_choi": 2.4428309398531542e-05
+    }
+  }
+}

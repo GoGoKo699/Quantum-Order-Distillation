@@ -1,0 +1,12 @@
+{
+  "source": "Drensky--Kasparian (1985), printed page 752",
+  "trace_term_count": 96,
+  "trace_cycle_histogram": {
+    "2": 0,
+    "4": 1536,
+    "6": -1920,
+    "8": 384
+  },
+  "qutrit_success_exact": "1/43740",
+  "qutrit_success_float": 2.2862368541380887e-05
+}
