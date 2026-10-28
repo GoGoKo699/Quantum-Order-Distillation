@@ -8,13 +8,15 @@ This project asks what changes when a supplied quantum controller coherently cho
 \mathcal E_{\mathrm{succ}}(\rho)=\frac3{64}\rho.
 ```
 
-The coefficient is the probability of that outcome. Conditioned on success, every input state is preserved, including its entanglement with another system. The [worked example below](WATROUS_BRIDGE.md#4-complete-worked-example-four-depolarizing-qubit-slots) calculates the probability and specifies the preparation, routing labels, and measurement.
+The coefficient is the probability of that outcome. Conditioned on success, every input state is preserved, including its entanglement with another system. The [worked example below](#worked-example) calculates the probability and specifies the preparation, routing labels, and measurement.
 
 The general result concerns independent fresh channels with full Choi rank in a precise [order-only model](../science/model.md). It connects the minimum positive number of compulsory channel calls to the minimum degree of a central polynomial. Understanding that connection requires ordinary channel theory, a distinction between coherent and classical order control, and an additional algebraic idea.
 
 The selected educational anchor is **John Watrous, *The Theory of Quantum Information* (Cambridge University Press, 2018)**. The [author's page](https://jhwatrous.github.io/books-and-courses.html) provides the [standard-layout manuscript](https://jhwatrous.github.io/TQI.pdf) and [errata](https://jhwatrous.github.io/TQI.errata.pdf). The manuscript is offered for personal use and must not be redistributed. All page numbers below are its **printed page numbers**, rather than PDF viewer indexes. The errata are dated 23 July 2025.
 
 This bridge supplies the connections needed for the project; it does not require reading the entire book. The [30-milestone map](MILESTONES.md) organizes the complete scientific story into 13 background milestones and 17 narrative milestones. The authoritative statements and proofs remain in [science/](../science/README.md).
+
+<a id="source-map"></a>
 
 ## 1. A focused route through the anchor
 
@@ -33,6 +35,8 @@ Use the source entries when their concepts become relevant. The topic labels in 
 | Capacity as a separate asymptotic task | §8.2.1, starting p. 512, when needed | Why one heralded branch does not establish unassisted quantum capacity |
 
 The main representation results are Theorem 2.22 on page 82, Corollary 2.23 on page 84, and Theorem 2.26 on page 87. They respectively supply complete-positivity tests, freedom to change a Kraus representation, and trace-preservation tests. Their roles are explained below. They do not assume or construct a coherent permutation of unknown channel boxes.
+
+<a id="notation"></a>
 
 ## 2. Translating notation and normalization
 
@@ -99,6 +103,8 @@ F_e(\mathcal C)
 The square is necessary when moving between the two conventions. The diamond norm is Watrous's completely bounded trace norm, Definition 3.43 on page 170. It measures a map's effect while allowing an untouched reference. A factor $`1/2`$ is included only when explicitly written, as in the [classical-order distance bound](../science/interpretation.md#a-quantitative-gap-from-the-identity).
 
 An accepted operation is kept **unnormalized** until its probability is taken. If $`\mathcal E(\rho)`$ is the accepted output, its trace is the acceptance probability and its conditional state is $`\mathcal E(\rho)/\mathrm{Tr}\mathcal E(\rho)`$. This is the instrument description in §2.3.2. For $`\mathcal E=p\,\mathrm{id}`$, the probability is input independent and the conditional output is exactly $`\rho`$. For an imperfect implementation, that probability can depend on the input; conditioning need not define a linear channel.
+
+<a id="conceptual-gaps"></a>
 
 ## 3. The missing steps from ordinary channels to the theorem
 
@@ -203,6 +209,8 @@ Here $`m_\star`$ is the minimum positive number of compulsory calls, and $`c(d)`
 
 The conclusion is architecture specific. The target cannot be encoded into protected memory, bypass a slot, or undergo inserted target gates. The controller starts independently of the target. Correlated device uses also need a different joint description. These conditions are part of the [model](../science/model.md#4-target-access-and-explicit-exclusions), not consequences of the textbook's representation theorems.
 
+<a id="worked-example"></a>
+
 ## 4. Complete worked example: four depolarizing qubit slots
 
 ### The channel and the supplied resource
@@ -295,6 +303,8 @@ Every classical order of these same slots gives $`\Delta_2^4=\Delta_2`$. Conditi
 
 The general centrality proof, the inherited superswitch attribution, and the exact certificate ruling out one, two, or three calls are in [the qubit account](../science/qubit.md). The example computes one explicit protocol's success probability. It does not establish that this probability is the largest possible.
 
+<a id="resource-scaling"></a>
+
 ## 5. Minimum calls and expected calls answer different questions
 
 The query theorem minimizes calls **within one successful-capable attempt**. It does not minimize the expected number of charged calls after failures. The two explicit minimum-call constructions illustrate the difference:
@@ -341,6 +351,8 @@ The [fixed-batch resource theorem](../science/probability.md#expected-charged-ca
 
 The infimum is over exact identity controllers in the unaugmented order-only model, with a fixed number $`m`$ of calls per attempt. The batch size can depend on the known noise parameter. The constants can be large and depend on dimension; this does not optimize their prefactors or charge the hardware cost of coherent paths. Its lower bound also does not extend to the [augmented model with randomizing wrappers](../science/interpretation.md#randomizing-wrappers).
 
+<a id="proof-route"></a>
+
 ## 6. Where the complete arguments live
 
 The bridge explains the conceptual transitions. Each scientific claim has an authoritative proof or source account elsewhere in the repository.
@@ -360,6 +372,8 @@ The bridge explains the conceptual transitions. Each scientific claim has an aut
 
 The control-error distinction is especially relevant when success is small. A small error in the unnormalized accepted operation can become larger after conditioning. The bound on the conditional trace norm error in the linked proof is $`2\delta/(p-\delta)`$ when the operation error is at most $`\delta<p`$ in diamond norm. It is an input-by-input bound including references, rather than a diamond distance between generally nonlinear normalized transformations.
 
+<a id="source-boundaries"></a>
+
 ## 7. Textbook foundations and research dependencies
 
 Watrous is the single educational anchor. The primary research sources remain necessary because several ingredients are outside the ordinary-channel foundations used here.
@@ -367,13 +381,13 @@ Watrous is the single educational anchor. The primary research sources remain ne
 | Layer | What supports it |
 |---|---|
 | States, positive operators, channels, Kraus and Choi representations, instruments, and channel distances | The selected Watrous sections above |
-| The generalized switch as a supplied higher-order resource | The [model](../science/model.md) and [published generalized-switch reference](../references/RELATED_WORK.md#exact-qubit-distillation-with-superswitches) |
-| Central-polynomial resetting as an antecedent and the inherited qubit branch | The [Navascués and superswitch comparisons](../references/RELATED_WORK.md#central-polynomial-quantum-resetting) |
-| Existence and minimum degrees of central polynomials | The [algebraic source account](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds) |
+| The generalized switch as a supplied higher-order resource | The [model](../science/model.md) and [published generalized-switch reference](../references/RELATED_WORK.md#kechrimparis2025) |
+| Central-polynomial resetting as an antecedent and the inherited qubit branch | The [Navascués and superswitch comparisons](../references/RELATED_WORK.md#navascues2018) |
+| Existence and minimum degrees of central polynomials | The [algebraic source account](../references/RELATED_WORK.md#central-polynomials) |
 | Explicit qutrit centrality | Drensky–Kasparian's construction, with the [complete local proof](../science/qutrit.md#2-centrality-and-its-scalar-value) |
-| The qutrit lower-degree exclusion | The historical theorem reported in Drensky–Kostadinov; its [source-access qualification](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds) remains explicit |
+| The qutrit lower-degree exclusion | The historical theorem reported in Drensky–Kostadinov; its [source-access qualification](../references/RELATED_WORK.md#central-polynomials) remains explicit |
 | General realization, fixed-channel converse, and fixed-batch charged-cost scaling | The canonical project proofs linked above |
-| Regev's determinant evaluation and its probability | The [published algebraic formula](../references/RELATED_WORK.md#regevs-polynomial-and-its-determinant-coefficient) and [channel probability derivation](../science/probability.md#regev-construction) |
+| Regev's determinant evaluation and its probability | The [published algebraic formula](../references/RELATED_WORK.md#regev-procesi) and [channel probability derivation](../science/probability.md#regev-construction) |
 
 In particular, $`c(2)=4`$ and $`c(3)=8`$ are exact algebraic degrees, whereas $`c(4)\le13`$ is an upper bound. The dimension-four equality is not established here. The query characterization transfers the algebraic minimum to the channel model; it does not prove new central-polynomial identities or imply feasibility at every larger compulsory call count.
 

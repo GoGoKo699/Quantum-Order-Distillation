@@ -7,7 +7,7 @@ P_2(X_1,X_2,X_3,X_4)
 =\{[X_1,X_2],[X_3,X_4]\}.
 ```
 
-This central polynomial appears in [Navascués's resetting construction](../references/RELATED_WORK.md#central-polynomial-quantum-resetting). Its eight-order channel realization is the known successful second-order superswitch branch of [Kechrimparis, Moran and Kwon](../references/RELATED_WORK.md#exact-qubit-distillation-with-superswitches). It gives an explicit example of the general [construction and converse](query_threshold.md).
+This central polynomial appears in [Navascués's resetting construction](../references/RELATED_WORK.md#navascues2018). Its eight-order channel realization is the known successful second-order superswitch branch of [Kechrimparis, Moran and Kwon](../references/RELATED_WORK.md#kechrimparis2025). It gives an explicit example of the general [construction and converse](query_threshold.md).
 
 ## 1. The eight orders
 

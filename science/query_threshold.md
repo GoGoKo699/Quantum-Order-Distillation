@@ -123,7 +123,7 @@ The statement is specific to full-rank slots and order polynomials. Rank-deficie
 
 ## 5. Known degrees and their quantum meaning
 
-The algebraic results and their provenance are recorded in [Related work](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds).
+The algebraic results and their provenance are recorded in [Related work](../references/RELATED_WORK.md#central-polynomials).
 
 | Target dimension | Minimum positive uses in the stated architecture | What is established |
 |---|---:|---|

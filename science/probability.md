@@ -18,7 +18,7 @@ W_{\boldsymbol a}=\sum_{\pi}K_{\boldsymbol a,\pi}\otimes|\pi\rangle\langle\pi|.
 \qquad\text{(1)}
 ```
 
-This is the arbitrary-order construction in Kechrimparis–Moran–Kwon, published Appendix A, Eqs. (A1)–(A4). Their controller preparation and measurement basis are freely chosen. [Kechrimparis, Moran and Kwon](../references/RELATED_WORK.md#exact-qubit-distillation-with-superswitches)
+This is the arbitrary-order construction in Kechrimparis–Moran–Kwon, published Appendix A, Eqs. (A1)–(A4). Their controller preparation and measurement basis are freely chosen. [Kechrimparis, Moran and Kwon](../references/RELATED_WORK.md#kechrimparis2025)
 
 Let
 
@@ -214,7 +214,7 @@ The constructive upper bound does not require solving the minimal-degree problem
 $`2r/[p_D(1-e^{-1})^r\epsilon]`$.
 Together with the unchanged lower bound $`c(d)/\epsilon`$, this proves the same $`\Theta_d(\epsilon^{-1})`$ scaling by a fully explicit construction even when $`c(d)`$ is unknown.
 
-For qubits, [Kechrimparis, Moran and Kwon, Secs. V–VI and Appendices F, J, K](../references/RELATED_WORK.md#exact-qubit-distillation-with-superswitches) already studies improved success under higher-order superswitches and a positive large-depth success limit at each fixed nonzero depolarizing noise. That qubit benefit from additional uses is inherited. Equation (14b) supplies a matching charged-query scaling and an architecture-wide lower bound in every fixed dimension; it is not a claim that increasing the qubit superswitch order was previously unknown.
+For qubits, [Kechrimparis, Moran and Kwon, Secs. V–VI and Appendices F, J, K](../references/RELATED_WORK.md#kechrimparis2025) already studies improved success under higher-order superswitches and a positive large-depth success limit at each fixed nonzero depolarizing noise. That qubit benefit from additional uses is inherited. Equation (14b) supplies a matching charged-query scaling and an architecture-wide lower bound in every fixed dimension; it is not a claim that increasing the qubit superswitch order was previously unknown.
 
 ## Qubit success probability
 
@@ -225,7 +225,7 @@ P_2=\{[X_1,X_2],[X_3,X_4]\},\qquad L=8.
 \qquad\text{(15)}
 ```
 
-Its eight order words and centrality proof are given on that page. It is the known qubit superswitch branch of [Kechrimparis, Moran and Kwon](../references/RELATED_WORK.md#exact-qubit-distillation-with-superswitches). The calculation here extends its probability formula to general, potentially nonunital qubit channels and to four different input channels.
+Its eight order words and centrality proof are given on that page. It is the known qubit superswitch branch of [Kechrimparis, Moran and Kwon](../references/RELATED_WORK.md#kechrimparis2025). The calculation here extends its probability formula to general, potentially nonunital qubit channels and to four different input channels.
 
 Expand each Kraus operator in the usual Pauli basis:
 
@@ -286,7 +286,7 @@ p=4(p_1^2p_2^2+p_1^2p_3^2+p_2^2p_3^2).
 \qquad\text{(21)}
 ```
 
-This recovers [Kechrimparis, Moran and Kwon, Eq. (5)](../references/RELATED_WORK.md#exact-qubit-distillation-with-superswitches). In particular,
+This recovers [Kechrimparis, Moran and Kwon, Eq. (5)](../references/RELATED_WORK.md#kechrimparis2025). In particular,
 
 ```math
 p(\Delta_2)=\frac3{64},\qquad
@@ -342,7 +342,7 @@ The qubit eight-word polynomial gives $`h_1=16,h_3=-24,h_5=8`$, recovering $`3/6
 
 ### Eight-call qutrit probability
 
-The [explicit qutrit construction](qutrit.md) uses the Drensky–Kasparian degree-eight central polynomial from [Drensky and Kasparian, pp. 746–747](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds). Its [coefficient list](../verification/degree8_coefficients.json) contains 2880 distinct words with coefficients $`\pm1`$, hence $`L=2880`$. The construction and centrality proof are given on that page. Applying Eq. (25) to the coefficient list gives
+The [explicit qutrit construction](qutrit.md) uses the Drensky–Kasparian degree-eight central polynomial from [Drensky and Kasparian, pp. 746–747](../references/RELATED_WORK.md#central-polynomials). Its [coefficient list](../verification/degree8_coefficients.json) contains 2880 distinct words with coefficients $`\pm1`$, hence $`L=2880`$. The construction and centrality proof are given on that page. Applying Eq. (25) to the coefficient list gives
 
 | Cycle count $`k`$ | $`h_k`$ |
 |---:|---:|
@@ -362,7 +362,7 @@ Thus
 
 The same exact contraction expression vanishes at dimensions one and two, as required when the qutrit central polynomial is restricted to smaller matrix algebras.
 
-There is also a structurally independent check. On $`3\times3`$ matrices the scalar value is, by the printed trace formula in [Drensky and Kasparian, p. 752](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds),
+There is also a structurally independent check. On $`3\times3`$ matrices the scalar value is, by the printed trace formula in [Drensky and Kasparian, p. 752](../references/RELATED_WORK.md#central-polynomials),
 
 ```math
 \lambda=2\sum_{\sigma\in S_4}\mathrm{sgn}(\sigma)
@@ -395,7 +395,7 @@ R_d=\mathrm{Alt}_X\mathrm{Alt}_Y
 ```
 
 Alternation here is the unnormalized signed sum. There are exactly
-$`s=L=(r!)^2`$ distinct signed words. [Procesi's published 2021 account](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds), Theorem 7 and Eq. (2.85) on page 99, gives the determinant evaluation, with the constant from Eq. (1.65) on page 94. Its proof on page 100 follows Formanek. The same formula appears in the revised 2022 account, Theorem 4.13 and Eq. (37):
+$`s=L=(r!)^2`$ distinct signed words. [Procesi's published 2021 account](../references/RELATED_WORK.md#central-polynomials), Theorem 7 and Eq. (2.85) on page 99, gives the determinant evaluation, with the constant from Eq. (1.65) on page 94. Its proof on page 100 follows Formanek. The same formula appears in the revised 2022 account, Theorem 4.13 and Eq. (37):
 
 ```math
 R_d(X;Y)=a_d\det[\mathrm{vec}X_1,\ldots,\mathrm{vec}X_r]
@@ -492,7 +492,7 @@ For independent attempts on freshly prepared Bell pairs, success probability $`p
 
 When the noise has the identity-mixture form of Eq. (11), Eq. (14b) describes how optimizing the fixed batch size changes this charged-call cost. It applies to the unmodified supplied channels. Allowing an additional depolarizing wrapper would change the access model and remove the small-noise lower bound; that augmented model must be accounted for separately.
 
-The number of calls is query minimal for the qubit and qutrit examples because the inherited central-degree values are $`c(2)=4`$ and $`c(3)=8`$; their support sizes and success probabilities have not been optimized globally. [Drensky and Kostadinov](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds)
+The number of calls is query minimal for the qubit and qutrit examples because the inherited central-degree values are $`c(2)=4`$ and $`c(3)=8`$; their support sizes and success probabilities have not been optimized globally. [Drensky and Kostadinov](../references/RELATED_WORK.md#central-polynomials)
 
 ## Verification
 
@@ -513,10 +513,10 @@ These calculations test transcription, normalization, and numerical implementati
 
 | Source | Locations used here |
 |---|---|
-| [Kechrimparis, Moran and Kwon (2025)](../references/RELATED_WORK.md#exact-qubit-distillation-with-superswitches) | Published Eq. (5) gives the Pauli probability; Appendix A, Eqs. (A1)–(A6), gives the generalized switch and controller choices; Secs. V–VI and Appendices F, J, K give the qubit higher-order analysis. |
-| [Drensky and Kasparian (1985)](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds) | Pages 746–747 define the qutrit polynomial; printed page 752 gives the scalar trace formula used in the independent probability calculation. |
-| [Procesi (2021)](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds) | *A note on the Formanek Weingarten function*: Eq. (1.65), printed page 94, gives $`C_d`$; Eq. (2.84) defines the polynomial; Theorem 7 and Eq. (2.85), page 99, give the exact determinant evaluation, proved on page 100. This is the direct source for the constant used here. |
-| [Procesi (2022), revised arXiv version 2](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds) | A parallel formulation appears in Eq. (26), Eqs. (35)–(36), and Theorem 4.13, Eq. (37). The 2021 theorem independently supplies the formula required here. |
-| [Drensky and Kostadinov (2026)](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds) | The introduction records the inherited qubit and qutrit minimum degrees. The [threshold account](query_threshold.md) separates those results from the general channel converse. |
+| [Kechrimparis, Moran and Kwon (2025)](../references/RELATED_WORK.md#kechrimparis2025) | Published Eq. (5) gives the Pauli probability; Appendix A, Eqs. (A1)–(A6), gives the generalized switch and controller choices; Secs. V–VI and Appendices F, J, K give the qubit higher-order analysis. |
+| [Drensky and Kasparian (1985)](../references/RELATED_WORK.md#central-polynomials) | Pages 746–747 define the qutrit polynomial; printed page 752 gives the scalar trace formula used in the independent probability calculation. |
+| [Procesi (2021)](../references/RELATED_WORK.md#central-polynomials) | *A note on the Formanek Weingarten function*: Eq. (1.65), printed page 94, gives $`C_d`$; Eq. (2.84) defines the polynomial; Theorem 7 and Eq. (2.85), page 99, give the exact determinant evaluation, proved on page 100. This is the direct source for the constant used here. |
+| [Procesi (2022), revised arXiv version 2](../references/RELATED_WORK.md#central-polynomials) | A parallel formulation appears in Eq. (26), Eqs. (35)–(36), and Theorem 4.13, Eq. (37). The 2021 theorem independently supplies the formula required here. |
+| [Drensky and Kostadinov (2026)](../references/RELATED_WORK.md#central-polynomials) | The introduction records the inherited qubit and qutrit minimum degrees. The [threshold account](query_threshold.md) separates those results from the general channel converse. |
 
 The [related-work account](../references/RELATED_WORK.md) and [bibliography](../references/references.bib) give full source records and distinguish the inherited central-polynomial constructions from their order-only channel interpretation.
