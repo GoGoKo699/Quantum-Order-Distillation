@@ -26,7 +26,7 @@ These are Kraus operators of a channel on the target and its order control. Orth
 =I\otimes I.
 ```
 
-The inner sum is the trace-preservation identity for a composition of the input channels. This is the standard generalized-switch construction used in [Kechrimparis, Moran and Kwon, Appendix A](../references/RELATED_WORK.md#kechrimparis2025). It is an assumed higher-order resource. Counting its channel slots does not give a gate-level implementation cost.
+The inner sum is the trace-preservation identity for a composition of the input channels. This is the standard generalized-switch construction used in [Kechrimparis, Moran and Kwon, Appendix A](../references/RELATED_WORK.md#exact-qubit-distillation-with-superswitches). It is an assumed higher-order resource. Counting its channel slots does not give a gate-level implementation cost.
 
 ### Independence and Kraus representations
 
@@ -136,7 +136,7 @@ Full rank is a sufficient condition for this universal positivity statement, not
 
 ## 4. Why finite-dimensional constructions exist
 
-Existence of central polynomials is inherited algebra. Formanek's construction supplies a positive-degree homogeneous central polynomial of degree $`d^2`$. Later constructions give degree $`(d-1)^2+4`$ for $`d>2`$. The exact source and degree distinctions are collected in [the algebraic references](../references/RELATED_WORK.md#central-polynomials).
+Existence of central polynomials is inherited algebra. Formanek's construction supplies a positive-degree homogeneous central polynomial of degree $`d^2`$. Later constructions give degree $`(d-1)^2+4`$ for $`d>2`$. The exact source and degree distinctions are collected in [the algebraic references](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds).
 
 For completeness, the passage from those polynomials to order control needs no repetition of a channel variable inside one slot. It uses characteristic-zero linearization.
 

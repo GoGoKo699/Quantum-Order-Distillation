@@ -8,12 +8,10 @@ The [polynomial realization](../science/polynomial_realization.md) and [query th
 
 | Work | Supplied resource and relevant result | Relation to this task |
 |---|---|---|
-| [Navascués (2018)](#navascues2018) | Controlled probes return after interacting with an uncontrolled target; probe interference realizes central polynomials. | Establishes the resetting mechanism in a model with accessible returned probes. |
-| [Chiribella, Wilson and Chau (2021)](#cyclic2021) | Cyclic orders of completely depolarizing channels give heralded transmission with vanishing error as the number of calls grows. | Higher-dimensional communication activation is established; the displayed finite-call herald retains depolarization. |
-| [Kechrimparis, Moran and Kwon (2025)](#kechrimparis2025) | Recursive superswitches distill qubit channels; the paper also defines the general permutation switch. | Supplies the channel-level architecture and the inherited four-call qubit branch. |
-| [Shen et al. (2026)](#shen2026) | A coherent Stinespring oracle with a specified environment basis permits Kraus-polynomial synthesis. | The returned environment is an additional resource; channel-only compilation is treated separately. |
-
-<a id="kechrimparis2025"></a>
+| [Navascués (2018)](#central-polynomial-quantum-resetting) | Controlled probes return after interacting with an uncontrolled target; probe interference realizes central polynomials. | Establishes the resetting mechanism in a model with accessible returned probes. |
+| [Chiribella, Wilson and Chau (2021)](#cyclic-orders-and-finite-heralded-noise) | Cyclic orders of completely depolarizing channels give heralded transmission with vanishing error as the number of calls grows. | Higher-dimensional communication activation is established; the displayed finite-call herald retains depolarization. |
+| [Kechrimparis, Moran and Kwon (2025)](#exact-qubit-distillation-with-superswitches) | Recursive superswitches distill qubit channels; the paper also defines the general permutation switch. | Supplies the channel-level architecture and the inherited four-call qubit branch. |
+| [Shen et al. (2026)](#coherent-kraus-polynomial-compilation) | A coherent Stinespring oracle with a specified environment basis permits Kraus-polynomial synthesis. | The returned environment is an additional resource; channel-only compilation is treated separately. |
 
 ## Exact qubit distillation with superswitches
 
@@ -25,8 +23,6 @@ Appendix A, Eqs. (A1)–(A4), defines the generalized switch with all permutatio
 
 Result 4 and Appendix I establish a higher-dimensional obstruction for the paper's recursive superswitch family. Arbitrary permutation coefficients extend beyond that family. The discussion in Section IX raises higher-dimensional switchlike distillation. The full-rank theorem addresses this capability within the stated order-only model; adding randomizing channel wrappers changes the supplied resources.
 
-<a id="navascues2018"></a>
-
 ## Central-polynomial quantum resetting
 
 **Miguel Navascués**, *Resetting Uncontrolled Quantum Systems*, **Physical Review X 8**, 031008 (2018). [DOI: 10.1103/PhysRevX.8.031008](https://doi.org/10.1103/PhysRevX.8.031008), [arXiv:1710.02470v4](https://arxiv.org/abs/1710.02470v4), revised 16 July 2018.
@@ -34,8 +30,6 @@ Result 4 and Appendix I establish a higher-dimensional obstruction for the paper
 The target interacts with probes that return to a controlled laboratory. Joint probe processing realizes central polynomials in blocks of the interaction unitary. The main text and Appendix A establish exact resetting in arbitrary dimension; Appendix C relates resetting protocols to central polynomials and discusses success limitations. The qubit anticommutator of commutators used here also appears in footnote 16.
 
 This supplies the quantum central-polynomial mechanism and a relation between polynomial degree and interaction count. In the present [realization](../science/polynomial_realization.md), interference combines orders within each fixed Kraus tuple, while distinct inaccessible noise histories are summed incoherently. Full Choi rank supplies the spanning property used in both directions of the channel theorem.
-
-<a id="cyclic2021"></a>
 
 ## Cyclic orders and finite heralded noise
 
@@ -51,8 +45,6 @@ For $`N`$ cyclic orders of $`N`$ completely depolarizing channels, the normalize
 
 The depolarizing weight is positive at every finite $`N`$ and tends to zero as $`N`$ increases. Thus this construction already gives arbitrarily high heralded fidelity in arbitrary dimension. Appendices E and F describe two-way-assisted communication consequences. The question considered here is finite-call exact identity heralding and its minimum call count. The [operational interpretation](../science/interpretation.md) distinguishes a successful identity branch from an unassisted capacity claim.
 
-<a id="shen2026"></a>
-
 ## Coherent Kraus-polynomial compilation
 
 **Zheyu Shen, Yusen Wu, Xiao Yuan, Xiao-Ming Zhang and Yukun Zhang**, *Quantum Algorithms for Multivariable Polynomial Transformations: From Efficient Synthesis to Quantum Channel Transformations*, [arXiv:2610.08714v1](https://arxiv.org/abs/2610.08714v1), 6 October 2026. [Full text](https://arxiv.org/html/2610.08714v1).
@@ -60,8 +52,6 @@ The depolarizing weight is positive at every finite $`N`$ and tends to zero as $
 Section 5.2, Eq. (5.8), supplies a complete coherent Stinespring unitary, a fixed returned environment basis, and an identity sector. Corollary 5.5 compiles polynomial families in its Kraus amplitudes. Example 5.6 and the discussion following Remark 5.7 show that a change of Kraus basis can change the selected operation, including removing a state-preserving branch. Section 5.3 instead compiles a causal controller from supplied Choi data, allowing processing gates on signal and memory.
 
 The order-only map in [the realization theorem](../science/polynomial_realization.md) is invariant under independent Kraus-representation changes in every channel slot. Its control acts on order labels, and the noise environments are unavailable. These distinct access assumptions determine which polynomial operations can be implemented.
-
-<a id="central-polynomials"></a>
 
 ## Central polynomials and degree bounds
 
@@ -99,8 +89,6 @@ The original lower-bound attribution is **V. Drensky and A. Kasparian**, *Polyno
 **Vesselin Drensky**, *Weak polynomial identities and their applications*, **Communications in Mathematics 29**(2), 291–324 (2021), [DOI: 10.2478/cm-2021-0022](https://doi.org/10.2478/cm-2021-0022), [full text](https://dml.cz/bitstream/handle/10338.dmlcz/149196/ActaOstrav_29-2021-2_11.pdf), surveys the central-polynomial constructions and their degree bounds. Theorem 3 states the minimum polynomial-identity degree for matrix algebras.
 
 The original source is **A. S. Amitsur and J. Levitzki**, *Minimal identities for algebras*, **Proceedings of the American Mathematical Society 1**(4), 449–463 (1950), [DOI: 10.1090/S0002-9939-1950-0036751-9](https://doi.org/10.1090/S0002-9939-1950-0036751-9). There is no nonzero polynomial identity of degree below $`2d`$ for $`M_d(\mathbb C)`$. For a positive-degree central polynomial $`P`$, the free polynomial $`[P,X_{m+1}]`$ is nonzero and is an identity on $`M_d`$. This gives $`c(d)\geq2d-1`$. The [query-threshold proof](../science/query_threshold.md) also gives a direct matrix-unit argument for the required identity lower bound.
-
-<a id="regev-procesi"></a>
 
 ## Regev's polynomial and its determinant coefficient
 

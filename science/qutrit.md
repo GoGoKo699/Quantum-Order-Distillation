@@ -304,4 +304,4 @@ The eight-call result concerns fresh channel copies with inaccessible environmen
 
 **[DK26]** V. Drensky and B. Kostadinov, *Central polynomials of minimal degree for matrices*, [arXiv:2601.07750v2](https://arxiv.org/abs/2601.07750v2), revised 4 July 2026. The introduction records the degree minima and their original sources. Section 2 explains characteristic-zero linearization.
 
-The [related-work account](../references/RELATED_WORK.md#central-polynomials) and [bibliography](../references/references.bib) give the broader attribution and distinguish the inherited algebra from the channel realization.
+The [related-work account](../references/RELATED_WORK.md#central-polynomials-and-degree-bounds) and [bibliography](../references/references.bib) give the broader attribution and distinguish the inherited algebra from the channel realization.

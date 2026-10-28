@@ -45,7 +45,7 @@ The supplied switch is the channel
 
 The tuple $`\boldsymbol a=(a_1,\ldots,a_m)`$ uses the same environmental label $`a_j`$ for slot $`j`$ in every order branch. All $`m`$ slots occur exactly once in every word. Only a subset of the $`m!`$ order states need be populated.
 
-Equations (1) and (2) are the standard generalized-switch resource used in [Kechrimparis, Moran, and Kwon, published Appendix A](../references/RELATED_WORK.md#kechrimparis2025). Its trace preservation and invariance under independent changes of Kraus representation are proved in [polynomial realization, Section 1](polynomial_realization.md#1-the-normalized-switch). A chosen Kraus decomposition is a mathematical representation, not additional operational access.
+Equations (1) and (2) are the standard generalized-switch resource used in [Kechrimparis, Moran, and Kwon, published Appendix A](../references/RELATED_WORK.md#exact-qubit-distillation-with-superswitches). Its trace preservation and invariance under independent changes of Kraus representation are proved in [polynomial realization, Section 1](polynomial_realization.md#1-the-normalized-switch). A chosen Kraus decomposition is a mathematical representation, not additional operational access.
 
 The count $`m`$ measures compulsory noisy-slot uses. A zero-slot identity wire is excluded from this conversion task. An additional compulsory slot cannot be ignored. Consequently a theorem about the minimum feasible positive $`m`$ does not by itself establish feasibility at every larger integer.
 
