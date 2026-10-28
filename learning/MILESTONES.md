@@ -379,7 +379,7 @@ to eight signed order words and normalization $`L=8`$. Explain centrality using 
 
 **Dependencies and story role:** [M01](#m01), [M15](#m15), [M16](#m16), [M18](#m18). Supplies the smallest complete example of the characterization.
 
-**Conceptual connection:** The protocol realizes an inherited central polynomial and a known qubit superswitch branch. Its explicit controller makes the general theorem tangible without turning this established special case into a separate novelty claim.
+**Conceptual connection:** The protocol realizes an inherited central polynomial and a known qubit superswitch branch. Its explicit controller gives a concrete instance of the general theorem.
 
 **Sources:** [Watrous operator foundations and worked example](WATROUS_BRIDGE.md#worked-example); [qubit construction and certificate](../science/qubit.md); [superswitch antecedent](../references/RELATED_WORK.md#kechrimparis2025).
 
