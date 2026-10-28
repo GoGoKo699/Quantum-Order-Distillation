@@ -20,7 +20,7 @@ For five possibly noncommuting gap factors U₀,…,U₄, define the alternating
 
 ```math
 \mathcal C_4(X_1,X_2,X_3,X_4;U_0,\ldots,U_4)
-=\sum_{\sigma\in S_4}\operatorname{sgn}(\sigma)
+=\sum_{\sigma\in S_4}\mathrm{sgn}(\sigma)
 U_0X_{\sigma(1)}U_1X_{\sigma(2)}U_2X_{\sigma(3)}U_3X_{\sigma(4)}U_4.
 \tag{1}
 ```
@@ -78,9 +78,9 @@ where
 
 ```math
 \lambda(X_1,\ldots,X_8)
-=2\sum_{\sigma\in S_4}\operatorname{sgn}(\sigma)
-\operatorname{tr}\!\left(X_{\sigma(1)}X_{\sigma(2)}[X_5,X_6]\right)
-\operatorname{tr}\!\left(X_{\sigma(3)}X_{\sigma(4)}[X_7,X_8]\right).
+=2\sum_{\sigma\in S_4}\mathrm{sgn}(\sigma)
+\mathrm{tr}\!\left(X_{\sigma(1)}X_{\sigma(2)}[X_5,X_6]\right)
+\mathrm{tr}\!\left(X_{\sigma(3)}X_{\sigma(4)}[X_7,X_8]\right).
 \tag{5}
 ```
 
@@ -118,19 +118,19 @@ The component contributing to the top exterior coefficient has four X factors, t
 The even subalgebra of G is commutative. Hence P and Q are 3×3 matrices over a commutative algebra, to which Cayley–Hamilton applies. For an even-length word of odd matrices, moving its first odd factor around the trace changes the sign. In particular,
 
 ```math
-\operatorname{tr}(X^{2k})=
-\operatorname{tr}(Y^{2k})=
-\operatorname{tr}(Z^{2k})=0.
+\mathrm{tr}(X^{2k})=
+\mathrm{tr}(Y^{2k})=
+\mathrm{tr}(Z^{2k})=0.
 ```
 
 A word with more than four X factors, more than two Y factors, or more than two Z factors vanishes, because it repeats an exterior generator from the corresponding group. Define the even scalar elements
 
 ```math
 \begin{aligned}
-a&=\operatorname{tr}(X^2Y^2),& b&=\operatorname{tr}(X^2Z^2),&
-c&=\operatorname{tr}(Y^2Z^2),\\
-u&=\operatorname{tr}(X^4Y^2),& v&=\operatorname{tr}(X^4Z^2),&
-w&=\operatorname{tr}(X^2Y^2Z^2)+\operatorname{tr}(X^2Z^2Y^2).
+a&=\mathrm{tr}(X^2Y^2),& b&=\mathrm{tr}(X^2Z^2),&
+c&=\mathrm{tr}(Y^2Z^2),\\
+u&=\mathrm{tr}(X^4Y^2),& v&=\mathrm{tr}(X^4Z^2),&
+w&=\mathrm{tr}(X^2Y^2Z^2)+\mathrm{tr}(X^2Z^2Y^2).
 \end{aligned}
 ```
 
@@ -138,11 +138,11 @@ Graded cyclicity and the degree restrictions yield
 
 ```math
 \begin{gathered}
-\operatorname{tr}P=0,\qquad \operatorname{tr}Q=-a-b,\qquad
-\tfrac12\operatorname{tr}P^2=a+b+c,\\
-\operatorname{tr}(PQ)=-u-v,\qquad
-\tfrac13\operatorname{tr}P^3=u+v+w,\qquad
-\operatorname{tr}(P^2Q)=0.
+\mathrm{tr}P=0,\qquad \mathrm{tr}Q=-a-b,\qquad
+\tfrac12\mathrm{tr}P^2=a+b+c,\\
+\mathrm{tr}(PQ)=-u-v,\qquad
+\tfrac13\mathrm{tr}P^3=u+v+w,\qquad
+\mathrm{tr}(P^2Q)=0.
 \tag{7}
 \end{gathered}
 ```
@@ -150,10 +150,10 @@ Graded cyclicity and the degree restrictions yield
 For clarity, the last cancellation is especially easy to track after discarding forbidden degrees. The remaining four traces are
 
 ```math
-\operatorname{tr}(X^2Y^2XZ^2X),\quad
-\operatorname{tr}(Y^2X^3Z^2X),\quad
-\operatorname{tr}(X^2Z^2XY^2X),\quad
-\operatorname{tr}(Z^2X^3Y^2X).
+\mathrm{tr}(X^2Y^2XZ^2X),\quad
+\mathrm{tr}(Y^2X^3Z^2X),\quad
+\mathrm{tr}(X^2Z^2XY^2X),\quad
+\mathrm{tr}(Z^2X^3Y^2X).
 ```
 
 Moving the last X of the first and third terms to the front produces a minus sign; moving the initial Y² or Z² of the second and fourth terms to the end produces no sign. They therefore cancel in pairs. Similarly, the mixed terms in tr(PQ) cancel because Y²X and Z²X both have odd degree.
@@ -161,7 +161,7 @@ Moving the last X of the first and third terms to the front produces a minus sig
 Cayley–Hamilton for traceless P gives
 
 ```math
-P^3=\tfrac12\operatorname{tr}(P^2)P+\tfrac13\operatorname{tr}(P^3)I.
+P^3=\tfrac12\mathrm{tr}(P^2)P+\tfrac13\mathrm{tr}(P^3)I.
 \tag{8}
 ```
 
@@ -169,10 +169,10 @@ The component linear in Q of Cayley–Hamilton for P+tQ gives
 
 ```math
 \begin{aligned}
-P^2Q+PQP+QP^2={}&\operatorname{tr}(Q)P^2+
-\operatorname{tr}(PQ)P+\tfrac12\operatorname{tr}(P^2)Q\\
-&+\left[\operatorname{tr}(P^2Q)-
-\tfrac12\operatorname{tr}(P^2)\operatorname{tr}(Q)\right]I.
+P^2Q+PQP+QP^2={}&\mathrm{tr}(Q)P^2+
+\mathrm{tr}(PQ)P+\tfrac12\mathrm{tr}(P^2)Q\\
+&+\left[\mathrm{tr}(P^2Q)-
+\tfrac12\mathrm{tr}(P^2)\mathrm{tr}(Q)\right]I.
 \end{aligned}
 \tag{9}
 ```
@@ -197,7 +197,7 @@ The nonscalar terms on the right of (9) are the negatives of (10). Its scalar te
 since a²=b²=ac=bc=0 by the degree restrictions. Thus
 
 ```math
-F=2\operatorname{tr}(X^2Y^2)\operatorname{tr}(X^2Z^2)I_3.
+F=2\mathrm{tr}(X^2Y^2)\mathrm{tr}(X^2Z^2)I_3.
 \tag{11}
 ```
 

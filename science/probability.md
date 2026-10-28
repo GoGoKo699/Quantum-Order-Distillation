@@ -80,9 +80,9 @@ J_{\mathcal N}=(\mathcal N\otimes\mathrm{id})(|\Omega_d\rangle\langle\Omega_d|)
 \tag{7}
 ```
 
-Thus $`\operatorname{Tr}J_{\mathcal N}=d`$, $`J_\Delta=I_{d^2}/d`$ for the completely depolarizing channel, and
+Thus $`\mathrm{Tr}J_{\mathcal N}=d`$, $`J_\Delta=I_{d^2}/d`$ for the completely depolarizing channel, and
 $`J_{\mathcal S}=p|\Omega_d\rangle\langle\Omega_d|`$.
-The probability is $`\operatorname{Tr}J_{\mathcal S}/d`$. This factor of $`d`$ is essential.
+The probability is $`\mathrm{Tr}J_{\mathcal S}/d`$. This factor of $`d`$ is essential.
 
 ## Full-rank noise floor and small-noise limits
 
@@ -155,7 +155,7 @@ For completeness, a related upper bound holds for any fixed number $`m`$ of call
 
 ```math
 p_{\mathrm{opt},m}(\mathcal N_\epsilon)
-\le\Pr\{\operatorname{Binomial}(m,\epsilon)\ge c(d)\}.
+\le\Pr\{\mathrm{Binomial}(m,\epsilon)\ge c(d)\}.
 \tag{14}
 ```
 
@@ -192,7 +192,7 @@ Let $`c=c(d)`$, and choose any degree-$`c`$ central controller with depolarizing
 In particular, $`\mathcal Q_d(\epsilon)=\Theta_d(\epsilon^{-1})`$ for each fixed $`d`$. The constants are dimension dependent and can be large; no optimal prefactor or uniform-in-d efficiency is asserted.
 
 **Lower bound.** Markov's inequality applied to Eq. (14) gives
-$`p\le\Pr\{\operatorname{Binomial}(m,\epsilon)\ge c\}\le m\epsilon/c`$.
+$`p\le\Pr\{\mathrm{Binomial}(m,\epsilon)\ge c\}\le m\epsilon/c`$.
 Every positive-probability fixed-batch protocol therefore has $`m/p\ge c/\epsilon`$.
 
 **Construction.** Replace each of the base controller's $`c`$ slots by a contiguous block of $`k=\lceil1/\epsilon\rceil`$ supplied channel uses, always in the same internal order. Superpose only the original block permutations. The target still visits every one of the $`ck`$ supplied boxes once, and there is no intervening target operation. Algebraically the new polynomial is
@@ -231,7 +231,7 @@ Expand each Kraus operator in the usual Pauli basis:
 
 ```math
 K^{(j)}_a=k^{(j)}_{a0}I+\boldsymbol k^{(j)}_a\cdot\boldsymbol\sigma,
-\qquad k^{(j)}_{ai}=\tfrac12\operatorname{Tr}(\sigma_iK^{(j)}_a).
+\qquad k^{(j)}_{ai}=\tfrac12\mathrm{Tr}(\sigma_iK^{(j)}_a).
 ```
 
 The vector components are generally complex. Define the positive semidefinite covariance
@@ -265,21 +265,21 @@ S(Q_1,Q_2)_{ij}
 It is the covariance of the cross products, so it is positive semidefinite. Summing Eq. (17) gives the exact formula for four possibly different channels:
 
 ```math
-p=\operatorname{Tr}\big[S(Q_1,Q_2)^T S(Q_3,Q_4)\big].
+p=\mathrm{Tr}\big[S(Q_1,Q_2)^T S(Q_3,Q_4)\big].
 \tag{19}
 ```
 
-For identical channels, $`S(Q,Q)=2\operatorname{adj}(Q)^T`$, yielding
+For identical channels, $`S(Q,Q)=2\mathrm{adj}(Q)^T`$, yielding
 
 ```math
-\boxed{\quad p=4\operatorname{Tr}\big[\operatorname{adj}(Q)
-                                  \operatorname{adj}(Q)^T\big].\quad}
+\boxed{\quad p=4\mathrm{Tr}\big[\mathrm{adj}(Q)
+                                  \mathrm{adj}(Q)^T\big].\quad}
 \tag{20}
 ```
 
-The transpose in these formulas is **not** an adjoint. It arises from the bilinear Pauli-vector dot product. Replacing it with an adjoint is incorrect for general nonunital channels. Positivity follows because $`\operatorname{adj}(Q)`$ and its transpose are positive semidefinite. Full Choi rank implies $`Q>0`$, making Eq. (20) strictly positive.
+The transpose in these formulas is **not** an adjoint. It arises from the bilinear Pauli-vector dot product. Replacing it with an adjoint is incorrect for general nonunital channels. Positivity follows because $`\mathrm{adj}(Q)`$ and its transpose are positive semidefinite. Full Choi rank implies $`Q>0`$, making Eq. (20) strictly positive.
 
-For a Pauli channel $`\mathcal N(\rho)=\sum_{i=0}^3p_i\sigma_i\rho\sigma_i`$, $`Q=\operatorname{diag}(p_1,p_2,p_3)`$, and
+For a Pauli channel $`\mathcal N(\rho)=\sum_{i=0}^3p_i\sigma_i\rho\sigma_i`$, $`Q=\mathrm{diag}(p_1,p_2,p_3)`$, and
 
 ```math
 p=4(p_1^2p_2^2+p_1^2p_3^2+p_2^2p_3^2).
@@ -306,12 +306,12 @@ For a word $`\pi`$, define the augmented cycle on $`\{0,1,\ldots,m\}`$,
 C_\pi=(0,\pi_1,\ldots,\pi_m).
 ```
 
-Let $`\#\operatorname{cyc}(g)`$ count all cycles of a permutation, including fixed points. The normalized Hilbert–Schmidt Gram entry is
+Let $`\#\mathrm{cyc}(g)`$ count all cycles of a permutation, including fixed points. The normalized Hilbert–Schmidt Gram entry is
 
 ```math
 g_{\pi\tau}:=\frac1d\sum_{\boldsymbol a}
- \operatorname{Tr}(K_{\boldsymbol a,\pi}^\dagger K_{\boldsymbol a,\tau})
-=d^{\#\operatorname{cyc}(C_\pi C_\tau^{-1})-m-1}.
+ \mathrm{Tr}(K_{\boldsymbol a,\pi}^\dagger K_{\boldsymbol a,\tau})
+=d^{\#\mathrm{cyc}(C_\pi C_\tau^{-1})-m-1}.
 \tag{23}
 ```
 
@@ -323,7 +323,7 @@ For any coefficient vector,
 
 ```math
 p_{I/d}=\frac1{L^2}\sum_{\pi,\tau}\overline{c_\pi}c_\tau
-d^{\#\operatorname{cyc}(C_\pi C_\tau^{-1})-m-1}.
+d^{\#\mathrm{cyc}(C_\pi C_\tau^{-1})-m-1}.
 \tag{24}
 ```
 
@@ -332,7 +332,7 @@ For a central polynomial this is its input-independent identity success probabil
 If coefficients are real integers, collect the exact signed histogram
 
 ```math
-h_k=\sum_{\pi,\tau:\ \#\operatorname{cyc}(C_\pi C_\tau^{-1})=k}c_\pi c_\tau.
+h_k=\sum_{\pi,\tau:\ \#\mathrm{cyc}(C_\pi C_\tau^{-1})=k}c_\pi c_\tau.
 \tag{25}
 ```
 
@@ -365,9 +365,9 @@ The same exact contraction expression vanishes at dimensions one and two, as req
 There is also a structurally independent check. On $`3\times3`$ matrices the scalar value is, by the printed trace formula in [Drensky and Kasparian, p. 752](../references/RELATED_WORK.md#central-polynomials),
 
 ```math
-\lambda=2\sum_{\sigma\in S_4}\operatorname{sgn}(\sigma)
-\operatorname{Tr}(X_{\sigma_1}X_{\sigma_2}[X_5,X_6])
-\operatorname{Tr}(X_{\sigma_3}X_{\sigma_4}[X_7,X_8]).
+\lambda=2\sum_{\sigma\in S_4}\mathrm{sgn}(\sigma)
+\mathrm{Tr}(X_{\sigma_1}X_{\sigma_2}[X_5,X_6])
+\mathrm{Tr}(X_{\sigma_3}X_{\sigma_4}[X_7,X_8]).
 \tag{27}
 ```
 
@@ -389,7 +389,7 @@ The Regev polynomial supplies a simple all-dimensional quantitative formula, tho
 ```math
 m_k(X)=X_{(k-1)^2+1}\cdots X_{k^2},
 \qquad
-R_d=\operatorname{Alt}_X\operatorname{Alt}_Y
+R_d=\mathrm{Alt}_X\mathrm{Alt}_Y
   [m_1(X)m_1(Y)\cdots m_d(X)m_d(Y)].
 \tag{28}
 ```
@@ -398,8 +398,8 @@ Alternation here is the unnormalized signed sum. There are exactly
 $`s=L=(r!)^2`$ distinct signed words. [Procesi's published 2021 account](../references/RELATED_WORK.md#central-polynomials), Theorem 7 and Eq. (2.85) on page 99, gives the determinant evaluation, with the constant from Eq. (1.65) on page 94. Its proof on page 100 follows Formanek. The same formula appears in the revised 2022 account, Theorem 4.13 and Eq. (37):
 
 ```math
-R_d(X;Y)=a_d\det[\operatorname{vec}X_1,\ldots,\operatorname{vec}X_r]
-                \det[\operatorname{vec}Y_1,\ldots,\operatorname{vec}Y_r]I_d,
+R_d(X;Y)=a_d\det[\mathrm{vec}X_1,\ldots,\mathrm{vec}X_r]
+                \det[\mathrm{vec}Y_1,\ldots,\mathrm{vec}Y_r]I_d,
 ```
 
 ```math
@@ -409,13 +409,13 @@ C_d=\frac{\prod_{k=1}^d(2k-1)!}{\prod_{k=1}^{d-1}k!}.
 \tag{29}
 ```
 
-The sign convention of $`\operatorname{vec}`$ does not affect probabilities. The same coordinate basis must be used in both determinants.
+The sign convention of $`\mathrm{vec}`$ does not affect probabilities. The same coordinate basis must be used in both determinants.
 
-For identical slots $`\mathcal N`$, form the matrix $`V`$ with columns $`\operatorname{vec}K_a`$, so $`VV^\dagger=J_{\mathcal N}`$. Cauchy–Binet, including all orderings of each set of distinct columns, gives
+For identical slots $`\mathcal N`$, form the matrix $`V`$ with columns $`\mathrm{vec}K_a`$, so $`VV^\dagger=J_{\mathcal N}`$. Cauchy–Binet, including all orderings of each set of distinct columns, gives
 
 ```math
 \sum_{a_1,\ldots,a_r}
- |\det[\operatorname{vec}K_{a_1},\ldots,\operatorname{vec}K_{a_r}]|^2
+ |\det[\mathrm{vec}K_{a_1},\ldots,\mathrm{vec}K_{a_r}]|^2
 =r!\det J_{\mathcal N}.
 \tag{30}
 ```
@@ -430,7 +430,7 @@ Equations (4), (29), and (30) yield
 
 This particular protocol succeeds precisely when $`J_{\mathcal N}`$ has full rank. That equivalence does not characterize distillability by other polynomials or controllers.
 
-Since $`J_{\mathcal N}\ge0`$ and $`\operatorname{Tr}J_{\mathcal N}=d`$, the arithmetic–geometric mean inequality gives $`\det J_{\mathcal N}\le d^{-d^2}`$, with equality at the depolarizer. Consequently
+Since $`J_{\mathcal N}\ge0`$ and $`\mathrm{Tr}J_{\mathcal N}=d`$, the arithmetic–geometric mean inequality gives $`\det J_{\mathcal N}\le d^{-d^2}`$, with equality at the depolarizer. Consequently
 
 ```math
 p_R(\mathcal N)\le p_R(\Delta_d)

@@ -124,11 +124,11 @@ Use the unnormalized Choi convention
 J(\mathcal N_j)
 =\sum_a\lvert K^{(j)}_a\rangle\!\rangle
        \langle\!\langle K^{(j)}_a\rvert,
-\qquad \operatorname{Tr}J(\mathcal N_j)=d.
+\qquad \mathrm{Tr}J(\mathcal N_j)=d.
 ```
 
 The range of this positive matrix is the span of its Kraus vectors. Full Choi rank is therefore equivalent to
-$`\operatorname{span}\{K^{(j)}_a\}=M_d(\mathbb C)`$.
+$`\mathrm{span}\{K^{(j)}_a\}=M_d(\mathbb C)`$.
 
 If every scalar in (2) vanished, write arbitrary $`X_j`$ as a linear combination of the Kraus operators of slot $`j`$. Multilinearity would then force $`P(X_1,\ldots,X_m)=0`$ for every matrix tuple, contradicting nonidentity. At least one scalar is nonzero, and hence $`p>0`$. No channel description enters the controller coefficients. $`\square`$
 

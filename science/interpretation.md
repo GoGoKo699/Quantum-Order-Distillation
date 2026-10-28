@@ -1,6 +1,6 @@
 # What exact heralded recovery means
 
-The [model](model.md) supplies an ideal coherent ordering resource for independent ordinary channels. The [construction](polynomial_realization.md) gives an accepted operation $`p\,\operatorname{id}_d`$, and the [query theorem](query_threshold.md) characterizes the minimum number of compulsory channel traversals. This page states the operational consequence and the boundaries of those claims.
+The [model](model.md) supplies an ideal coherent ordering resource for independent ordinary channels. The [construction](polynomial_realization.md) gives an accepted operation $`p\,\mathrm{id}_d`$, and the [query theorem](query_threshold.md) characterizes the minimum number of compulsory channel traversals. This page states the operational consequence and the boundaries of those claims.
 
 ## Heralded entanglement generation
 
@@ -62,7 +62,7 @@ w=1-\prod_{j=1}^m(1-\eta_j).
 Expanding any complete composition in (1) using (2), the terms containing at least one depolarizer have total weight $`w`$. Every such term is a replacer channel
 
 ```math
-\mathcal R_\sigma(\rho)=\sigma\operatorname{Tr}\rho.
+\mathcal R_\sigma(\rho)=\sigma\mathrm{Tr}\rho.
 ```
 
 The first depolarizer removes dependence on the input; subsequent trace-preserving maps only change its fixed output. Combining those terms across all selected orders yields
@@ -79,7 +79,7 @@ Let the entanglement fidelity relative to identity be
 ```math
 F_e(\mathcal C)=
 \langle\Phi_d|
-(\operatorname{id}\otimes\mathcal C)
+(\mathrm{id}\otimes\mathcal C)
 (|\Phi_d\rangle\langle\Phi_d|)
 |\Phi_d\rangle.
 ```
@@ -97,7 +97,7 @@ Every replacer has $`F_e(\mathcal R_\sigma)=1/d^2`$, and $`F_e(\mathcal T)\le1`$
 ```
 
 The same right side lower-bounds
-$`\tfrac12\|\mathcal C-\operatorname{id}\|_\diamond`$: use the maximally entangled input and measure its projector at the output. Known unitary corrections depending on a classical outcome do not evade the bound because they take replacers to replacers.
+$`\tfrac12\|\mathcal C-\mathrm{id}\|_\diamond`$: use the maximally entangled input and measure its projector at the output. Known unitary corrections depending on a classical outcome do not evade the bound because they take replacers to replacers.
 
 The gap is strictly positive for full-rank slots, so an accepted classical-order channel in this model cannot be exactly identity. For completely depolarizing slots, it is exactly $`\Delta`$ and equality holds in (4). Coherent order instead permits a positive-probability accepted branch with unit fidelity. This comparison concerns conditional exactness and does not assert an advantage in throughput.
 
@@ -192,10 +192,10 @@ Suppose the implemented accepted operation $`\widetilde{\mathcal E}`$ is complet
 
 ```math
 \|\widetilde{\mathcal E}
--p\,\operatorname{id}\|_\diamond\le\delta.
+-p\,\mathrm{id}\|_\diamond\le\delta.
 ```
 
-For any normalized input including a reference, let $`\widetilde\sigma`$ be the unnormalized accepted output and $`\widetilde p=\operatorname{Tr}\widetilde\sigma`$. Then
+For any normalized input including a reference, let $`\widetilde\sigma`$ be the unnormalized accepted output and $`\widetilde p=\mathrm{Tr}\widetilde\sigma`$. Then
 
 ```math
 \|\widetilde\sigma-p\rho\|_1\le\delta,

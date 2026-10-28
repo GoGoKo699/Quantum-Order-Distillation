@@ -61,10 +61,10 @@ The switch acts on $`T`$ and $`C`$, and as identity on $`R`$ and $`A`$. After th
 
 ```math
 \mathcal E_F(\rho)
-=\operatorname{Tr}_{CA}\!\left[
+=\mathrm{Tr}_{CA}\!\left[
 (I_T\otimes F_{CA}^{1/2})
 (\mathfrak S_{\mathcal N_1,\ldots,\mathcal N_m}
- \otimes\operatorname{id}_A)(\rho\otimes\omega_{CA})
+ \otimes\mathrm{id}_A)(\rho\otimes\omega_{CA})
 (I_T\otimes F_{CA}^{1/2})
 \right].
 \tag{3}
@@ -97,14 +97,14 @@ Ideal coherent order control is supplied. The slot count is not a gate-level imp
 An exact identity branch means equality of completely positive maps,
 
 ```math
-\mathcal E_F=p\,\operatorname{id}_d,\qquad p>0.
+\mathcal E_F=p\,\mathrm{id}_d,\qquad p>0.
 \tag{4}
 ```
 
 Its success probability is $`p`$ on every normalized input. For every untouched reference $`R`$ and joint input,
 
 ```math
-(\operatorname{id}_R\otimes\mathcal E_F)(\rho_{RT})
+(\mathrm{id}_R\otimes\mathcal E_F)(\rho_{RT})
 =p\,\rho_{RT}.
 ```
 
@@ -126,27 +126,27 @@ The Choi matrix is **unnormalized**, with the output factor written first:
 
 ```math
 J_{\mathcal N}
- =(\mathcal N\otimes\operatorname{id})
+ =(\mathcal N\otimes\mathrm{id})
    (|\Omega_d\rangle\langle\Omega_d|)
  =\sum_a|K_a\rangle\!\rangle\langle\!\langle K_a|,
 \qquad
-\operatorname{Tr}J_{\mathcal N}=d.
+\mathrm{Tr}J_{\mathcal N}=d.
 \tag{5}
 ```
 
-Trace preservation is $`\operatorname{Tr}_{\mathrm{output}}J_{\mathcal N}=I_d`$.
+Trace preservation is $`\mathrm{Tr}_{\mathrm{output}}J_{\mathcal N}=I_d`$.
 
 For the completely depolarizing channel
-$`\Delta(\rho)=I_d\operatorname{Tr}(\rho)/d`$,
+$`\Delta(\rho)=I_d\mathrm{Tr}(\rho)/d`$,
 
 ```math
 J_\Delta=\frac{I_{d^2}}d,
 \qquad
-J_{p\,\operatorname{id}}=
+J_{p\,\mathrm{id}}=
 p|\Omega_d\rangle\langle\Omega_d|.
 ```
 
-Full Choi rank means $`\operatorname{rank}J_{\mathcal N}=d^2`$. Equivalently, a Kraus family spans $`M_d(\mathbb C)`$. This equivalence and its use in the positivity proof are established in [Theorem 1](polynomial_realization.md#theorem-1-universal-exact-branch). Full rank is sufficient for the universal construction to succeed, and it is the hypothesis of the fixed-channel converse. It is not a claim that every rank-deficient channel is impossible to distill.
+Full Choi rank means $`\mathrm{rank}J_{\mathcal N}=d^2`$. Equivalently, a Kraus family spans $`M_d(\mathbb C)`$. This equivalence and its use in the positivity proof are established in [Theorem 1](polynomial_realization.md#theorem-1-universal-exact-branch). Full rank is sufficient for the universal construction to succeed, and it is the hypothesis of the fixed-channel converse. It is not a claim that every rank-deficient channel is impossible to distill.
 
 ## 7. Result map
 
