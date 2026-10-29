@@ -108,7 +108,7 @@ The one- and two-call converse above applies to all their branches. Their aggreg
 
 **Attainment.** For any LP point, choose raw call-count probabilities $`t_m=v_m/\sum_nv_n`$ and flag acceptance fractions $`u_{mi}/v_m`$, omitting a type with $`v_m=0`$. Overall success is $`1/\sum_nv_n`$, so expected calls per acceptance are exactly the objective.
 
-The native two- and three-call errors use traceless unitary corrections orthogonal to the identity Bell vector. The one-call nonidentity unitary is $`Z`$, also traceless. It need not be orthogonal to each other error vector: their positive combined error Choi matrix still has support orthogonal to $`\Phi`$. Thus the mixture's Bell lower bound and channel triangle upper bound coincide, giving exact half-diamond error equal to its Bell deficit. This realizes every LP point. For a fixed call family, each cost segment is affine in error, so cumulative-prefix vertices suffice for its lower hull. $`\square`$
+The native two- and three-call channels have traceless nonidentity unitary components, whose Bell vectors are orthogonal to the identity Bell vector. The one-call nonidentity unitary is $`Z`$, also traceless. It need not be orthogonal to each other error vector: their positive combined error Choi matrix still has support orthogonal to $`\Phi`$. Thus the mixture's Bell lower bound and channel triangle upper bound coincide, giving exact half-diamond error equal to its Bell deficit. This realizes every LP point. For a fixed call family, each cost segment is affine in error, so cumulative-prefix vertices suffice for its lower hull. $`\square`$
 
 For accepted hull weights $`\alpha_i`$, the actual raw trial probabilities are
 
