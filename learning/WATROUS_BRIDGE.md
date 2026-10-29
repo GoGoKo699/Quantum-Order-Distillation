@@ -325,7 +325,7 @@ Consider independent slots containing
 
 ```math
 \mathcal N_\epsilon=(1-\epsilon)\mathrm{id}+\epsilon\Delta,
-\qquad 0<\epsilon\le1.
+\qquad 0\lt \epsilon\le1.
 ```
 
 At the minimum degree $`c(d)`$, substituting identity for any one variable of a central polynomial must make it vanish. A nonzero remaining polynomial would otherwise be a central polynomial of lower degree. In the identity-mixture channel, the minimum-degree filter therefore accepts only the all-depolarizing part of the expansion. Its success scales as $`\epsilon^{c(d)}`$.
@@ -377,7 +377,7 @@ The bridge explains the conceptual transitions. Each scientific claim has an aut
 | How does this connect to retained entanglement? | [Specified-protocol uniform separation](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) |
 | Which computations can be reproduced, and what do they establish? | [Verification guide](../verification/README.md) |
 
-The control-error distinction is especially relevant when success is small. A small error in the unnormalized accepted operation can become larger after conditioning. The bound on the conditional trace norm error in the linked proof is $`2\delta/(p-\delta)`$ when the operation error is at most $`\delta<p`$ in diamond norm. It is an input-by-input bound including references, rather than a diamond distance between generally nonlinear normalized transformations.
+The control-error distinction is especially relevant when success is small. A small error in the unnormalized accepted operation can become larger after conditioning. The bound on the conditional trace norm error in the linked proof is $`2\delta/(p-\delta)`$ when the operation error is at most $`\delta\lt p`$ in diamond norm. It is an input-by-input bound including references, rather than a diamond distance between generally nonlinear normalized transformations.
 
 <a id="source-boundaries"></a>
 
@@ -471,7 +471,7 @@ The inherited P2 branch and the alternative Q branch illustrate why the physical
 
 **Milestones M24 and M27–M30.** The same positivity foundation supports three distinct arguments.
 
-First, if the Schur kernel has a strictly positive identity floor, every nonzero accepted effect leaves a nonzero diagonal contribution from ordinary composed slot channels. For full-Choi-rank slots that contribution has full Choi rank. A positive map containing it cannot have the rank-one Choi operator of an exact unitary branch. The [strict Schur obstruction](../science/noisy_recovery_obstruction.md#strict-schur-obstruction) gives the precise finite-call theorem. Global dephasing with $`\eta<1`$ and physical local dephasing with $`\gamma<1`$ have such floors. This proof concerns unobserved phase noise on the actual order register, with no noise flag or coherence restoration; it is not a claim about every type of controller noise.
+First, if the Schur kernel has a strictly positive identity floor, every nonzero accepted effect leaves a nonzero diagonal contribution from ordinary composed slot channels. For full-Choi-rank slots that contribution has full Choi rank. A positive map containing it cannot have the rank-one Choi operator of an exact unitary branch. The [strict Schur obstruction](../science/noisy_recovery_obstruction.md#strict-schur-obstruction) gives the precise finite-call theorem. Global dephasing with $`\eta\lt 1`$ and physical local dephasing with $`\gamma\lt 1`$ have such floors. This proof concerns unobserved phase noise on the actual order register, with no noise flag or coherence restoration; it is not a claim about every type of controller noise.
 
 Second, the optimum survives a finite target-axis tilt even after the reward matrices stop commuting. A diagonal matrix made from the best individual mode rewards can still dominate every corrected reward matrix. The [tilted proof](../science/tilted_readout.md#tilted-optimality) reduces this operator-envelope condition to two coupled 2-by-2 Walsh blocks. Exact polynomial identities and positive Bernstein coefficients establish the required margin. At $`\epsilon=1/100`$ and physical $`\gamma=4/5`$, the complete three-X readout frontier remains optimal throughout
 
@@ -485,6 +485,6 @@ The angle $`\delta`$ is in radians. The conclusion optimizes the final correctio
 
 Third, the sister project keeps the *same raw channel family and per-bit noise* but compares different outputs. Its specified three-call experiment retains C and T unconditionally, while the four-call P2 experiment measures C and accepts a Bell pair across R:T. Exact rational grid certificates plus a Stinespring continuity bound prove a uniform separation on the smaller angular interval $`|\delta|\le .2`$ radians. This interval is stated in $`\delta`$, not in $`t`$. The proof and its full resource comparison live in [Entanglement’s uniform theorem](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation).
 
-The three-call occupied 3-by-2 output is PPT and therefore separable for all three physical encodings. The four-call accepted R:T output is NPT, with $`.035<p<.095`$ and $`F>101/190`$. Calls, controller bits, bipartitions and conditional endpoints differ. The theorem concerns those experiments, not every retained protocol or an optimized equal-resource comparison. It establishes a connection between the tracks without making retained entanglement a recovery certificate.
+The three-call occupied 3-by-2 output is PPT and therefore separable for all three physical encodings. The four-call accepted R:T output is NPT, with $`.035\lt p\lt .095`$ and $`F>101/190`$. Calls, controller bits, bipartitions and conditional endpoints differ. The theorem concerns those experiments, not every retained protocol or an optimized equal-resource comparison. It establishes a connection between the tracks without making retained entanglement a recovery certificate.
 
 Watrous supplies positive operators, instruments, Schur maps, norms and separability language. The controller-feasibility theorem, tight frontiers, envelope certificate and rational-grid interpolation are the missing project arguments. The [verification guide](../verification/README.md) distinguishes independent exact reconstruction, interval certificates and numerical evaluations from the analytical proofs that connect them.

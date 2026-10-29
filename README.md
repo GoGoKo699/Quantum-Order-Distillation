@@ -52,7 +52,7 @@ There is also a sharp distinction between fewest calls and expected calls. For
 
 ```math
 \mathcal N_\epsilon=(1-\epsilon)\,\mathrm{id}_d+\epsilon\Delta_d,
-\qquad 0<\epsilon\le1,
+\qquad 0\lt \epsilon\le1,
 ```
 
 every minimum-call exact controller satisfies

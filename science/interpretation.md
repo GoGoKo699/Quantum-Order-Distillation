@@ -48,7 +48,7 @@ The unnormalized Choi convention gives a channel decomposition
 \qquad\text{(2)}
 ```
 
-When $`\eta_j<1`$, positivity follows from
+When $`\eta_j\lt 1`$, positivity follows from
 $`J_{\mathcal N_j}-\eta_jI_{d^2}/d\ge0`$, and its channel normalization follows by taking the appropriate partial trace. The case $`\eta_j=1`$ is $`\mathcal N_j=\Delta`$.
 
 ### A quantitative gap from the identity

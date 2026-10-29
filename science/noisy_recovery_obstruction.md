@@ -61,13 +61,13 @@ Global unobserved dephasing has
 \Gamma=\eta\boldsymbol1\boldsymbol1^T+(1-\eta)I_r.
 ```
 
-For every $`0\le\eta<1`$, the theorem applies with $`\lambda=1-\eta`$. In the [physical three-qubit local model](noisy_routing_model.md#physical-codebook), $`\Gamma`$ is a simultaneous row-and-column permutation of
+For every $`0\le\eta\lt 1`$, the theorem applies with $`\lambda=1-\eta`$. In the [physical three-qubit local model](noisy_routing_model.md#physical-codebook), $`\Gamma`$ is a simultaneous row-and-column permutation of
 
 ```math
 \begin{pmatrix}1&\gamma\\\gamma&1\end{pmatrix}^{\otimes3}.
 ```
 
-For every $`0\le\gamma<1`$, its smallest eigenvalue is $`(1-\gamma)^3>0`$. Thus the noisy [recovery frontiers](recovery_frontier.md) and [tilted theorem](tilted_readout.md) describe approximate recovery whenever $`\epsilon>0`$ and either of these strict dephasing models is present.
+For every $`0\le\gamma\lt 1`$, its smallest eigenvalue is $`(1-\gamma)^3>0`$. Thus the noisy [recovery frontiers](recovery_frontier.md) and [tilted theorem](tilted_readout.md) describe approximate recovery whenever $`\epsilon>0`$ and either of these strict dephasing models is present.
 
 The ideal boundary $`\eta=1`$ or $`\gamma=1`$ has a singular correlation matrix, so the theorem makes no assertion there. This is consistent with the [exact four-call qubit construction](qubit.md).
 
