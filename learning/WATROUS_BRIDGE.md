@@ -375,6 +375,7 @@ The bridge explains the conceptual transitions. Each scientific claim has an aut
 | Which controller noise excludes finite exact recovery? | [Strict Schur-floor obstruction](../science/noisy_recovery_obstruction.md#strict-schur-obstruction) |
 | Which readout attains the complete noisy recovery frontier? | [Orthogonal frontier](../science/recovery_frontier.md#frontier-theorem); [certified tilted interval](../science/tilted_readout.md#tilted-optimality) |
 | How does this connect to retained entanglement? | [Specified-protocol uniform separation](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) |
+| What is optimal for the original rank-deficient slot with three calls, and across randomized call counts? | [Native half-diamond frontier](../science/native_three_call_frontier.md#native-three-call-frontier); [randomized call-cost closure](../science/randomized_call_cost.md#convex-call-cost) |
 | Which computations can be reproduced, and what do they establish? | [Verification guide](../verification/README.md) |
 
 The control-error distinction is especially relevant when success is small. A small error in the unnormalized accepted operation can become larger after conditioning. The bound on the conditional trace norm error in the linked proof is $`2\delta/(p-\delta)`$ when the operation error is at most $`\delta\lt p`$ in diamond norm. It is an input-by-input bound including references, rather than a diamond distance between generally nonlinear normalized transformations.
@@ -488,3 +489,67 @@ Third, the sister project keeps the *same raw channel family and per-bit noise* 
 The three-call occupied 3-by-2 output is PPT and therefore separable for all three physical encodings. The four-call accepted R:T output is NPT, with $`.035\lt p\lt .095`$ and $`F>101/190`$. Calls, controller bits, bipartitions and conditional endpoints differ. The theorem concerns those experiments, not every retained protocol or an optimized equal-resource comparison. It establishes a connection between the tracks without making retained entanglement a recovery certificate.
 
 Watrous supplies positive operators, instruments, Schur maps, norms and separability language. The controller-feasibility theorem, tight frontiers, envelope certificate and rational-grid interpolation are the missing project arguments. The [verification guide](../verification/README.md) distinguishes independent exact reconstruction, interval certificates and numerical evaluations from the analytical proofs that connect them.
+
+<a id="native-benchmark-bridge"></a>
+
+## 10. A native three-call benchmark and exact fresh-trial cost
+
+**Milestones M19–M21 and M29–M30.** The original measure-Z/prepare-X slot also supports a complete recovery benchmark of its own. Here the slot has Kraus operators $`K_0=|+\rangle\langle0|`$ and $`K_1=|-\rangle\langle1|`$, with no depolarizing admixture. It is rank deficient. Three independent compulsory slots have **all six** order labels available. Global order-basis dephasing with coherence $`\eta_3`$ acts immediately after routing and before final controller processing. These choices differ from the four-call, eight-order, full-rank physical-local-noise frontier above and from the sister’s retained three-order experiment.
+
+The accepted output is a target-only channel: average the corrected fine outcome label, retain the overall acceptance flag, and require the total accepted map to have the form $`\mathcal E=p\Lambda`$ with input-independent $`p`$. Arbitrary fine outcomes in the converse may have input-dependent probabilities. The error variable here is
+
+```math
+e=\frac12\|\Lambda-\mathrm{id}\|_\diamond.
+```
+
+It is an externally specified channel-error tolerance, distinct from the depolarizing admixture $`\epsilon`$ of the other channel family. Watrous §3.3.2 explains why the diamond norm tests arbitrary reference-assisted inputs rather than one selected output state.
+
+The [native frontier theorem](../science/native_three_call_frontier.md#native-three-call-frontier) constructs four orthogonal controller projector flags. Their probabilities and corrected, unnormalized Bell overlaps are:
+
+| Flag | Acceptance probability | Corrected Bell overlap | Target correction |
+|---|---|---|---|
+| O | $`(4-\eta_3)/12`$ | $`(1+2\eta_3)/12`$ | $`(X-Z)/\sqrt2`$ |
+| E | $`(4-\eta_3)/12`$ | $`(1+\eta_3)/12`$ | Y |
+| T | $`(1+2\eta_3)/6`$ | $`(1+5\eta_3)/24`$ | I |
+| Sign | $`(1-\eta_3)/6`$ | $`(1-\eta_3)/24`$ | I |
+
+For a flag with probability $`p_z`$ and overlap $`f_z`$, accept a fraction $`x_z`$ between zero and one. Sorting by $`f_z/p_z`$ gives the full frontier:
+
+```math
+f_{3,\max}(p)=\max\left\{\sum_z f_zx_z:
+0\le x_z\le1,\quad\sum_zp_zx_z=p\right\},
+\qquad e_{3,\min}(p)=1-\frac{f_{3,\max}(p)}p.
+```
+
+The universal controller converse bounds the Bell overlap through positive Choi blocks, including the possible complex coherence between two nonidentity Bell directions. It therefore covers ancillary controllers and continuously rotated effects rather than only the native measurement. The attaining corrected channels are mixtures of unitary channels whose nonidentity Bell support is orthogonal to the identity Bell vector. A Bell input gives error at least $`1-f/p`$; the unitary triangle bound gives the same upper bound. That additional argument makes the result an exact half-diamond frontier. A generic Bell-fidelity calculation would supply only the lower bound.
+
+### Accepted fractions and trial probabilities are different weights
+
+One call followed by a known final Hadamard gives Z dephasing, with $`p=1`$ and Bell overlap $`1/2`$. The corresponding two-call and three-call native frontiers supply the remaining comparison points. Randomly choosing among these fresh-trial types allows a complete finite linear-program closure. If type j is selected with probability $`t_j`$ and succeeds with probability $`p_j`$, its fraction among accepted outputs is
+
+```math
+\alpha_j=\frac{t_jp_j}{\sum_k t_kp_k},
+\qquad C=\sum_j\alpha_j\frac{m_j}{p_j},
+\qquad
+t_j=\frac{\alpha_j/p_j}{\sum_k\alpha_k/p_k}.
+```
+
+Here $`m_j`$ is the calls charged per attempt and $`C`$ is expected calls per accepted fresh output. The [convex cost theorem](../science/randomized_call_cost.md#convex-call-cost) proves that the lower envelope of the native cumulative vertices is exact over the stated randomized one-/two-/three-call model. The corrected accepted target-only channel also averages the trial-type label. The attaining mixtures retain equality between half-diamond error and the Bell deficit; the converse does not assume that every individual fine outcome is a normalized channel.
+
+For example, fix **the same external tolerance $`e=3/8`$** and $`\eta_2=\eta_3=.9`$. Select a one-call trial with probability $`1/21`$ and a three-call trial accepting only O, E and T with probability $`20/21`$. The total acceptance is $`62/63`$ and mean calls per attempt are $`61/21`$, giving
+
+```math
+C_{123}=\frac{183}{62},\qquad
+C_{12}=\frac{101}{32},\qquad
+1-\frac{C_{123}}{C_{12}}=\frac{203}{3131}\simeq .0648355.
+```
+
+The accepted fractions are $`3/62`$ and $`59/62`$, which differ from the attempt probabilities. The saving charges failed trials and does not reuse a failed unknown input. Six coherent labels, routing and correction hardware remain additional resources. Batch coding or collective distillation across failures is outside this fresh-trial model.
+
+### Unequal logical noise and a conditional duration test
+
+Equal retained coherence at different call counts is an assumption, not a consequence of equal hardware noise. The [unequal-noise analysis](../science/randomized_call_cost.md#unequal-noise) treats $`\eta_2`$ and $`\eta_3`$ independently and separates extending the achievable accuracy from lowering cost at a common external tolerance. At $`\eta_2=.9`$, accuracy extends for $`\eta_3>6/7`$, while common-error cost improves only for $`\eta_3>79/91`$. The fixed-tolerance optimum retains its stated external $`e`$ when comparing these effects.
+
+If a scalar logical dephasing model additionally gives $`\eta_m=\exp(-\kappa T_m)`$, the same slice’s cost saving requires $`T_3/T_2\lt1.3421693427`$. A duration ratio of 3/2 loses the gain at $`\eta_2=.9`$; it can retain cost gain at larger $`\eta_2`$, above approximately .91999108053509. The [duration model](../science/randomized_call_cost.md#duration-model) states the exact threshold and assumptions. Physical local noise on a multibit controller generally has pair-dependent factors and requires its own analysis. Charging elapsed time instead of noisy calls also changes the LP objective; a call-cost saving alone is not a hardware-duration claim.
+
+The analytical controller and mixture proofs, exact invariant-kernel checks, and numerical evaluations have distinct roles. The [verification guide](../verification/README.md) documents the native benchmark reconstruction and the limits of numerical SDP corroboration alongside the earlier joint certificates. Watrous supplies the channel, instrument, norm, probability and optimization foundations; the native frontier, finite closure and unequal-noise thresholds are project arguments.

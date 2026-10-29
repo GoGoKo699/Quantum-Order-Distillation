@@ -1,6 +1,6 @@
 # Thirty milestones for quantum order distillation
 
-This map follows one operational story: **how coherent order can herald an exact identity channel, what that capability costs, and which recovery tradeoffs remain attainable when the controller is noisy.** It connects the central-polynomial characterization to a complete controller optimization and a proved comparison with retained entanglement.
+This map follows one operational story: **how coherent order can herald an exact identity channel, what that capability costs, and which recovery tradeoffs remain attainable when the controller is noisy.** It connects the central-polynomial characterization to complete controller optimizations, an exact randomized call-cost benchmark, and a proved comparison with retained entanglement.
 
 The sole educational anchor, shared with the sister project, is **John Watrous, *The Theory of Quantum Information* (2018)**. The [Watrous bridge](WATROUS_BRIDGE.md) identifies its version and relevant sections, translates notation, supplies worked explanations, and marks the steps developed in the project. Primary papers in [Related work](../references/RELATED_WORK.md) provide research attribution rather than additional educational anchors.
 
@@ -20,9 +20,9 @@ The **13 + 17 allocation** reflects the meeting of channel mathematics, polynomi
 | [M01](#m01)–[M06](#m06) | States, references, channels, positive Choi matrices and accepted operations |
 | [M07](#m07)–[M13](#m13) | Independent ordered slots, polynomials, exactness and the complete task |
 | [M14](#m14)–[M18](#m18) | Physical construction, full-rank converse, qubit and qutrit realizations |
-| [M19](#m19)–[M21](#m21) | Success cost, batching and model boundaries |
+| [M19](#m19)–[M21](#m21) | Success cost, batching, model boundaries and a native three-call benchmark |
 | [M22](#m22)–[M27](#m27) | Physical noise, complete controller feasibility, no-go and attaining frontiers |
-| [M28](#m28)–[M30](#m30) | Robust sister comparison, evidence and whole-project synthesis |
+| [M28](#m28)–[M30](#m30) | Robust sister comparison, randomized cost, unequal noise and whole-project synthesis |
 
 The [proof route](WATROUS_BRIDGE.md#proof-route) and [scientific overview](../science/README.md) supply direct specialist routes.
 
@@ -342,45 +342,45 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 **Central question:** What does a perfect accepted channel cost when most attempts fail?
 
-**Understanding target:** Use coefficient normalization and exact depolarizing contractions to interpret qubit success 3/64 and qutrit success 1/43,740. Separate p, calls per attempt, occupied orders, register size, and m/p for independent fresh-pair trials.
+**Understanding target:** Use coefficient normalization and exact depolarizing contractions to interpret qubit success 3/64 and qutrit success 1/43,740. Separate p, calls per attempt, occupied orders, register size, and m/p for independent fresh-pair trials. For randomized trial types, distinguish attempt-selection probabilities from the fractions of accepted outputs that each type supplies.
 
 **Dependencies and story role:** M12, M17 and M18. Converts existence into an explicitly charged operational statement.
 
 **Conceptual connection:** A perfect normalized branch can coexist with a large expected cost; a failed unknown input is not assumed reusable.
 
-**Source pointers:** Watrous §§1.2.2 and 2.3.2; [success probability](../science/probability.md#qubit-success-probability); [resource accounting](../science/probability.md#resource-accounting).
+**Source pointers:** Watrous §§1.2.2 and 2.3.2; [success probability](../science/probability.md#qubit-success-probability); [resource accounting](../science/probability.md#resource-accounting); [accepted-fraction cost accounting](../science/randomized_call_cost.md#convex-call-cost).
 
 <a id="m20"></a>
 
-### M20. Noise floors, batching and the near-identity boundary
+### M20. Batching, noise floors and the access boundary
 
 **Phase:** Narrative/innovation.
 
 **Central question:** Why can weaker slot noise make a fixed exact filter rarer, and how can a larger batch help?
 
-**Understanding target:** Distinguish a CP full-rank noise floor from a controller-noise floor. Explain the minimum-call suppression law near identity and the matching fixed-dimension expected-call scaling obtained by contiguous batching. Retain its fixed-batch, fresh-input and known-noise assumptions.
+**Understanding target:** Distinguish a CP full-rank noise floor from a controller-noise floor. Explain the minimum-call suppression law near identity and the matching fixed-dimension expected-call scaling obtained by contiguous batching. Retain its fixed-batch, fresh-input and known-noise assumptions. Explain why correlated slots, rank-deficient channels, protected bypasses and per-slot wrappers require separate conclusions rather than a transfer of the full-rank characterization.
 
 **Dependencies and story role:** M15, M16 and M19. Integrates probability with call-count optimization rather than treating minimum calls as the only cost.
 
 **Conceptual connection:** Batching changes the effective slot strength while still charging every original traversal; it does not optimize routing overhead or establish communication capacity.
 
-**Source pointers:** Watrous §1.2.2 and §2.2.2; [CP noise floor](../science/probability.md#cp-noise-floor); [near-identity suppression](../science/probability.md#noise-approaching-the-identity); [expected charged calls](../science/probability.md#expected-charged-calls).
+**Source pointers:** Watrous §1.2.2 and §2.2.2; [CP noise floor](../science/probability.md#cp-noise-floor); [near-identity suppression](../science/probability.md#noise-approaching-the-identity); [expected charged calls](../science/probability.md#expected-charged-calls); [model boundary examples](../science/interpretation.md).
 
 <a id="m21"></a>
 
-### M21. Which changes leave the theorem’s model?
+### M21. A complete native three-call error frontier
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Which physical resources would invalidate a transfer of the exact recovery theorem?
+**Central question:** What is the best success probability versus half-diamond error for the original measure-Z/prepare-X channel with six coherent orders?
 
-**Understanding target:** Explain the correlated-noise and rank-deficient boundary examples, classical-order comparison, and randomizing wrappers. Keep an unknown input, inaccessible environments and compulsory raw traversals visible when comparing protocols.
+**Understanding target:** Specify the rank-deficient slot without depolarizing admixture, all six order labels, and global order-basis dephasing before final controller processing. Explain the four native projector flags, their fractional acceptance frontier, and the converse over arbitrary mixed, ancillary and complex controllers. Identify the evaluated output as the corrected accepted target-only channel after averaging fine outcomes; only aggregate success must be input independent. Explain why the attaining channels make half-diamond error equal the Bell deficit.
 
-**Dependencies and story role:** M13, M16 and M20. Closes the ideal-control story by testing the assumptions on which its characterization depends.
+**Dependencies and story role:** M05–M08, M11–M13 and M19–M20. Introduces a complete finite-error benchmark at a rank-deficient boundary, before the separate full-rank four-call model.
 
-**Conceptual connection:** A valid theorem transfer requires matching access and resources; equal marginal channels or a convenient Kraus formula do not suffice.
+**Conceptual connection:** A Bell bound can become an exact diamond frontier when an attaining channel structure is proved. This six-order three-call task does not contradict the full-rank four-call exactness threshold or replace the retained three-order experiment.
 
-**Source pointers:** Watrous §§2.2.2 and 3.3.2; [interpretation and boundary cases](../science/interpretation.md); [raw-slot access](../science/noisy_routing_model.md#shared-access).
+**Source pointers:** Watrous §§2.2.2, 2.3.2, 3.2 and 3.3.2; [native three-call frontier](../science/native_three_call_frontier.md#native-three-call-frontier); [focused bridge](WATROUS_BRIDGE.md#native-benchmark-bridge).
 
 <a id="m22"></a>
 
@@ -496,19 +496,19 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 <a id="m29"></a>
 
-### M29. Proof, certificate, evaluation and attribution
+### M29. Randomized call cost and unequal controller noise
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Which parts of the scientific account are analytical theorems, exact finite certificates or numerical crosschecks?
+**Central question:** Which randomized one-, two- and three-call trials minimize expected calls at a fixed external error tolerance?
 
-**Understanding target:** Trace the degree imports, inherited qubit branch, controller reduction, exact coefficient reconstruction, Bernstein positivity and rational CT/RT certificates to their proper sources. Explain what the independent rebuild verifies and why Bell fidelity at most one half does not prove separability of every possible complex-controller Choi output.
+**Understanding target:** Form the lower convex cost envelope from the native frontier vertices and convert accepted fractions into attempt probabilities. Explain the exact optimum over the stated fresh-trial class, including the one-/two-call baseline, separate coherences eta2 and eta3, and the distinction between a new accuracy and savings at a common error. Use the equal-.9, error-3/8 example to interpret cost 183/62 versus 101/32. Treat scalar logical dephasing over duration as a conditional model and recompute the objective if time replaces call count. Connect each bound and certificate to its analytical proof, exact rebuild and inherited ingredients.
 
-**Dependencies and story role:** M16–M18 and M23–M28. Integrates evidence and attribution before the final scientific synthesis.
+**Dependencies and story role:** M11–M12, M19–M21 and M23–M28. Integrates acceptance, error, noise and charged resources before the final scientific synthesis.
 
-**Conceptual connection:** Finite exact obligations can support a uniform theorem when combined with its analytical argument; numerical agreement and bounded literature search retain narrower meanings.
+**Conceptual connection:** The fair comparison fixes the external error and includes failed fresh trials. Equal coherence at different call counts, native routing hardware cost and local multibit noise cannot be inferred from the call-count optimum.
 
-**Source pointers:** Watrous positivity and fidelity foundations; [source boundaries](WATROUS_BRIDGE.md#source-boundaries); [related work](../references/RELATED_WORK.md); [verification commands](../verification/README.md).
+**Source pointers:** Watrous §§1.2.2–1.2.3 and 3.3.2; [convex call-cost theorem](../science/randomized_call_cost.md#convex-call-cost); [unequal-noise criterion](../science/randomized_call_cost.md#unequal-noise); [conditional duration model](../science/randomized_call_cost.md#duration-model); [attribution](../references/RELATED_WORK.md); [verification](../verification/README.md).
 
 <a id="m30"></a>
 
@@ -518,10 +518,10 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 **Central question:** What does coherent order enable, what does controller noise forbid, and what is the charged operational conclusion?
 
-**Understanding target:** Connect ideal exact recovery and its central-degree threshold to the strict-noise no-go, the attainable noisy recovery frontier, tilted robustness and the specified entanglement comparison. State the independent raw-slot model, final-only corrections and fresh-input accounting in one coherent explanation, without inferring unassisted capacity or unrestricted controller–target impossibility.
+**Understanding target:** Connect ideal exact recovery and its central-degree threshold to the strict-noise no-go, the attainable noisy recovery frontier, tilted robustness, the six-order native half-diamond frontier, randomized one-/two-/three-call cost closure, and the specified entanglement comparison. State the independent raw-slot model, final-only corrections and fresh-input accounting in one coherent explanation, without inferring unassisted capacity or unrestricted controller–target impossibility.
 
 **Dependencies and story role:** M13–M29. Phase synthesis: combines construction, converse, noisy optimization, sister connection and evidence boundaries.
 
-**Conceptual connection:** The common mathematical foundation supports distinct scientific tasks; it is the access model, endpoint, error and success convention together that determine what transfers.
+**Conceptual connection:** Proofs, exact finite certificates and numerical crosschecks retain different evidential roles. The common mathematical foundation supports distinct scientific tasks; it is the access model, endpoint, error and success convention together that determine what transfers.
 
 **Source pointers:** Watrous channel, instrument, fidelity and separability sections through the [bridge](WATROUS_BRIDGE.md); [scientific route](../science/README.md); [shared access](../science/noisy_routing_model.md#shared-access); [verification](../verification/README.md).

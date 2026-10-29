@@ -10,11 +10,33 @@ The [polynomial realization](../science/polynomial_realization.md) and [query th
 |---|---|---|
 | [Navascués (2018)](#navascues2018) | Controlled probes return after interacting with an uncontrolled target; probe interference realizes central polynomials. | Establishes the resetting mechanism in a model with accessible returned probes. |
 | [Chiribella, Wilson and Chau (2021)](#cyclic2021) | Cyclic orders of completely depolarizing channels give heralded transmission with vanishing error as the number of calls grows. | Higher-dimensional communication activation is established; the displayed finite-call herald retains depolarization. |
+| [Chiribella et al. (2021)](#two-slot-communication2021) | Two independent noisy-channel instances in a quantum switch enable perfect communication; an identical self-switch has a product-branch decomposition. | Communication activation and the distinction between retained-controller and reference entanglement are inherited. |
+| [Das and Bandyopadhyay (2022)](#das-bandyopadhyay2022) | A quantum switch of two switches can improve the probability of heralded perfect qubit communication. | More switches improving communication is established; the fixed-channel three-call converse and randomized call-cost envelope are the narrower questions here. |
 | [Kechrimparis, Moran and Kwon (2025)](#kechrimparis2025) | Recursive superswitches distill qubit channels; the paper also defines the general permutation switch. | Supplies the channel-level architecture and the inherited four-call qubit branch. |
 | [Kechrimparis et al. (2024)](#kechrimparis2024) | Four-slot nested switching and a Pauli-specific branch reduction for state discrimination. | Supplies the eight-order architecture; its branch-exclusivity assumption must be checked before transfer to raw non-Pauli slots. |
 | [Molitor et al. (2024)](#molitor2024) | Two-slot switching with dissipative control noise and outcome-dependent shielding. | Establishes the importance of control noise and rules out an unrestricted claim that every noisy controller destroys exactness. |
 | [Regula and Takagi (2021)](#regula-takagi2021) | An accepted unwanted positive component obstructs perfect probabilistic distillation. | Supplies the obstruction principle; the routing-specific argument proves that nonzero acceptance cannot eliminate the diagonal component. |
 | [Shen et al. (2026)](#shen2026) | A coherent Stinespring oracle with a specified environment basis permits Kraus-polynomial synthesis. | The returned environment is an additional resource; channel-only compilation is treated separately. |
+
+<a id="two-slot-communication2021"></a>
+
+## Communication baselines and the fixed-channel cost theorem
+
+**Giulio Chiribella, Manik Banik, Some Sankar Bhattacharya, Tamal Guha, Mir Alimuddin, Arup Roy, Sutapa Saha, Sristy Agrawal and Guruprasad Kar**, *Indefinite causal order enables perfect quantum communication with zero capacity channels*, **New Journal of Physics 23**, 033039 (2021). [DOI](https://doi.org/10.1088/1367-2630/abe7a0); [arXiv:1810.10457v4](https://arxiv.org/abs/1810.10457v4), revised 5 September 2022.
+
+Perfect communication through a coherent ordering of noisy independent channels is an established mechanism. Equation (3) gives the identical two-slot switch's commutator/anticommutator decomposition, with product controller–target branches. Its retained controller–target separability is compatible with preserving a message's entanglement with an untouched reference. These mechanisms and distinctions are inherited inputs to the present benchmark.
+
+<a id="das-bandyopadhyay2022"></a>
+
+**Debarshi Das and Somshubhro Bandyopadhyay**, *Quantum communication using a quantum switch of quantum switches*, **Proceedings of the Royal Society A 478**(2266), 20220231 (2022). [DOI](https://doi.org/10.1098/rspa.2022.0231); [arXiv:2111.08266v3](https://arxiv.org/abs/2111.08266v3), revised 6 October 2022 and identified by its authors as the published version; [institutional record](https://discovery.ucl.ac.uk/id/eprint/10156914/).
+
+The paper coherently orders two quantum switches and gives cases with a higher probability of perfect heralded qubit transmission than the component switches, alongside cases without an advantage. Thus the broad phenomenon of improving heralded communication with additional switches is established prior work.
+
+The [native three-call frontier](../science/native_three_call_frontier.md) addresses the fixed rank-deficient channel with Kraus operators $`K_0=|+\rangle\langle0|`$ and $`K_1=|-\rangle\langle1|`$, all six three-slot orders, and global unflagged logical order dephasing. It determines the full success–half-diamond-error frontier over the stated mixed, ancillary and complex controller model, with known final target unitary corrections. Four native controller flags attain a matching converse. Input independence is required for total acceptance; it is not assumed for every fine outcome.
+
+The [randomized call-cost theorem](../science/randomized_call_cost.md) then gives the exact expected-call optimum across fresh one-, two- and three-call trials, with a matched protocol and convex-hull converse. Its unequal-noise and duration conclusions use the specified scalar logical-dephasing law. They neither price an unmeasured router implementation nor assert a physical multiqubit-noise advantage. The result is for this fixed channel and trial model, rather than a general channel-family or capacity theorem.
+
+This three-call benchmark does not contradict the four-call minimum for full-Choi-rank qubit slots: its fixed channel has deficient Choi rank. It is also distinct from the four-call eight-order Bell-fidelity frontier with physical local controller noise. The call set, slot family, error criterion and noise model must remain attached to each statement. These comparisons establish the precise relation to the cited mechanisms without a claim of priority from a narrow search.
 
 <a id="kechrimparis2025"></a>
 

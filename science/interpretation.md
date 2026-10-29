@@ -232,3 +232,9 @@ Bell fidelity above one half is a sufficient two-qubit entanglement witness. A l
 Coherent-order communication activation is an established phenomenon. In particular, cyclic-order protocols already provide higher-dimensional heralded transmission with an error that decreases as more channels are used. Central-polynomial quantum resetting also predates this channel model.
 
 The result here is finite exact identity heralding through ordinary inaccessible-environment channel slots, together with the minimum-use characterization in that restricted architecture. The precise inherited results, source versions, and implication boundaries are given in [Related work](../references/RELATED_WORK.md), with bibliographic data in [references.bib](../references/references.bib).
+
+## Native recovery, labels and trial mixtures
+
+The [rank-two benchmark](native_three_call_frontier.md) gives exact target-only half-diamond frontiers under global logical controller noise. Its attaining maps have nonidentity Choi support orthogonal to the Bell state, making the diamond lower bound tight. This proven equality does not turn a general Bell-fidelity bound into a diamond-error theorem for other channels or label-retaining tasks.
+
+The [convex resource theorem](randomized_call_cost.md) weights successes and attempts differently. Its exact 6.48% example saves expected compulsory calls at a fixed external error tolerance by randomizing fresh one- and three-call attempts. Six coherent order labels and physical routing overhead remain separate resources. The conditional visibility law $`\eta_m=e^{-\gamma T_m}`$ changes with architecture duration; its threshold is not a local physical-qubit noise or hardware certification.

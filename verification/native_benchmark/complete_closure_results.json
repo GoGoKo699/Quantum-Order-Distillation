@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "three_call_direct_grid_points": 549,
+  "raw_flow_lp_hull_cases": 350,
+  "additional_resource_weight_cases": 100,
+  "arbitrary_complex_gram_strategies": 250,
+  "phase_grid_cases": 2475,
+  "activation_random_cases": 1500,
+  "max_three_knapsack_lp_residual": 1.1102230246251565e-16,
+  "max_direct_choi_error_residual": 5.741934705483231e-16,
+  "max_raw_flow_vs_hull_residual": 6.217248937900877e-15,
+  "positive_global_witness_violation": 0.0,
+  "priority": {
+    "eta2": "9/10",
+    "eta3": "9/10",
+    "epsilon": "3/8",
+    "optimal_cost": "183/62",
+    "baseline_cost": "101/32",
+    "relative_saving": "203/3131",
+    "acceptance": "62/63",
+    "raw_trial_probabilities": {
+      "3": "20/21",
+      "1": "1/21"
+    }
+  },
+  "equal_noise_reentrant_thresholds": [
+    0.6025483911749282,
+    0.779397597018221
+  ],
+  "unequal_noise_priority_threshold": "79/91",
+  "priority_duration_ratio_limit": 1.3421693427268675,
+  "per_call_duration_ratio_1_5_coherence_threshold": 0.9199910805350898,
+  "per_call_exponent_threshold": 0.04169565202830154,
+  "exact_physical_coherence_root_bracket": [
+    "9199910805350899/10000000000000000",
+    "91999108053509/100000000000000"
+  ],
+  "conditional_physics_warning": "Scalar logical-order dephasing model only; local physical-qubit errors need a different channel."
+}

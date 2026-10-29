@@ -1,0 +1,154 @@
+{
+  "status": "exact_fraction_constants_and_analytic_proofs",
+  "priority": {
+    "eta2": "9/10",
+    "eta3": "9/10",
+    "external_error": "3/8",
+    "cost123": "183/62",
+    "cost12": "101/32",
+    "relative_saving": "203/3131",
+    "relative_saving_decimal": 0.06483551580964549,
+    "three_OET": {
+      "success": "59/60",
+      "error": "87/236",
+      "cost": "180/59"
+    },
+    "accepted_weights": {
+      "one": "3/62",
+      "three_OET": "59/62"
+    },
+    "raw_trial_probabilities": {
+      "one": "1/21",
+      "three_OET": "20/21"
+    },
+    "aggregate_success": "62/63",
+    "mean_calls_per_attempt": "61/21",
+    "hull_vertices": [
+      {
+        "label": "three_O",
+        "error": "3/31",
+        "cost": "360/31"
+      },
+      {
+        "label": "two_minus",
+        "error": "3/22",
+        "cost": "80/11"
+      },
+      {
+        "label": "three_OET",
+        "error": "87/236",
+        "cost": "180/59"
+      },
+      {
+        "label": "one",
+        "error": "1/2",
+        "cost": "1"
+      }
+    ],
+    "cost_segments": [
+      {
+        "interval": [
+          "3/31",
+          "3/22"
+        ],
+        "intercept": "200/9",
+        "slope": "-2960/27"
+      },
+      {
+        "interval": [
+          "3/22",
+          "87/236"
+        ],
+        "intercept": "1960/201",
+        "slope": "-10960/603"
+      },
+      {
+        "interval": [
+          "87/236",
+          "1/2"
+        ],
+        "intercept": "273/31",
+        "slope": "-484/31"
+      }
+    ],
+    "maximum_relative_saving": "203/3083",
+    "maximum_saving_error": "87/236"
+  },
+  "unequal_priority": {
+    "eta2": "9/10",
+    "accuracy_extension_eta3_strict_lower_bound": "6/7",
+    "common_cost_eta3_strict_lower_bound": "79/91",
+    "fixed_error": "3/8",
+    "fixed_error_cost_segments": [
+      {
+        "eta3_interval": [
+          "0",
+          "79/91"
+        ],
+        "cost": "101/32"
+      },
+      {
+        "eta3_interval": [
+          "79/91",
+          "15/17"
+        ],
+        "cost": "(789-680*z)/(135-83*z)"
+      },
+      {
+        "eta3_interval": [
+          "15/17",
+          "1"
+        ],
+        "cost": "(17*z+3)/(18*z-10)"
+      }
+    ],
+    "gamma_extra_time_strict_upper_bound": "ln(819/790)",
+    "gamma_extra_time_decimal": 0.03605113839200222,
+    "T3_over_T2_strict_upper_bound": 1.3421693427268673
+  },
+  "equal_noise_common_cost_phase": {
+    "low_interval": [
+      "1/2",
+      "(35-sqrt(985))/6"
+    ],
+    "high_interval": [
+      "(5+sqrt(233))/26",
+      "1"
+    ],
+    "all_finite_thresholds_strict": true,
+    "low_root_decimal": 0.6025483911749282,
+    "high_root_decimal": 0.779397597018221
+  },
+  "any_activation": {
+    "eta2_le_half": "eta3>2/5",
+    "eta2_above_half": "eta3>min(2*x/(3-x),(57*x+4)/(13*x+52))",
+    "crossing": "(63+sqrt(7953))/166",
+    "crossing_decimal": 0.9167445426413625
+  },
+  "duration_ratio_three_halves": {
+    "condition": "13*t^5+52*t^3-57*t^2-4>0, t=sqrt(eta2)",
+    "x_polynomial_coefficients_descending": [
+      169,
+      1352,
+      2704,
+      -3249,
+      -456,
+      -16
+    ],
+    "certified_root_lower": "9199910805350899/10000000000000000",
+    "certified_root_upper": "91999108053509/100000000000000",
+    "polynomial_at_lower_sign": -1,
+    "polynomial_at_upper_sign": 1,
+    "root_decimal": "0.919991080535089948106984351003611371123541598602",
+    "accuracy_extension_possible": false,
+    "activation_iff": "eta2>x_c"
+  },
+  "scope": {
+    "fine_outcomes_may_be_input_dependent": true,
+    "aggregate_accepted_map_must_be_p_times_TP": true,
+    "metric": "accepted target-only half-diamond error after averaging fine labels",
+    "objective": "expected compulsory noisy calls per accepted fresh trial",
+    "logical_noise_model": "generator gamma*(Diag-id), before final controller processing",
+    "general_attempt_weights": "replace m by a_m in LP objective"
+  }
+}

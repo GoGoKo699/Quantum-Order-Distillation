@@ -55,6 +55,14 @@ The ideal exact branch and its minimum-call characterization do not settle usefu
 
 The shared optimization and certificate bundle is one common contribution across the two repositories. This repository owns recovery and its optimization proofs; the sister repository owns the retained-entanglement criterion and the full uniform separation proof. Neither the original central-polynomial threshold nor the order-support criterion alone implies this noisy comparison.
 
+## The rank-deficient native benchmark
+
+At the fixed measure-$`Z`$/prepare-$`X`$ endpoint, the channel has Choi rank two. The full-rank central-polynomial minimum consequently does not control its call count. The [native three-call frontier](native_three_call_frontier.md) instead uses every permutation of three raw slots and a global order-dephasing mask. Its four controller projectors provide a finite attaining protocol and an all-controller converse for accepted target-only half-diamond error.
+
+The [randomized call-cost account](randomized_call_cost.md) supplies the complete two-call baseline proof and then convexifies all one-/two-/three-call strategies. It distinguishes raw attempt-selection probabilities from fractions of accepted outputs, proves the unequal logical-noise activation condition and checks an explicitly conditional duration law. The target-only output averages fine labels, and only aggregate acceptance is required to be input independent.
+
+These are additional scoped benchmark results. A Bell deficit equals half-diamond error here because the attaining corrected mixtures have error Choi support orthogonal to the identity Bell state. That equality is proved for these maps; it is not transferred automatically to the four-call tilted Bell frontier or to a retained controller output.
+
 ## Verification route
 
 Read the [verification guide](../verification/README.md) before interpreting a numerical result. The evidence has three distinct roles:

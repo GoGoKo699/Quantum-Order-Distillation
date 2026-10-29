@@ -153,3 +153,26 @@ The authoritative noisy-controller proofs are [routing and noise](../science/noi
 [the orthogonal frontier](../science/recovery_frontier.md), and
 [tilted readout optimality](../science/tilted_readout.md).
 The sister repository owns the complete [retained-C:T/recovered-R:T separation proof](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md).
+
+## Native three-call frontier and randomized call costs
+
+The separate [native benchmark guide](native_benchmark/README.md) covers the
+fixed rank-deficient measure-Z/prepare-X channel, global logical control
+noise, the complete one-/two-/three-call frontier, and optimal randomized
+fresh-trial costs. It uses the accepted target-only half-diamond metric after
+averaging fine labels. The [three-call proof](../science/native_three_call_frontier.md#native-three-call-frontier)
+and [convex cost/noise proof](../science/randomized_call_cost.md#convex-call-cost)
+state the full controller and resource assumptions.
+
+```bash
+python3 verification/native_benchmark/verify_exact_invariance.py --output-dir /tmp/quantum-order-native-check
+python3 -m pip install -r verification/native_benchmark/requirements.txt
+python3 verification/native_benchmark/verify_complete_closure.py --output-dir /tmp/quantum-order-native-check
+```
+
+The first command is standard-library only. The second suite has separately
+pinned SciPy and Matplotlib dependencies and writes its fresh JSON/figures to
+the selected directory. The guide separates exact identities, exact priority
+cost constants, finite numerical LP/Choi checks, and analytical continuum
+claims. This benchmark does not use the four-call physical local-noise
+certificate bundle above.
