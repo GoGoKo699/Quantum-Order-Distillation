@@ -1,8 +1,8 @@
 # Native one-, two-, and three-call benchmark
 
 This directory verifies the fixed qubit measure–prepare channel
-$K_0=\lvert+\rangle\langle0\rvert$,
-$K_1=\lvert-\rangle\langle1\rvert$ with global logical order-basis
+$`K_0=\lvert+\rangle\langle0\rvert`$,
+$`K_1=\lvert-\rangle\langle1\rvert`$ with global logical order-basis
 dephasing. The analytical statements and complete proofs are the
 [three-call frontier](../../science/native_three_call_frontier.md#native-three-call-frontier)
 and the [randomized call-cost envelope](../../science/randomized_call_cost.md#convex-call-cost).
@@ -68,13 +68,13 @@ complex-controller test evaluates a Bell-overlap upper bound; it does not
 assert input-independent success for every sampled fine outcome.
 
 A successful complete run reports `status: PASS` and zero positive global
-witness violation. At $\eta_2=\eta_3=9/10$ and error budget $3/8$, the exact
-priority values are cost $183/62$, baseline cost $101/32$, relative saving
-$203/3131$, aggregate acceptance $62/63$, and raw trial probabilities $1/21$
-for one call and $20/21$ for three calls. The recorded maximum numerical
-residuals are approximately $1.11\times10^{-16}$ for the native knapsack/LP
-comparison, $5.75\times10^{-16}$ for the direct Choi error, and
-$6.22\times10^{-15}$ for raw-flow versus convex-hull cost.
+witness violation. At $`\eta_2=\eta_3=9/10`$ and error budget $`3/8`$, the exact
+priority values are cost $`183/62`$, baseline cost $`101/32`$, relative saving
+$`203/3131`$, aggregate acceptance $`62/63`$, and raw trial probabilities $`1/21`$
+for one call and $`20/21`$ for three calls. The recorded maximum numerical
+residuals are approximately $`1.11\times10^{-16}`$ for the native knapsack/LP
+comparison, $`5.75\times10^{-16}`$ for the direct Choi error, and
+$`6.22\times10^{-15}`$ for raw-flow versus convex-hull cost.
 
 The exact program reports 96 invariance equalities, 2,727 unequal-noise test
 cases and zero mismatches. Rational identities are checked exactly; small
