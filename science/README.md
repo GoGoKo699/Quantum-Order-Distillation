@@ -4,7 +4,7 @@ A noisy channel leaves information in an inaccessible environment. Choosing a cl
 
 A central polynomial supplies exactly that condition. Its value is a scalar matrix for every tuple of matrices, even when the individual matrices do not commute. The same identity can therefore apply separately to every inaccessible noise history. The environment labels are still summed incoherently; within each fixed label tuple, the orders interfere.
 
-This account establishes the resulting channel capability and its exact minimum-use characterization. It also records the probability cost, an explicit qutrit construction, and the assumptions under which the characterization applies.
+This account establishes the resulting channel capability and its exact minimum-use characterization. It also records the probability cost, an explicit qutrit construction, and the assumptions under which the characterization applies. A second connected argument determines noisy-controller recovery frontiers and their relation to retained entanglement.
 
 ## The argument in order
 
@@ -41,6 +41,27 @@ These statements explain capability and cost within one model. They do not estim
 Central-polynomial resetting with returned quantum probes was already established by Navascués. Coherent cyclic orders already activate communication through complete depolarization and approach perfect heralded transmission with increasing uses. The qubit superswitch distillation branch is also prior work. The comparison here concerns **finite exact identity heralding from ordinary inaccessible-environment channel slots and its minimum compulsory traversal count**.
 
 The [related-work account](../references/RELATED_WORK.md) compares the physical access and exact claims of these sources, including current versions. It distinguishes the order-polynomial construction from a coherent Kraus-oracle compiler, whose environment access is stronger.
+
+## Noisy control: a second connected argument
+
+The ideal exact branch and its minimum-call characterization do not settle useful recovery after controller coherence is lost. The noisy extension keeps the channel slots raw and fixes the physical controller encoding before optimization.
+
+1. [Specify the shared family and physical noise](noisy_routing_model.md). The four-slot nested-switch architecture is inherited; its eight physical order codes determine local dephasing distances. Final target corrections are permitted, while per-slot wrappers and target interleavings are excluded.
+2. [Characterize all physical controllers](controller_optimization.md#controller-feasibility). Positive accepted coefficient matrices obey one diagonal budget. Symmetry gives uniform preparation; correction-sector splitting and realification produce input-independent attaining representatives without falsely assigning that property to every controller.
+3. [Locate the exactness boundary](noisy_recovery_obstruction.md#strict-schur-obstruction). Strict Schur noise leaves unavoidable positive diagonal acceptance. Independent full-rank slots make that component full Choi rank, excluding an exact unitary branch.
+4. [Solve the orthogonal recovery frontier](recovery_frontier.md#frontier-theorem). Coefficient-wise Walsh identities and an optimized correction envelope reduce the whole acceptance–fidelity problem to a fractional knapsack, including boundary modes and deterministic acceptance.
+5. [Prove tilted optimality](tilted_readout.md#tilted-optimality). A diagonal matrix envelope survives noncommuting overlap matrices. An exact degree-16 Bernstein certificate establishes its strict block margin throughout the stated interval.
+6. [Compare the operational outputs](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation). The sister repository proves that specified retained-$`C:T`$ outputs can be separable while an accepted four-call $`R:T`$ output is entangled under the same per-bit noise. The protocols' distinct resources and conditioning are part of the comparison.
+
+The shared optimization and certificate bundle is one common contribution across the two repositories. This repository owns recovery and its optimization proofs; the sister repository owns the retained-entanglement criterion and the full uniform separation proof. Neither the original central-polynomial threshold nor the order-support criterion alone implies this noisy comparison.
+
+## The rank-deficient native benchmark
+
+At the fixed measure-$`Z`$/prepare-$`X`$ endpoint, the channel has Choi rank two. The full-rank central-polynomial minimum consequently does not control its call count. The [native three-call frontier](native_three_call_frontier.md) instead uses every permutation of three raw slots and a global order-dephasing mask. Its four controller projectors provide a finite attaining protocol and an all-controller converse for accepted target-only half-diamond error.
+
+The [randomized call-cost account](randomized_call_cost.md) supplies the complete two-call baseline proof and then convexifies all one-/two-/three-call strategies. It distinguishes raw attempt-selection probabilities from fractions of accepted outputs, proves the unequal logical-noise activation condition and checks an explicitly conditional duration law. The target-only output averages fine labels, and only aggregate acceptance is required to be input independent.
+
+These are additional scoped benchmark results. A Bell deficit equals half-diamond error here because the attaining corrected mixtures have error Choi support orthogonal to the identity Bell state. That equality is proved for these maps; it is not transferred automatically to the four-call tilted Bell frontier or to a retained controller output.
 
 ## Verification route
 

@@ -102,7 +102,7 @@ Then $`J_{\mathcal N_j}-\eta_jJ_\Delta\ge0`$, so
 \qquad\text{(9)}
 ```
 
-with $`\mathcal R_j`$ CPTP when $`\eta_j<1`$. The case $`\eta_j=1`$ is $`\mathcal N_j=\Delta`$. With normalized Choi states $`\rho_{\mathcal N}=J_{\mathcal N}/d`$, the same parameter is $`d^2\lambda_{\min}(\rho_{\mathcal N})`$.
+with $`\mathcal R_j`$ CPTP when $`\eta_j\lt 1`$. The case $`\eta_j=1`$ is $`\mathcal N_j=\Delta`$. With normalized Choi states $`\rho_{\mathcal N}=J_{\mathcal N}/d`$, the same parameter is $`d^2\lambda_{\min}(\rho_{\mathcal N})`$.
 
 The switch branch is multilinear in independent slots. Expanding Eq. (9) produces a sum of completely positive operations with nonnegative weights. Retaining the all-depolarizing term proves
 
@@ -122,7 +122,7 @@ Let $`c(d)`$ be the least positive degree of a nonidentity multilinear central p
 
 ```math
 \mathcal N_\epsilon=(1-\epsilon)\mathrm{id}+\epsilon\Delta,
-\qquad 0<\epsilon\le1.
+\qquad 0\lt \epsilon\le1.
 \qquad\text{(11)}
 ```
 
@@ -159,9 +159,9 @@ p_{\mathrm{opt},m}(\mathcal N_\epsilon)
 \qquad\text{(14)}
 ```
 
-Here $`p_{\mathrm{opt},m}=0`$ when no positive-probability exact identity controller exists, including $`m<c(d)`$.
+Here $`p_{\mathrm{opt},m}=0`$ when no positive-probability exact identity controller exists, including $`m\lt c(d)`$.
 
-After choosing which slots contribute $`\Delta`$, identity substitution leaves a central polynomial in the remaining $`k`$ variables. It vanishes for $`1\le k<c(d)`$. It also vanishes for $`k=0`$: centrality with one arbitrary variable and all others equal to $`I`$ forces $`\sum_\pi c_\pi=0`$. Every conditional branch with $`k\ge c(d)`$ has probability at most one. Summing its mixture weights gives Eq. (14). This is a bound, not an achievability result for larger $`m`$.
+After choosing which slots contribute $`\Delta`$, identity substitution leaves a central polynomial in the remaining $`k`$ variables. It vanishes for $`1\le k\lt c(d)`$. It also vanishes for $`k=0`$: centrality with one arbitrary variable and all others equal to $`I`$ forces $`\sum_\pi c_\pi=0`$. Every conditional branch with $`k\ge c(d)`$ has probability at most one. Summing its mixture weights gives Eq. (14). This is a bound, not an achievability result for larger $`m`$.
 
 ### Expected charged calls
 
@@ -178,7 +178,7 @@ The minimum-call probability law does not imply that $`\epsilon^{-c(d)}`$ attemp
 
 Here each attempt has a fixed batch size $`m`$; the infimum may choose that size and controller as functions of the known parameter $`\epsilon`$. Additional depolarizing gadgets or other target processing are outside this model and outside the following lower bound.
 
-Let $`c=c(d)`$, and choose any degree-$`c`$ central controller with depolarizing success $`p_D>0`$. Then, for $`0<\epsilon\le1`$,
+Let $`c=c(d)`$, and choose any degree-$`c`$ central controller with depolarizing success $`p_D>0`$. Then, for $`0\lt \epsilon\le1`$,
 
 ```math
 \boxed{\quad

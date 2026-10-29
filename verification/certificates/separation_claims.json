@@ -1,0 +1,96 @@
+{
+  "status": "certificate-ledger-exact-assertions-validated",
+  "channel": {
+    "epsilon": "1/100",
+    "theta": "pi/2 + delta",
+    "delta_interval": [
+      "-1/5",
+      "1/5"
+    ],
+    "entanglement_breaking": true,
+    "full_choi_rank": true
+  },
+  "physical_noise": {
+    "gamma": "4/5",
+    "phase_flip_probability_per_bit": "1/10"
+  },
+  "retained_protocol": {
+    "chronological_orders": [
+      "012",
+      "021",
+      "102"
+    ],
+    "target_input": "|0>",
+    "uniform_control_dimension": 3,
+    "physical_control_qubits": 2,
+    "allocations": "all three distance-two pairs",
+    "conditional": false,
+    "uniform_pt_lower_bound": "1/400"
+  },
+  "recovery_protocol": {
+    "matrix_words": [
+      "1234",
+      "1243",
+      "2134",
+      "2143",
+      "3412",
+      "3421",
+      "4312",
+      "4321"
+    ],
+    "physical_codes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      5,
+      7
+    ],
+    "postselection_signs": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "final_correction": "identity",
+    "physical_control_qubits": 3,
+    "input_independent_success": true,
+    "success_probability_open_interval": [
+      "7/200",
+      "19/200"
+    ],
+    "unnormalized_bell_witness_lower_bound": "3/1000",
+    "conditional_bell_fidelity_lower_bound": "101/190",
+    "mean_calls_per_accepted_fresh_pair_open_interval": [
+      "800/19",
+      "800/7"
+    ]
+  },
+  "certificate": {
+    "grid": "delta_k=2atan(k/400), k=-41,...,41",
+    "max_grid_distance": "1/400",
+    "ct_certificates": 249,
+    "rt_certificates": 83,
+    "ct_grid_spectral_shift": "1/100",
+    "rt_grid_witness_bound": "1/125",
+    "rt_grid_probability_open_interval": [
+      "1/25",
+      "9/100"
+    ],
+    "stinespring_trace_norm_bound": "4r sin(|delta-delta_prime|/4) <= r |delta-delta_prime|",
+    "ledger_sha256": "3cd0c8710bb98841b62b2067f5697c4918cd80a5b34ead7d861647b44d1b72d1",
+    "ledger_relative_path": "entanglement_bridge_analysis/joint_tilt_certificate_results.json"
+  },
+  "limitations": [
+    "Specified retained protocol and code allocations, not all possible retained-controller protocols.",
+    "Different protocols: three vs four slots; two vs three physical control bits; unconditional retained output vs conditional recovery output.",
+    "Fresh inputs required for repeated attempts; no unassisted-capacity claim.",
+    "The uniform numerical bounds are conservative certificates, not optimum fidelity claims."
+  ]
+}

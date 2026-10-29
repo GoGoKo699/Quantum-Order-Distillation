@@ -52,3 +52,23 @@ From the root, install verification/requirements.txt and run:
 python3 verification/run_checks.py
 
 The verification guide documents the optional exhaustive all-word probability calculation. Do not treat stored numerical residuals as substitutes for checking a changed implementation.
+
+## Shared noisy-control science
+
+- science/noisy_routing_model.md: raw tilted measure–prepare family, actual physical codebook, inaccessible independent noise and normalized Bell objectives.
+- science/controller_optimization.md: exact multi-outcome H feasibility, ancilla reduction, symmetry, correction sectors and attaining real input-independent controllers.
+- science/noisy_recovery_obstruction.md: strict Schur lower bound forces unavoidable diagonal acceptance; full Choi rank excludes exact unitary recovery.
+- science/recovery_frontier.md: full orthogonal acceptance–corrected-fidelity frontier, Walsh proof, global and local coefficients, deterministic acceptance and branch-ranking reversal.
+- science/tilted_readout.md: noncommuting diagonal-envelope proof and exact Bernstein certificate for |tan(delta/2)|<=1/5 at epsilon=.01,gamma=.8.
+- verification/audit_verify.py and verification/certificates/: portable independent rebuild of all shared exact obligations.
+- Sister proof: https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md
+
+The retained C:T / accepted R:T comparison has a smaller angular interval |delta|<=.2 radians, different call/controller costs and fixed protocols. Arbitrary complex-controller success may depend on the input; an optimal real representative attains the required input-independent Bell frontier. Bell fidelity<=1/2 does not classify all such outputs as separable. Physical code [0,1,2,3,4,6,5,7] is essential to the local-noise theorem. The inherited nested architecture and Pauli branch require accurate attribution. There is one shared Watrous anchor and one 30-milestone map per distinct project, not an additional sister curriculum.
+
+## Fixed-channel native benchmark
+
+- science/native_three_call_frontier.md: complete all-six-order, rank-two M, global-dephasing success/half-diamond frontier; four native projector flags, arbitrary-complex-controller converse and exact attainment.
+- science/randomized_call_cost.md: complete two-call baseline, exact randomized fresh1/2/3 trial LP/lowerhull, unequal logical noise and conditionalduration criterion.
+- verification/native_benchmark/README.md: separate pinned dependencies, exact invariance/phase audit and numerical closure checks; no inaccurate SDP boundary is used as a certificate.
+
+Fine labels are corrected then averaged into a target-only accepted channel; aggregate E=pLambda is input independent, individual fine pieces need not be. Rank-deficient M, six orders and scalar global noise are distinct from the fullrank eight-order physical-local-noise Bellfrontier. Half-diamond equality is proved for native attaining mixtures, not assumed for arbitrary switched channels. At eta2=eta3=.9,e=3/8, randomizedfreshtrial cost183/62 improves exact <=2 baseline101/32. This is an expectedcall benchmark, not hardware/capacity certification.

@@ -164,3 +164,13 @@ Each proof has one main location.
 | Antecedents and the distinction between channel access and coherent Kraus access | [Related work](../references/RELATED_WORK.md) |
 
 Bibliographic records are collected in [references.bib](../references/references.bib).
+
+## 8. Noisy-controller specialization
+
+The [shared noisy-routing model](noisy_routing_model.md) retains the raw-slot access above and adds an unobserved Schur map on the actual order register, immediately before or after routing. It defines the tilted entanglement-breaking qubit family, the inherited eight-order architecture, physical routing codes, global versus per-bit phase noise, and Bell-input normalization. The four-call noisy-frontier claims refer to that specialization. The [controller characterization](controller_optimization.md) gives its exact physical feasible set and explains why arbitrary complex controllers need not have input-independent acceptance, although an optimal real representative does.
+
+The sister entanglement repository writes its three-slot words chronologically and orders tensor factors as controller then target. Here matrix words act rightmost first. The [shared comparison](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#specified-protocols) translates both conventions explicitly before using either construction.
+
+## 9. Fixed rank-two native benchmark
+
+The [native three-call model](native_three_call_frontier.md) specializes to the rank-deficient measure-$`Z`$/prepare-$`X`$ channel and all six three-slot permutations. Its global dephasing acts after routing and before controller processing. The output is the corrected accepted target-only channel with fine labels averaged, aggregate success $`\mathcal E=p\Lambda`$ and error $`\frac12\|\Lambda-\mathrm{id}\|_\diamond`$. Individual outcomes need not be scalar trace preserving. The [randomized-cost proof](randomized_call_cost.md) charges original slot calls and fresh inputs across one-, two- and three-call trial types. These additional task promises and noise assumptions are stated separately from the four-call physical codebook.

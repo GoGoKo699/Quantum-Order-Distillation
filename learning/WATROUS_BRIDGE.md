@@ -10,7 +10,7 @@ This project asks what changes when a supplied quantum controller coherently cho
 
 The coefficient is the probability of that outcome. Conditioned on success, every input state is preserved, including its entanglement with another system. The [worked example below](#worked-example) calculates the probability and specifies the preparation, routing labels, and measurement.
 
-The general result concerns independent fresh channels with full Choi rank in a precise [order-only model](../science/model.md). It connects the minimum positive number of compulsory channel calls to the minimum degree of a central polynomial. Understanding that connection requires ordinary channel theory, a distinction between coherent and classical order control, and an additional algebraic idea.
+The ideal-control result concerns independent fresh channels with full Choi rank in a precise [order-only model](../science/model.md). It connects the minimum positive number of compulsory channel calls to the minimum degree of a central polynomial. The noisy-control results then identify when exactness is obstructed and determine complete attainable acceptance–fidelity frontiers for a specified eight-order qubit architecture. The two parts share the channel and instrument foundations, while requiring additional polynomial and positive-matrix arguments.
 
 The selected educational anchor is **John Watrous, *The Theory of Quantum Information* (Cambridge University Press, 2018)**. The [author's page](https://jhwatrous.github.io/books-and-courses.html) provides the [standard-layout manuscript](https://jhwatrous.github.io/TQI.pdf) and [errata](https://jhwatrous.github.io/TQI.errata.pdf). The manuscript is offered for personal use and must not be redistributed. All page numbers below are its **printed page numbers**, rather than PDF viewer indexes. The errata are dated 23 July 2025.
 
@@ -31,6 +31,9 @@ Use the source entries when their concepts become relevant. The topic labels in 
 | State overlap and errors including a reference | §3.2, p. 139; §3.3.2, starting p. 166 | Fidelity conventions and conditional control errors |
 | Random unitary descriptions of depolarization | §§4.1.1–4.1.2, starting pp. 202 and 212 | The Pauli worked example and the Weyl-channel comparison |
 | Entangled pairs and classical communication | §§6.1.2, 6.2.2, and 6.3.1, starting pp. 324, 345, and 359 | Fresh-pair attempts and the use of an accepted pair |
+| Positive-matrix optimization | §1.2.3, semidefinite programming | Exact feasible controller effects and operator upper bounds |
+| Schur maps | §4.1.3 | Physical controller dephasing as an entrywise multiplier |
+| Separability and partial transpose | §§6.1.1–6.1.2 and §6.2.3 | The sister comparison’s different entanglement cuts |
 | Probability and expected resource use | §1.2.2, starting p. 47 | Independent attempts and charged channel calls |
 | Capacity as a separate asymptotic task | §8.2.1, starting p. 512, when needed | Why one heralded branch does not establish unassisted quantum capacity |
 
@@ -322,7 +325,7 @@ Consider independent slots containing
 
 ```math
 \mathcal N_\epsilon=(1-\epsilon)\mathrm{id}+\epsilon\Delta,
-\qquad 0<\epsilon\le1.
+\qquad 0\lt \epsilon\le1.
 ```
 
 At the minimum degree $`c(d)`$, substituting identity for any one variable of a central polynomial must make it vanish. A nonzero remaining polynomial would otherwise be a central polynomial of lower degree. In the identity-mixture channel, the minimum-degree filter therefore accepts only the all-depolarizing part of the expansion. Its success scales as $`\epsilon^{c(d)}`$.
@@ -367,10 +370,15 @@ The bridge explains the conceptual transitions. Each scientific claim has an aut
 | What establishes the four- and eight-call values? | [Qubit construction and finite certificate](../science/qubit.md); [qutrit construction and imported minimality](../science/qutrit.md) |
 | How do probability, noise strength, and total charged calls interact? | [Probability and resources](../science/probability.md) |
 | What changes for classical orders, correlated noise, or rank-deficient channels? | [Operational interpretation and counterexamples](../science/interpretation.md) |
-| What if the controller is imperfect? | [Conditional-error estimate](../science/interpretation.md#ideal-control-and-conditional-error) |
+| What if the controller is imperfect? | [General conditional-error estimate](../science/interpretation.md#ideal-control-and-conditional-error); [physical noisy-routing model](../science/noisy_routing_model.md#shared-access) |
+| What is the exact domain of all accepted controller instruments? | [Controller feasibility and attaining real representatives](../science/controller_optimization.md#controller-feasibility) |
+| Which controller noise excludes finite exact recovery? | [Strict Schur-floor obstruction](../science/noisy_recovery_obstruction.md#strict-schur-obstruction) |
+| Which readout attains the complete noisy recovery frontier? | [Orthogonal frontier](../science/recovery_frontier.md#frontier-theorem); [certified tilted interval](../science/tilted_readout.md#tilted-optimality) |
+| How does this connect to retained entanglement? | [Specified-protocol uniform separation](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) |
+| What is optimal for the original rank-deficient slot with three calls, and across randomized call counts? | [Native half-diamond frontier](../science/native_three_call_frontier.md#native-three-call-frontier); [randomized call-cost closure](../science/randomized_call_cost.md#convex-call-cost) |
 | Which computations can be reproduced, and what do they establish? | [Verification guide](../verification/README.md) |
 
-The control-error distinction is especially relevant when success is small. A small error in the unnormalized accepted operation can become larger after conditioning. The bound on the conditional trace norm error in the linked proof is $`2\delta/(p-\delta)`$ when the operation error is at most $`\delta<p`$ in diamond norm. It is an input-by-input bound including references, rather than a diamond distance between generally nonlinear normalized transformations.
+The control-error distinction is especially relevant when success is small. A small error in the unnormalized accepted operation can become larger after conditioning. The bound on the conditional trace norm error in the linked proof is $`2\delta/(p-\delta)`$ when the operation error is at most $`\delta\lt p`$ in diamond norm. It is an input-by-input bound including references, rather than a diamond distance between generally nonlinear normalized transformations.
 
 <a id="source-boundaries"></a>
 
@@ -393,4 +401,155 @@ In particular, $`c(2)=4`$ and $`c(3)=8`$ are exact algebraic degrees, whereas $`
 
 Verification scripts check coefficients, exact witnesses, contractions, normalization, and numerical channel implementations. The qubit lower-degree certificate is a finite algebraic proof certificate. Sampled matrix evaluations are not proofs of universal centrality, and the qutrit computations do not reproduce the historical minimality proof. The [verification guide](../verification/README.md) distinguishes these roles.
 
-The resulting route is from channel representations to controlled order amplitudes, from those amplitudes to central polynomials, and from rank-one Choi support back to the same algebraic condition. The model and the resource account determine what that connection allows physically.
+The ideal-control route goes from channel representations to controlled order amplitudes, from those amplitudes to central polynomials, and from rank-one Choi support back to the same algebraic condition. The noisy-control route below adds a complete feasible instrument domain and tight operator bounds. The access model and resource account determine both routes’ physical conclusions.
+
+<a id="noisy-control-bridge"></a>
+
+## 8. From instruments and Schur maps to a noisy recovery frontier
+
+**Milestones M22–M26.** The textbook’s instruments and semidefinite-programming language meet in a concrete question: how much accepted Bell fidelity can *any* permitted controller obtain at a chosen acceptance probability? A selected herald gives a lower bound. To establish an optimum, the calculation must include arbitrary mixed preparations, ancillary controllers, collective effects and outcome-dependent final target unitaries.
+
+### Fix the physical register before specifying its noise
+
+Let the raw qubit slot measure the target’s Z axis and prepare the two opposite states of a tilted axis, with a small depolarizing admixture:
+
+```math
+\mathcal N_{\epsilon,\theta}
+=(1-\epsilon)\mathrm{Ad}_{R_y(\theta)}\circ\mathcal D_Z
++\epsilon\Delta,
+\qquad \theta=\pi/2+\delta.
+```
+
+Here $`\mathcal D_Z`$ deletes target off-diagonal entries, whereas $`\Delta(X)=\mathrm{Tr}(X)I_2/2`$ replaces the target by the maximally mixed state. The slot is entanglement breaking; positive $`\epsilon`$ gives full Choi rank. A fixed target unitary after the complete experiment is a correction. A unitary attached to every supplied slot would change the resource.
+
+The eight matrix words in lexical order are $`1234,1243,2134,2143,3412,3421,4312,4321`$. Their physical three-bit codes are respectively **000, 001, 010, 011, 100, 110, 101, 111**. The inner reversal bits stay attached to the same channel pairs when the outer bit exchanges the two blocks. Replacing this assignment by lexical binary counting changes the physical local-noise model.
+
+Watrous §4.1.3 supplies the Schur-map viewpoint: a matrix element between physical order labels is multiplied entrywise by a positive kernel. Global dephasing has off-diagonal factor $`\eta`$. Independent phase flips of probability $`z`$ on each physical bit instead give
+
+```math
+\Gamma_{\pi\sigma}=\gamma^{d_H(b_\pi,b_\sigma)},
+\qquad \gamma=1-2z.
+```
+
+Thus $`\gamma=4/5`$ means a 10% phase-flip probability on each bit. It is a different noise process from global dephasing with $`\eta=4/5`$. The [physical codebook and common family](../science/noisy_routing_model.md#physical-codebook) fix these definitions fully.
+
+### An instrument has a shared coefficient budget
+
+An accepted outcome is represented by a positive matrix $`H_x`$ on the eight order labels. All outcomes must fit one initial preparation:
+
+```math
+H_x\succeq0,\qquad
+\sum_x H_x\preceq\mathrm{diag}(t),
+\qquad t_\pi\ge0,\quad\sum_\pi t_\pi=1.
+```
+
+The vector $`t`$ gives preparation populations. The bound accounts for mutually compatible effects of one instrument, rather than allowing every outcome its own independent preparation budget. The [feasibility theorem](../science/controller_optimization.md#controller-feasibility) proves both directions: every allowed controller gives such matrices, and every feasible family can be implemented. Mixed preparations and ancillary controllers do not enlarge this set. Symmetry of these identical slots and their physical noise permits uniform preparation and the budget $`I_8/8`$ without losing an optimum.
+
+Acceptance and the unnormalized corrected Bell overlap are linear functionals of $`H_x`$. Their Gram matrices encode all raw Kraus-history contractions. For a general complex Schur kernel, the appropriate entrywise contraction uses its transpose; this convention is fixed in the scientific derivation. The physical kernels here are real and symmetric.
+
+The Bell input is an optimization probe, not a reason to assume every branch has input-independent success. Arbitrary complex $`H_x`$ can produce input-dependent acceptance. For this real, Y-covariant family, the [real-controller reduction](../science/controller_optimization.md#real-controller-reduction) proves that the optimum has a real attaining representative, with a scalar success effect. Its accepted normalization therefore defines a recovery channel on arbitrary inputs. This is an attainment theorem, not a classification of every feasible controller.
+
+### A readout frontier becomes fractional knapsack
+
+At the orthogonal point $`\delta=0`$, the acceptance and relevant corrected-reward matrices are diagonal in the physical Walsh basis. This is the basis measured by three physical X measurements. Let $`b_j`$ be a mode’s acceptance coefficient and $`a_j`$ its best corrected Bell-reward coefficient. If $`x_j`$ is its accepted coefficient weight, the complete frontier is
+
+```math
+\max\ pF=\sum_j a_jx_j,
+\qquad
+0\le x_j\le\frac18,
+\qquad \sum_j b_jx_j=p.
+```
+
+Each mode has acceptance capacity $`b_j/8`$ and fidelity $`a_j/b_j`$ when $`b_j>0`$. Accept modes in descending fidelity, randomizing acceptance of the final boundary mode when needed; zero-capacity modes contribute no acceptance. An operator upper bound covers every allowed controller, and this simple readout attains it. The [frontier theorem](../science/recovery_frontier.md#frontier-theorem) supplies the coefficient tables and proof.
+
+For example, at $`\epsilon=.01`$ and physical $`\gamma=.8`$, the highest-fidelity mode accepts with probability approximately **.06196376409** and corrected Bell fidelity **.758264362729**. Increasing acceptance to **.1245025** gives optimal fidelity approximately **.688117778572**. These are two points on one tradeoff curve, not conflicting controller recommendations. The deterministic optimum is approximately **.47329633218**. A Bell-fidelity optimum below one half does **not** imply that every possible complex-controller Choi output is separable.
+
+The inherited P2 branch and the alternative Q branch illustrate why the physical kernel matters. Their fidelity ranking reverses between the stated global and local noise experiments, even under a matched scalar-coherence comparison. The [exact branch formulas](../science/recovery_frontier.md) retain both fidelity and acceptance, so a claim about a favorable herald is not mistaken for the full frontier or for a cost-free accepted output.
+
+<a id="noise-obstruction-bridge"></a>
+
+## 9. Positive noise floors, tilted optimality and the sister connection
+
+**Milestones M24 and M27–M30.** The same positivity foundation supports three distinct arguments.
+
+First, if the Schur kernel has a strictly positive identity floor, every nonzero accepted effect leaves a nonzero diagonal contribution from ordinary composed slot channels. For full-Choi-rank slots that contribution has full Choi rank. A positive map containing it cannot have the rank-one Choi operator of an exact unitary branch. The [strict Schur obstruction](../science/noisy_recovery_obstruction.md#strict-schur-obstruction) gives the precise finite-call theorem. Global dephasing with $`\eta\lt 1`$ and physical local dephasing with $`\gamma\lt 1`$ have such floors. This proof concerns unobserved phase noise on the actual order register, with no noise flag or coherence restoration; it is not a claim about every type of controller noise.
+
+Second, the optimum survives a finite target-axis tilt even after the reward matrices stop commuting. A diagonal matrix made from the best individual mode rewards can still dominate every corrected reward matrix. The [tilted proof](../science/tilted_readout.md#tilted-optimality) reduces this operator-envelope condition to two coupled 2-by-2 Walsh blocks. Exact polynomial identities and positive Bernstein coefficients establish the required margin. At $`\epsilon=1/100`$ and physical $`\gamma=4/5`$, the complete three-X readout frontier remains optimal throughout
+
+```math
+t=\tan(\delta/2),\qquad
+|t|\le\frac15,
+\qquad |\delta|\le2\arctan(1/5)\simeq .39479112.
+```
+
+The angle $`\delta`$ is in radians. The conclusion optimizes the final correction separately for every outcome and angle. Holding the orthogonal-point corrections fixed would not test the stated optimal readout.
+
+Third, the sister project keeps the *same raw channel family and per-bit noise* but compares different outputs. Its specified three-call experiment retains C and T unconditionally, while the four-call P2 experiment measures C and accepts a Bell pair across R:T. Exact rational grid certificates plus a Stinespring continuity bound prove a uniform separation on the smaller angular interval $`|\delta|\le .2`$ radians. This interval is stated in $`\delta`$, not in $`t`$. The proof and its full resource comparison live in [Entanglement’s uniform theorem](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation).
+
+The three-call occupied 3-by-2 output is PPT and therefore separable for all three physical encodings. The four-call accepted R:T output is NPT, with $`.035\lt p\lt .095`$ and $`F>101/190`$. Calls, controller bits, bipartitions and conditional endpoints differ. The theorem concerns those experiments, not every retained protocol or an optimized equal-resource comparison. It establishes a connection between the tracks without making retained entanglement a recovery certificate.
+
+Watrous supplies positive operators, instruments, Schur maps, norms and separability language. The controller-feasibility theorem, tight frontiers, envelope certificate and rational-grid interpolation are the missing project arguments. The [verification guide](../verification/README.md) distinguishes independent exact reconstruction, interval certificates and numerical evaluations from the analytical proofs that connect them.
+
+<a id="native-benchmark-bridge"></a>
+
+## 10. A native three-call benchmark and exact fresh-trial cost
+
+**Milestones M19–M21 and M29–M30.** The original measure-Z/prepare-X slot also supports a complete recovery benchmark of its own. Here the slot has Kraus operators $`K_0=|+\rangle\langle0|`$ and $`K_1=|-\rangle\langle1|`$, with no depolarizing admixture. It is rank deficient. Three independent compulsory slots have **all six** order labels available. Global order-basis dephasing with coherence $`\eta_3`$ acts immediately after routing and before final controller processing. These choices differ from the four-call, eight-order, full-rank physical-local-noise frontier above and from the sister’s retained three-order experiment.
+
+The accepted output is a target-only channel: average the corrected fine outcome label, retain the overall acceptance flag, and require the total accepted map to have the form $`\mathcal E=p\Lambda`$ with input-independent $`p`$. Arbitrary fine outcomes in the converse may have input-dependent probabilities. The error variable here is
+
+```math
+e=\frac12\|\Lambda-\mathrm{id}\|_\diamond.
+```
+
+It is an externally specified channel-error tolerance, distinct from the depolarizing admixture $`\epsilon`$ of the other channel family. Watrous §3.3.2 explains why the diamond norm tests arbitrary reference-assisted inputs rather than one selected output state.
+
+The [native frontier theorem](../science/native_three_call_frontier.md#native-three-call-frontier) constructs four orthogonal controller projector flags. Their probabilities and corrected, unnormalized Bell overlaps are:
+
+| Flag | Acceptance probability | Corrected Bell overlap | Target correction |
+|---|---|---|---|
+| O | $`(4-\eta_3)/12`$ | $`(1+2\eta_3)/12`$ | $`(X-Z)/\sqrt2`$ |
+| E | $`(4-\eta_3)/12`$ | $`(1+\eta_3)/12`$ | Y |
+| T | $`(1+2\eta_3)/6`$ | $`(1+5\eta_3)/24`$ | I |
+| Sign | $`(1-\eta_3)/6`$ | $`(1-\eta_3)/24`$ | I |
+
+For a flag with probability $`p_z`$ and overlap $`f_z`$, accept a fraction $`x_z`$ between zero and one. Sorting by $`f_z/p_z`$ gives the full frontier:
+
+```math
+f_{3,\max}(p)=\max\left\{\sum_z f_zx_z:
+0\le x_z\le1,\quad\sum_zp_zx_z=p\right\},
+\qquad e_{3,\min}(p)=1-\frac{f_{3,\max}(p)}p.
+```
+
+The universal controller converse bounds the Bell overlap through positive Choi blocks, including the possible complex coherence between two nonidentity Bell directions. It therefore covers ancillary controllers and continuously rotated effects rather than only the native measurement. The attaining corrected channels are mixtures of unitary channels whose nonidentity Bell support is orthogonal to the identity Bell vector. A Bell input gives error at least $`1-f/p`$; the unitary triangle bound gives the same upper bound. That additional argument makes the result an exact half-diamond frontier. A generic Bell-fidelity calculation would supply only the lower bound.
+
+### Accepted fractions and trial probabilities are different weights
+
+One call followed by a known final Hadamard gives Z dephasing, with $`p=1`$ and Bell overlap $`1/2`$. The corresponding two-call and three-call native frontiers supply the remaining comparison points. Randomly choosing among these fresh-trial types allows a complete finite linear-program closure. If type j is selected with probability $`t_j`$ and succeeds with probability $`p_j`$, its fraction among accepted outputs is
+
+```math
+\alpha_j=\frac{t_jp_j}{\sum_k t_kp_k},
+\qquad C=\sum_j\alpha_j\frac{m_j}{p_j},
+\qquad
+t_j=\frac{\alpha_j/p_j}{\sum_k\alpha_k/p_k}.
+```
+
+Here $`m_j`$ is the calls charged per attempt and $`C`$ is expected calls per accepted fresh output. The [convex cost theorem](../science/randomized_call_cost.md#convex-call-cost) proves that the lower envelope of the native cumulative vertices is exact over the stated randomized one-/two-/three-call model. The corrected accepted target-only channel also averages the trial-type label. The attaining mixtures retain equality between half-diamond error and the Bell deficit; the converse does not assume that every individual fine outcome is a normalized channel.
+
+For example, fix **the same external tolerance $`e=3/8`$** and $`\eta_2=\eta_3=.9`$. Select a one-call trial with probability $`1/21`$ and a three-call trial accepting only O, E and T with probability $`20/21`$. The total acceptance is $`62/63`$ and mean calls per attempt are $`61/21`$, giving
+
+```math
+C_{123}=\frac{183}{62},\qquad
+C_{12}=\frac{101}{32},\qquad
+1-\frac{C_{123}}{C_{12}}=\frac{203}{3131}\simeq .0648355.
+```
+
+The accepted fractions are $`3/62`$ and $`59/62`$, which differ from the attempt probabilities. The saving charges failed trials and does not reuse a failed unknown input. Six coherent labels, routing and correction hardware remain additional resources. Batch coding or collective distillation across failures is outside this fresh-trial model.
+
+### Unequal logical noise and a conditional duration test
+
+Equal retained coherence at different call counts is an assumption, not a consequence of equal hardware noise. The [unequal-noise analysis](../science/randomized_call_cost.md#unequal-noise) treats $`\eta_2`$ and $`\eta_3`$ independently and separates extending the achievable accuracy from lowering cost at a common external tolerance. At $`\eta_2=.9`$, accuracy extends for $`\eta_3>6/7`$, while common-error cost improves only for $`\eta_3>79/91`$. The fixed-tolerance optimum retains its stated external $`e`$ when comparing these effects.
+
+If a scalar logical dephasing model additionally gives $`\eta_m=\exp(-\kappa T_m)`$, the same slice’s cost saving requires $`T_3/T_2\lt1.3421693427`$. A duration ratio of 3/2 loses the gain at $`\eta_2=.9`$; it can retain cost gain at larger $`\eta_2`$, above approximately .91999108053509. The [duration model](../science/randomized_call_cost.md#duration-model) states the exact threshold and assumptions. Physical local noise on a multibit controller generally has pair-dependent factors and requires its own analysis. Charging elapsed time instead of noisy calls also changes the LP objective; a call-cost saving alone is not a hardware-duration claim.
+
+The analytical controller and mixture proofs, exact invariant-kernel checks, and numerical evaluations have distinct roles. The [verification guide](../verification/README.md) documents the native benchmark reconstruction and the limits of numerical SDP corroboration alongside the earlier joint certificates. Watrous supplies the channel, instrument, norm, probability and optimization foundations; the native frontier, finite closure and unequal-noise thresholds are project arguments.

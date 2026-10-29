@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "arithmetic": "fractions.Fraction; all algebraic invariance and phase-predicate comparisons exact",
+  "orders": [
+    "012",
+    "021",
+    "102",
+    "120",
+    "201",
+    "210"
+  ],
+  "target_coordinate_kernels": 16,
+  "left_actions_per_kernel": 6,
+  "left_invariance_equalities": 96,
+  "trivial_standard_zero_block_equalities": 32,
+  "sign_zero_side_equalities": 32,
+  "bell_diagonal_kernel_identities": [
+    "M_I=3T/2",
+    "M_U=3O/4",
+    "M_Y=(T+E)/2",
+    "M_V=T+E/4"
+  ],
+  "zero_cross_bell_pairs": [
+    "I,U",
+    "I,Y",
+    "I,V",
+    "U,Y",
+    "Y,V"
+  ],
+  "sole_cross_bell_kernel": "C_UV=O C_UV E; C_VU=E C_VU O (transpose/conjugate orientation)",
+  "integer_UV_kernel": [
+    [
+      0,
+      8,
+      -8,
+      8,
+      -8,
+      0
+    ],
+    [
+      8,
+      0,
+      -8,
+      0,
+      -8,
+      8
+    ],
+    [
+      -8,
+      8,
+      0,
+      8,
+      0,
+      -8
+    ],
+    [
+      -8,
+      0,
+      8,
+      0,
+      8,
+      -8
+    ],
+    [
+      8,
+      -8,
+      0,
+      -8,
+      0,
+      8
+    ],
+    [
+      0,
+      -8,
+      8,
+      -8,
+      8,
+      0
+    ]
+  ],
+  "projector_ranks_and_constant_diagonals": {
+    "T": {
+      "rank": 1,
+      "diagonal": "1/6"
+    },
+    "S": {
+      "rank": 1,
+      "diagonal": "1/6"
+    },
+    "O": {
+      "rank": 2,
+      "diagonal": "1/3"
+    },
+    "E": {
+      "rank": 2,
+      "diagonal": "1/3"
+    }
+  },
+  "complex_gram_scope": "The exact kernels cover arbitrary complex PSD G. U,V coherence may be complex; the PSD two-dimensional block trace bounds its largest eigenvalue.",
+  "unequal_noise_predicate": "a<=1/2: b>2/5; a>1/2: b>min(2a/(3-a),(57a+4)/(13a+52))",
+  "unequal_noise_exact_test_cases": 2727,
+  "unequal_noise_mismatches": 0,
+  "duration_law": {
+    "assumption": "eta_m=exp(-m gamma), with no additional architecture-dependent duration overhead",
+    "threshold_a": 0.91999108053509,
+    "threshold_b": 0.8824201674453485,
+    "threshold_gamma": 0.04169565202830142,
+    "equation": "13t^5+52t^3-57t^2-4=0"
+  },
+  "physical_scope": [
+    "Independent compulsory channel slots, inaccessible environments, initially independent target/reference and controller.",
+    "Global unflagged logical order-basis dephasing after routing and before ANY final controller processing.",
+    "Architecture-specific retained coherences a=eta_2,b=eta_3 are independent model parameters unless a duration law is explicitly imposed.",
+    "Fine controller outcomes may have input-dependent success; aggregate accepted channel must have input-independent p.",
+    "The corrected accepted TARGET-ONLY channel averages/discards the fine controller/correction label.",
+    "No hardware, equal-time, device-independent causal, capacity, or novelty conclusion is certified by this audit."
+  ]
+}

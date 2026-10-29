@@ -48,7 +48,7 @@ The unnormalized Choi convention gives a channel decomposition
 \qquad\text{(2)}
 ```
 
-When $`\eta_j<1`$, positivity follows from
+When $`\eta_j\lt 1`$, positivity follows from
 $`J_{\mathcal N_j}-\eta_jI_{d^2}/d\ge0`$, and its channel normalization follows by taking the appropriate partial trace. The case $`\eta_j=1`$ is $`\mathcal N_j=\Delta`$.
 
 ### A quantitative gap from the identity
@@ -217,8 +217,24 @@ The normalized successful transformation can depend nonlinearly on its input thr
 
 This is a conditioning estimate, not a hardware fault-tolerance threshold. It shows why a small positive accepted probability needs a separate control-accuracy account. The [resource analysis](probability.md) also distinguishes noisy-call counts from the synthesis and coherence costs of many order states.
 
+## Noisy exactness and useful recovery
+
+The ideal central-polynomial theorem and a noisy accepted Bell state describe different endpoints. Under the [strict Schur assumptions](noisy_recovery_obstruction.md#strict-schur-obstruction), every nonzero accepted branch contains an unavoidable full-Choi-rank diagonal component, so no final target unitary can make it exact. The [frontier](recovery_frontier.md) nevertheless quantifies useful approximate recovery, charging the accepted probability instead of retaining only its best conditional fidelity.
+
+The physical geometry of controller noise also matters. A single scalar controller coherence or fidelity does not determine the best herald: the [global/local comparison](recovery_frontier.md) exhibits a branch-ranking reversal even at matched scalar coherence. The actual three-bit codebook is therefore a load-bearing part of the stated local-noise theorem.
+
+For the same raw channel family and per-bit phase noise, [Quantum Order Entanglement proves](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) a robust specified-protocol distinction: three-call retained $`C:T`$ outputs are separable while the fixed four-call accepted $`R:T`$ pair remains NPT. This compares different bipartitions, conditioning, controller sizes and call counts. It gives neither an optimized equal-resource separation nor a no-go theorem for all retained-controller protocols.
+
+Bell fidelity above one half is a sufficient two-qubit entanglement witness. A lower optimized Bell fidelity does not show that every complex-controller output is separable. Likewise, a retained $`C:T`$ witness on a known target input does not certify recovery of an unknown input. These inference boundaries join the two tracks without conflating their tasks.
+
 ## Relation to established communication results
 
 Coherent-order communication activation is an established phenomenon. In particular, cyclic-order protocols already provide higher-dimensional heralded transmission with an error that decreases as more channels are used. Central-polynomial quantum resetting also predates this channel model.
 
 The result here is finite exact identity heralding through ordinary inaccessible-environment channel slots, together with the minimum-use characterization in that restricted architecture. The precise inherited results, source versions, and implication boundaries are given in [Related work](../references/RELATED_WORK.md), with bibliographic data in [references.bib](../references/references.bib).
+
+## Native recovery, labels and trial mixtures
+
+The [rank-two benchmark](native_three_call_frontier.md) gives exact target-only half-diamond frontiers under global logical controller noise. Its attaining maps have nonidentity Choi support orthogonal to the Bell state, making the diamond lower bound tight. This proven equality does not turn a general Bell-fidelity bound into a diamond-error theorem for other channels or label-retaining tasks.
+
+The [convex resource theorem](randomized_call_cost.md) weights successes and attempts differently. Its exact 6.48% example saves expected compulsory calls at a fixed external error tolerance by randomizing fresh one- and three-call attempts. Six coherent order labels and physical routing overhead remain separate resources. The conditional visibility law $`\eta_m=e^{-\gamma T_m}`$ changes with architecture duration; its threshold is not a local physical-qubit noise or hardware certification.
