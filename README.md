@@ -66,22 +66,22 @@ Among exact protocols that repeat a fixed batch on **fresh entangled-pair inputs
 
 ## Recovery with a noisy controller
 
-The exact central-polynomial result assumes ideal order coherence. With unobserved controller noise, the useful question becomes the best corrected Bell fidelity at a specified accepted probability. The [shared noisy-routing model](science/noisy_routing_model.md) fixes four independent raw qubit slots, eight nested-switch orders, and their physical three-bit encoding. The channel measures along $Z$, prepares along a tilted axis, and includes a depolarizing admixture. Every slot is entanglement breaking and has full Choi rank when that admixture is positive.
+The exact central-polynomial result assumes ideal order coherence. With unobserved controller noise, the useful question becomes the best corrected Bell fidelity at a specified accepted probability. The [shared noisy-routing model](science/noisy_routing_model.md) fixes four independent raw qubit slots, eight nested-switch orders, and their physical three-bit encoding. The channel measures along $`Z`$, prepares along a tilted axis, and includes a depolarizing admixture. Every slot is entanglement breaking and has full Choi rank when that admixture is positive.
 
 For arbitrary controller preparations, controller ancillas, accepted instruments and final outcome-dependent target unitaries, we establish:
 
 | Result | Exact scope and consequence |
 |---|---|
-| [Physical controller characterization](science/controller_optimization.md#controller-feasibility) | Accepted coefficient matrices are precisely $H_x\succeq0$, $\sum_xH_x\preceq\operatorname{diag}(t)$, $t\ge0$, $\sum_it_i=1$; ancillary controllers do not enlarge this set. |
-| [Complete orthogonal-axis frontier](science/recovery_frontier.md#frontier-theorem) | For every channel admixture and every stated global visibility or equal local phase factor, three-$X$ readout with outcome-dependent corrections and acceptance attains the full probability–fidelity frontier. |
-| [Robust tilted optimality](science/tilted_readout.md#tilted-optimality) | At admixture $\epsilon=0.01$ and physical local phase factor $\gamma=0.8$, the same readout is optimal for all $\lvert\tan(\delta/2)\rvert\le1/5$, despite noncommuting overlap matrices. |
+| [Physical controller characterization](science/controller_optimization.md#controller-feasibility) | Accepted coefficient matrices are precisely $`H_x\succeq0`$, $`\sum_xH_x\preceq\mathrm{diag}(t)`$, $`t\ge0`$, $`\sum_it_i=1`$; ancillary controllers do not enlarge this set. |
+| [Complete orthogonal-axis frontier](science/recovery_frontier.md#frontier-theorem) | For every channel admixture and every stated global visibility or equal local phase factor, three-$`X`$ readout with outcome-dependent corrections and acceptance attains the full probability–fidelity frontier. |
+| [Robust tilted optimality](science/tilted_readout.md#tilted-optimality) | At admixture $`\epsilon=0.01`$ and physical local phase factor $`\gamma=0.8`$, the same readout is optimal for all $`\lvert\tan(\delta/2)\rvert\le1/5`$, despite noncommuting overlap matrices. |
 | [Exact-recovery obstruction](science/noisy_recovery_obstruction.md#strict-schur-obstruction) | Independent full-Choi-rank slots and a strictly positive Schur-noise lower bound exclude any nonzero exact accepted unitary branch at finite call count in the stated access model. |
 
-At the orthogonal point with $\epsilon=0.01$ and $\gamma=0.8$ (a 10% independent phase-flip probability per physical bit), the highest conditional Bell fidelity is approximately **0.758264**, available up to accepted probability **0.0619638**. Accepting every outcome instead gives optimized Bell fidelity **0.473296**. These optimize the stated Bell objective; a fidelity at or below one half does not classify every possible output's entanglement.
+At the orthogonal point with $`\epsilon=0.01`$ and $`\gamma=0.8`$ (a 10% independent phase-flip probability per physical bit), the highest conditional Bell fidelity is approximately **0.758264**, available up to accepted probability **0.0619638**. Accepting every outcome instead gives optimized Bell fidelity **0.473296**. These optimize the stated Bell objective; a fidelity at or below one half does not classify every possible output's entanglement.
 
 An arbitrary complex controller can have input-dependent acceptance. The [reduction proof](science/controller_optimization.md#real-controller-reduction) establishes that a real, input-independent representative attains the Bell-input optimum. The physical encoding is part of the local-noise theorem; merely relabeling the words in lexical binary order changes the noise model.
 
-The sister repository [Quantum Order Entanglement](https://github.com/GoGoKo699/Quantum-Order-Entanglement) owns the [robust retained-$C:T$/accepted-$R:T$ comparison](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation). It uses the same raw channel family and per-bit noise, with distinct specified protocols and explicit success costs. The two repositories share this foundation and the Watrous anchor while keeping their original scientific questions.
+The sister repository [Quantum Order Entanglement](https://github.com/GoGoKo699/Quantum-Order-Entanglement) owns the [robust retained-$`C:T`$/accepted-$`R:T`$ comparison](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation). It uses the same raw channel family and per-bit noise, with distinct specified protocols and explicit success costs. The two repositories share this foundation and the Watrous anchor while keeping their original scientific questions.
 
 ## Read the science
 

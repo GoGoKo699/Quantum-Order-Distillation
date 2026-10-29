@@ -414,12 +414,12 @@ Let the raw qubit slot measure the target’s Z axis and prepare the two opposit
 
 ```math
 \mathcal N_{\epsilon,\theta}
-=(1-\epsilon)\operatorname{Ad}_{R_y(\theta)}\circ\mathcal D_Z
+=(1-\epsilon)\mathrm{Ad}_{R_y(\theta)}\circ\mathcal D_Z
 +\epsilon\Delta,
 \qquad \theta=\pi/2+\delta.
 ```
 
-Here $`\mathcal D_Z`$ deletes target off-diagonal entries, whereas $`\Delta(X)=\operatorname{Tr}(X)I_2/2`$ replaces the target by the maximally mixed state. The slot is entanglement breaking; positive $`\epsilon`$ gives full Choi rank. A fixed target unitary after the complete experiment is a correction. A unitary attached to every supplied slot would change the resource.
+Here $`\mathcal D_Z`$ deletes target off-diagonal entries, whereas $`\Delta(X)=\mathrm{Tr}(X)I_2/2`$ replaces the target by the maximally mixed state. The slot is entanglement breaking; positive $`\epsilon`$ gives full Choi rank. A fixed target unitary after the complete experiment is a correction. A unitary attached to every supplied slot would change the resource.
 
 The eight matrix words in lexical order are $`1234,1243,2134,2143,3412,3421,4312,4321`$. Their physical three-bit codes are respectively **000, 001, 010, 011, 100, 110, 101, 111**. The inner reversal bits stay attached to the same channel pairs when the outer bit exchanges the two blocks. Replacing this assignment by lexical binary counting changes the physical local-noise model.
 
@@ -438,7 +438,7 @@ An accepted outcome is represented by a positive matrix $`H_x`$ on the eight ord
 
 ```math
 H_x\succeq0,\qquad
-\sum_x H_x\preceq\operatorname{diag}(t),
+\sum_x H_x\preceq\mathrm{diag}(t),
 \qquad t_\pi\ge0,\quad\sum_\pi t_\pi=1.
 ```
 

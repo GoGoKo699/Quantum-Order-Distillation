@@ -223,9 +223,9 @@ The ideal central-polynomial theorem and a noisy accepted Bell state describe di
 
 The physical geometry of controller noise also matters. A single scalar controller coherence or fidelity does not determine the best herald: the [global/local comparison](recovery_frontier.md) exhibits a branch-ranking reversal even at matched scalar coherence. The actual three-bit codebook is therefore a load-bearing part of the stated local-noise theorem.
 
-For the same raw channel family and per-bit phase noise, [Quantum Order Entanglement proves](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) a robust specified-protocol distinction: three-call retained $C:T$ outputs are separable while the fixed four-call accepted $R:T$ pair remains NPT. This compares different bipartitions, conditioning, controller sizes and call counts. It gives neither an optimized equal-resource separation nor a no-go theorem for all retained-controller protocols.
+For the same raw channel family and per-bit phase noise, [Quantum Order Entanglement proves](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) a robust specified-protocol distinction: three-call retained $`C:T`$ outputs are separable while the fixed four-call accepted $`R:T`$ pair remains NPT. This compares different bipartitions, conditioning, controller sizes and call counts. It gives neither an optimized equal-resource separation nor a no-go theorem for all retained-controller protocols.
 
-Bell fidelity above one half is a sufficient two-qubit entanglement witness. A lower optimized Bell fidelity does not show that every complex-controller output is separable. Likewise, a retained $C:T$ witness on a known target input does not certify recovery of an unknown input. These inference boundaries join the two tracks without conflating their tasks.
+Bell fidelity above one half is a sufficient two-qubit entanglement witness. A lower optimized Bell fidelity does not show that every complex-controller output is separable. Likewise, a retained $`C:T`$ witness on a known target input does not certify recovery of an unknown input. These inference boundaries join the two tracks without conflating their tasks.
 
 ## Relation to established communication results
 
