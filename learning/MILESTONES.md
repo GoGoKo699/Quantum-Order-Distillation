@@ -1,43 +1,30 @@
 # Thirty milestones for quantum order distillation
 
-This map follows the scientific question: **when can control of channel order alone herald an exact identity channel, and what does that capability cost?** It connects the physical access model, the central-polynomial mechanism, the minimum-use theorem, explicit protocols, and their operational limits.
+This map follows one operational story: **how coherent order can herald an exact identity channel, what that capability costs, and which recovery tradeoffs remain attainable when the controller is noisy.** It connects the central-polynomial characterization to a complete controller optimization and a proved comparison with retained entanglement.
 
-The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**. The [Watrous bridge](WATROUS_BRIDGE.md) identifies the relevant sections, translates notation, supplies a worked example, and explains which research ingredients lie beyond the textbook. Primary research sources remain necessary for the inherited polynomial identities and their degree bounds; they are distinguished in [Related work](../references/RELATED_WORK.md).
+The sole educational anchor, shared with the sister project, is **John Watrous, *The Theory of Quantum Information* (2018)**. The [Watrous bridge](WATROUS_BRIDGE.md) identifies its version and relevant sections, translates notation, supplies worked explanations, and marks the steps developed in the project. Primary papers in [Related work](../references/RELATED_WORK.md) provide research attribution rather than additional educational anchors.
 
 ## Phase structure
 
 | Phase | Milestones | Scientific purpose | Closing synthesis |
 |---|---|---|---|
-| Background/preliminaries | [M01](#m01) through [M13](#m13) | Connect states, channel representations, conditional operations, independent ordered uses, and matrix polynomials into one precise recovery problem. | [M13: The complete recovery specification](#m13) |
-| Narrative/innovation | [M14](#m14) through [M30](#m30) | Build the construction and converse, make their dimension and probability consequences concrete, and determine their physical scope. | [M30: The integrated operational theorem](#m30) |
+| Background/preliminaries | [M01](#m01)–[M13](#m13) | Join states, channel representations, instruments, independent ordered slots and matrix polynomials into the recovery problem. | [M13: The complete recovery specification](#m13) |
+| Narrative/innovation | [M14](#m14)–[M30](#m30) | Build exact recovery and its costs, then controller-noise obstructions, attaining frontiers and the sister comparison. | [M30: The complete capability, frontier and resource statement](#m30) |
 
-The **13 + 17 allocation** reflects this project's meeting of two subjects. Quantum-channel mathematics alone does not explain centrality, while a matrix identity alone does not establish a physical channel protocol or its cost. The first phase builds the common language and ends with the complete task. The second needs room for both directions of the characterization, the qubit and qutrit realizations, and the distinction between minimum calls, expected calls, and routing resources.
-
-Within each phase, the route proceeds from individual objects and arguments to their combined meaning. Narrative milestones include inherited mathematical tools and known special cases as well as the project consequences. The map targets global understanding; specialist derivations remain in their authoritative scientific pages.
+The **13 + 17 allocation** reflects the meeting of channel mathematics, polynomial identities and constrained optimization. The background proceeds from local objects to the complete model. The narrative combines proof components into physical capabilities and limits; its later milestones build on the ideal-control story rather than replacing it. The map is common to every reader and targets global understanding, while specialist calculations remain in their authoritative scientific pages.
 
 ## Navigation
 
-| ID | Background/preliminaries | ID | Narrative/innovation |
-|---|---|---|---|
-| [M01](#m01) | States and target matrices | [M14](#m14) | A valid switch independent of Kraus representation |
-| [M02](#m02) | Entangled reference systems | [M15](#m15) | Turning coefficients into control amplitudes |
-| [M03](#m03) | Ordinary channels and inaccessible environments | [M16](#m16) | Centrality gives exact positive success |
-| [M04](#m04) | A channel as a Choi matrix | [M17](#m17) | Why exact full-rank recovery forces centrality |
-| [M05](#m05) | Positivity, rank, and spanning | [M18](#m18) | The minimum degree becomes a call threshold |
-| [M06](#m06) | Effects, instruments, and accepted operations | [M19](#m19) | Four calls for a qubit |
-| [M07](#m07) | Independent uses and matrix-product order | [M20](#m20) | Eight calls for a qutrit |
-| [M08](#m08) | Classical choice and coherent order | [M21](#m21) | Evaluating specified controllers |
-| [M09](#m09) | Multilinear words and compulsory slots | [M22](#m22) | An all-dimensional construction and its cost |
-| [M10](#m10) | Central polynomials and polynomial identities | [M23](#m23) | Two consequences of a CP noise floor |
-| [M11](#m11) | Exact recovery, fidelity, and distance | [M24](#m24) | Exact recovery near the identity boundary |
-| [M12](#m12) | Heralding and distinct resource counts | [M25](#m25) | Optimizing expected original-channel calls |
-| [M13](#m13) | The complete recovery specification | [M26](#m26) | Correlated and rank-deficient boundaries |
-| | | [M27](#m27) | Randomizing wrappers change the resource |
-| | | [M28](#m28) | Exact algebra with imperfect control |
-| | | [M29](#m29) | Finite exact recovery in the communication landscape |
-| | | [M30](#m30) | The integrated operational theorem |
+| Milestones | Scientific connection |
+|---|---|
+| [M01](#m01)–[M06](#m06) | States, references, channels, positive Choi matrices and accepted operations |
+| [M07](#m07)–[M13](#m13) | Independent ordered slots, polynomials, exactness and the complete task |
+| [M14](#m14)–[M18](#m18) | Physical construction, full-rank converse, qubit and qutrit realizations |
+| [M19](#m19)–[M21](#m21) | Success cost, batching and model boundaries |
+| [M22](#m22)–[M27](#m27) | Physical noise, complete controller feasibility, no-go and attaining frontiers |
+| [M28](#m28)–[M30](#m30) | Robust sister comparison, evidence and whole-project synthesis |
 
-The dependency links in each record identify earlier milestones that supply its main ideas. The [proof route](WATROUS_BRIDGE.md#proof-route) connects this map to the authoritative statements, and the [scientific overview](../science/README.md) provides a shorter research route.
+The [proof route](WATROUS_BRIDGE.md#proof-route) and [scientific overview](../science/README.md) supply direct specialist routes.
 
 ## Phase I: Background/preliminaries
 
@@ -55,7 +42,7 @@ The dependency links in each record identify earlier milestones that supply its 
 
 **Conceptual connection:** A matrix basis describes all possible operator amplitudes, while positivity and normalization select physical states. Confusing those roles would weaken the later centrality condition.
 
-**Sources:** [Watrous Sections 1.1.2, 1.1.3, and 2.1.2](WATROUS_BRIDGE.md#source-map); [project target and channel spaces](../science/model.md#1-independent-ordinary-channel-slots).
+**Source pointers:** [Watrous Sections 1.1.2, 1.1.3, and 2.1.2](WATROUS_BRIDGE.md#source-map); [project target and channel spaces](../science/model.md#1-independent-ordinary-channel-slots).
 
 <a id="m02"></a>
 
@@ -71,7 +58,7 @@ The dependency links in each record identify earlier milestones that supply its 
 
 **Conceptual connection:** A protocol that preserves selected target states can still damage entanglement. Channel-level recovery includes those correlations from the start.
 
-**Sources:** [Watrous Section 2.1.3](WATROUS_BRIDGE.md#source-map); [exact successful recovery](../science/model.md#5-exact-successful-recovery); [heralded entanglement generation](../science/interpretation.md#heralded-entanglement-generation).
+**Source pointers:** [Watrous Section 2.1.3](WATROUS_BRIDGE.md#source-map); [exact successful recovery](../science/model.md#5-exact-successful-recovery); [heralded entanglement generation](../science/interpretation.md#heralded-entanglement-generation).
 
 <a id="m03"></a>
 
@@ -87,7 +74,7 @@ The dependency links in each record identify earlier milestones that supply its 
 
 **Conceptual connection:** Tracing out an environment gives a sum of Kraus operations. Having a formula for that sum does not supply coherent access to its terms. That distinction will separate the present protocol from stronger environment-access models.
 
-**Sources:** [Watrous Sections 2.2.1–2.2.2, including Theorem 2.22](WATROUS_BRIDGE.md#source-map); [ordinary channel slots](../science/model.md#1-independent-ordinary-channel-slots); [access distinctions](WATROUS_BRIDGE.md#conceptual-gaps).
+**Source pointers:** [Watrous Sections 2.2.1–2.2.2, including Theorem 2.22](WATROUS_BRIDGE.md#source-map); [ordinary channel slots](../science/model.md#1-independent-ordinary-channel-slots); [access distinctions](WATROUS_BRIDGE.md#conceptual-gaps).
 
 <a id="m04"></a>
 
@@ -112,7 +99,7 @@ For a channel, $`\mathrm{Tr}J_{\mathcal N}=d`$ and the output partial trace is $
 
 **Conceptual connection:** The identity channel has a rank-one Choi matrix even though it transmits an arbitrary target state. The depolarizer has $`J_\Delta=I_{d^2}/d`$.
 
-**Sources:** [Watrous Section 2.2.2, Eq. (2.64) and Theorem 2.26](WATROUS_BRIDGE.md#source-map); [notation translation](WATROUS_BRIDGE.md#notation); [project Choi conventions](../science/model.md#6-choi-and-full-rank-conventions).
+**Source pointers:** [Watrous Section 2.2.2, Eq. (2.64) and Theorem 2.26](WATROUS_BRIDGE.md#source-map); [notation translation](WATROUS_BRIDGE.md#notation); [project Choi conventions](../science/model.md#6-choi-and-full-rank-conventions).
 
 <a id="m05"></a>
 
@@ -128,7 +115,7 @@ For a channel, $`\mathrm{Tr}J_{\mathcal N}=d`$ and the output partial trace is $
 
 **Conceptual connection:** Full Choi rank means that Kraus operators span the entire matrix algebra. Rank-one successful output means that every successful Kraus amplitude has one prescribed operator direction.
 
-**Sources:** [Watrous Sections 1.1.3 and 2.2.2](WATROUS_BRIDGE.md#source-map); [full-rank spanning in Theorem 1](../science/polynomial_realization.md#theorem-1-universal-exact-branch); [rank-one Choi argument](../science/query_threshold.md#2-the-rank-one-choi-argument).
+**Source pointers:** [Watrous Sections 1.1.3 and 2.2.2](WATROUS_BRIDGE.md#source-map); [full-rank spanning in Theorem 1](../science/polynomial_realization.md#theorem-1-universal-exact-branch); [rank-one Choi argument](../science/query_threshold.md#2-the-rank-one-choi-argument).
 
 <a id="m06"></a>
 
@@ -144,7 +131,7 @@ For a channel, $`\mathrm{Tr}J_{\mathcal N}=d`$ and the output partial trace is $
 
 **Conceptual connection:** Rank-one postselection is a convenient realization. The later lower bound must also cover more general preparations and accepted effects.
 
-**Sources:** [Watrous Sections 2.3.1–2.3.2, especially instruments on pp. 111–113](WATROUS_BRIDGE.md#source-map); [allowed controller and instrument](../science/model.md#3-allowed-controller-and-successful-instrument).
+**Source pointers:** [Watrous Sections 2.3.1–2.3.2, especially instruments on pp. 111–113](WATROUS_BRIDGE.md#source-map); [allowed controller and instrument](../science/model.md#3-allowed-controller-and-successful-instrument).
 
 <a id="m07"></a>
 
@@ -160,7 +147,7 @@ For a channel, $`\mathrm{Tr}J_{\mathcal N}=d`$ and the output partial trace is $
 
 **Conceptual connection:** The once-per-slot word convention makes degree count channel traversals. Independent environments make the complete noise label a tuple, which is essential for both Kraus invariance and the spanning proof.
 
-**Sources:** [Watrous channel and representation foundations, Sections 2.2.1–2.2.2](WATROUS_BRIDGE.md#source-map); [compulsory traversals and word order](../science/model.md#2-compulsory-traversals-and-word-order); [independence requirement](../science/model.md#1-independent-ordinary-channel-slots).
+**Source pointers:** [Watrous channel and representation foundations, Sections 2.2.1–2.2.2](WATROUS_BRIDGE.md#source-map); [compulsory traversals and word order](../science/model.md#2-compulsory-traversals-and-word-order); [independence requirement](../science/model.md#1-independent-ordinary-channel-slots).
 
 <a id="m08"></a>
 
@@ -176,7 +163,7 @@ For a channel, $`\mathrm{Tr}J_{\mathcal N}=d`$ and the output partial trace is $
 
 **Conceptual connection:** The controller combines different products of the same slot operators. It neither selects a favorable Kraus outcome nor turns a classical distribution over orders into the same resource.
 
-**Sources:** [Watrous Sections 2.1.2, 2.2.2, and 2.3.2](WATROUS_BRIDGE.md#source-map); [conceptual bridge to order control](WATROUS_BRIDGE.md#conceptual-gaps); [switch definition](../science/polynomial_realization.md#1-the-normalized-switch).
+**Source pointers:** [Watrous Sections 2.1.2, 2.2.2, and 2.3.2](WATROUS_BRIDGE.md#source-map); [conceptual bridge to order control](WATROUS_BRIDGE.md#conceptual-gaps); [switch definition](../science/polynomial_realization.md#1-the-normalized-switch).
 
 <a id="m09"></a>
 
@@ -199,7 +186,7 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 **Conceptual connection:** Separate channel instances correspond to separate variables even when their channel maps, or particular matrix values, coincide.
 
-**Sources:** [Watrous operator algebra background, Section 1.1.2](WATROUS_BRIDGE.md#source-map); [the polynomial step beyond the textbook](WATROUS_BRIDGE.md#conceptual-gaps); [realizable order polynomials](../science/polynomial_realization.md#2-every-multilinear-order-polynomial-is-realizable).
+**Source pointers:** [Watrous operator algebra background, Section 1.1.2](WATROUS_BRIDGE.md#source-map); [the polynomial step beyond the textbook](WATROUS_BRIDGE.md#conceptual-gaps); [realizable order polynomials](../science/polynomial_realization.md#2-every-multilinear-order-polynomial-is-realizable).
 
 <a id="m10"></a>
 
@@ -215,7 +202,7 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 **Conceptual connection:** Scalarity will give exact recovery; nonidentity together with spanning will give positive success. Neither condition alone supplies both conclusions.
 
-**Sources:** [Scope of the Watrous anchor](WATROUS_BRIDGE.md#source-boundaries); [centrality definition](../science/polynomial_realization.md#3-centrality-gives-exact-recovery); [linearization](../science/polynomial_realization.md#4-why-finite-dimensional-constructions-exist); [primary algebraic sources](../references/RELATED_WORK.md#central-polynomials).
+**Source pointers:** [Scope of the Watrous anchor](WATROUS_BRIDGE.md#source-boundaries); [centrality definition](../science/polynomial_realization.md#3-centrality-gives-exact-recovery); [linearization](../science/polynomial_realization.md#4-why-finite-dimensional-constructions-exist); [primary algebraic sources](../references/RELATED_WORK.md#central-polynomials).
 
 <a id="m11"></a>
 
@@ -231,7 +218,7 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 **Conceptual connection:** The project's $`F_e`$ is an overlap with a maximally entangled state. Watrous's fidelity uses the root convention, so that overlap is the square of the corresponding textbook fidelity.
 
-**Sources:** [Watrous Sections 3.2.1 and 3.3.2](WATROUS_BRIDGE.md#source-map); [notation and fidelity conventions](WATROUS_BRIDGE.md#notation); [exact recovery](../science/model.md#5-exact-successful-recovery).
+**Source pointers:** [Watrous Sections 3.2.1 and 3.3.2](WATROUS_BRIDGE.md#source-map); [notation and fidelity conventions](WATROUS_BRIDGE.md#notation); [exact recovery](../science/model.md#5-exact-successful-recovery).
 
 <a id="m12"></a>
 
@@ -247,7 +234,7 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 **Conceptual connection:** Encoding many order labels in a small number of qubits does not provide a small routing circuit. Minimum positive use count excludes a zero-call identity wire.
 
-**Sources:** [Watrous instrument and capacity context](WATROUS_BRIDGE.md#source-map); [resource bridge](WATROUS_BRIDGE.md#resource-scaling); [resource accounting](../science/probability.md#resource-accounting); [fresh-pair interpretation](../science/interpretation.md#heralded-entanglement-generation).
+**Source pointers:** [Watrous instrument and capacity context](WATROUS_BRIDGE.md#source-map); [resource bridge](WATROUS_BRIDGE.md#resource-scaling); [resource accounting](../science/probability.md#resource-accounting); [fresh-pair interpretation](../science/interpretation.md#heralded-entanglement-generation).
 
 <a id="m13"></a>
 
@@ -263,323 +250,278 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 **Conceptual connection:** A dimension-dependent universal construction and a lower bound for one completely known fixed channel have different quantifiers. The supplied generalized switch is itself a resource, not a consequence of the textbook channel axioms.
 
-**Sources:** [Watrous-to-project conceptual gaps](WATROUS_BRIDGE.md#conceptual-gaps); [complete model](../science/model.md); [scientific question and proof dependencies](../science/README.md).
+**Source pointers:** [Watrous-to-project conceptual gaps](WATROUS_BRIDGE.md#conceptual-gaps); [complete model](../science/model.md); [scientific question and proof dependencies](../science/README.md).
 
 ## Phase II: Narrative/innovation
 
 <a id="m14"></a>
 
-### M14. A valid switch independent of Kraus representation
+### M14. Physical order amplitudes become a matrix polynomial
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why does the order-controlled construction define a physical operation on channels themselves?
+**Central question:** How does a normalized controller turn a formal word sum into an accepted quantum operation?
 
-**Understanding target:** Explain how orthogonal order projectors and trace preservation of each complete composition give a trace-preserving switch. Follow why independent isometric changes of slot Kraus families combine into one tensor-product isometry on the history label, leaving the switch and its measurement branches unchanged.
+**Understanding target:** Explain Kraus independence of the supplied switch and the preparation/effect construction for arbitrary multilinear coefficients. Keep coherent addition of orders within one history separate from the incoherent sum over independent histories.
 
-**Dependencies and story role:** [M03](#m03), [M07](#m07), [M08](#m08), [M13](#m13). Establishes the physical validity of the resource before using interference to recover a state.
+**Dependencies and story role:** M06–M10 and M13. Starts the narrative with the physical realization needed by every later algebraic claim.
 
-**Conceptual connection:** Each slot occurs once in every word. That common structure makes the construction insensitive to mathematical Kraus choices without granting access to the environments.
+**Conceptual connection:** Coefficient normalization is part of a protocol, not a free rescaling of a mathematical identity.
 
-**Sources:** [Watrous Section 2.2.2, Corollary 2.23](WATROUS_BRIDGE.md#source-map); [normalized switch](../science/polynomial_realization.md#1-the-normalized-switch); [independence and Kraus representations](../science/polynomial_realization.md#independence-and-kraus-representations).
+**Source pointers:** Watrous §§2.2.2 and 2.3.2 via the [bridge](WATROUS_BRIDGE.md#conceptual-gaps); [normalized switch and realization](../science/polynomial_realization.md#1-the-normalized-switch).
 
 <a id="m15"></a>
 
-### M15. Turning coefficients into control amplitudes
+### M15. Centrality gives an exact branch with positive probability
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How can a formal signed or complex polynomial become an accepted quantum operation with correct normalization?
+**Central question:** Why does a nonidentity central polynomial recover every input rather than merely a selected state?
 
-**Understanding target:** Connect control preparation, coefficient phases, and rank-one postselection to
+**Understanding target:** Combine scalar successful Kraus operators with complete positivity to obtain a multiple of the identity channel. Use the full Kraus span and multilinearity to prove that at least one scalar is nonzero. Distinguish centrality from nonidentity.
 
-```math
-B_{\boldsymbol a}
-=\frac{P(K^{(1)}_{a_1},\ldots,K^{(m)}_{a_m})}{L},
-\qquad L=\sum_\pi|c_\pi|.
-```
+**Dependencies and story role:** M05, M10, M11 and M14. Joins the algebraic mechanism to the complete quantum recovery goal.
 
-Explain why $`1/L`$ is the maximal scale for that fixed formal coefficient ray within the pure-preparation, single-rank-one-effect class. Distinguish this normalization statement from global optimization over polynomials, equivalent representations, or several accepted outcomes.
+**Conceptual connection:** A scalar on every inaccessible history protects an untouched reference; spanning supplies positive success.
 
-**Dependencies and story role:** [M06](#m06), [M09](#m09), [M14](#m14). Converts the algebraic object into a definite controller with a charged success probability.
-
-**Conceptual connection:** Interference signs and normalization are physical parts of the protocol, not arbitrary rescalings of a formal identity.
-
-**Sources:** [Watrous measurement foundations](WATROUS_BRIDGE.md#source-map); [polynomial realization](../science/polynomial_realization.md#2-every-multilinear-order-polynomial-is-realizable); [fixed-ray normalization](../science/probability.md#optimality-for-a-fixed-coefficient-ray).
+**Source pointers:** Watrous §§1.1.3 and 2.2.2; [universal exact branch](../science/polynomial_realization.md#theorem-1-universal-exact-branch).
 
 <a id="m16"></a>
 
-### M16. Centrality gives exact positive success
+### M16. The converse and the minimum call threshold
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why do inaccessible noise histories all give the same accepted target channel?
+**Central question:** Why must every exact full-rank protocol obey the same central-polynomial degree limit?
 
-**Understanding target:** Explain the two steps of Theorem 1. Centrality makes every successful history operator a scalar multiple of identity, so their incoherent sum is $`p\,\mathrm{id}_d`$. If each slot has full Choi rank, Kraus spanning and multilinearity prevent every scalar from vanishing. The same controller works for heterogeneous full-rank slots and needs no channel description.
+**Understanding target:** Explain the rank-one Choi support argument for general accepted effects, then extend scalarity from the Kraus span to arbitrary matrices. Interpret the minimum positive call count as c(d), including the imported algebraic degree facts and their limits.
 
-**Dependencies and story role:** [M05](#m05), [M10](#m10), [M11](#m11), [M15](#m15). Establishes achievability with both exactness and nonzero success.
+**Dependencies and story role:** M05–M07, M09–M11 and M15. Reverses the construction to produce a characterization rather than only an example.
 
-**Conceptual connection:** The environment may retain the noise history. Recovery follows because all accepted histories act identically on the target. For arbitrary channels scalarity still holds, but positive success is not guaranteed outside the stated full-rank condition.
+**Conceptual connection:** Positivity prevents cancellation between unwanted successful histories and converts exact recovery into an algebraic necessity.
 
-**Sources:** [Watrous Choi/Kraus background](WATROUS_BRIDGE.md#source-map); [Theorem 1 and its proof](../science/polynomial_realization.md#theorem-1-universal-exact-branch); [worked channel example](WATROUS_BRIDGE.md#worked-example).
+**Source pointers:** Watrous §§1.1.3, 2.2.2 and 2.3.2; [query characterization](../science/query_threshold.md#theorem-2-exact-query-characterization); [known degrees and dimension bounds](../science/query_threshold.md#5-known-degrees-and-their-quantum-meaning).
 
 <a id="m17"></a>
 
-### M17. Why exact full-rank recovery forces centrality
+### M17. The four-call qubit branch
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Could a controller tailored to one known full-rank channel avoid the central-polynomial condition?
+**Central question:** What makes the eight-word qubit polynomial both central and physically useful?
 
-**Understanding target:** Follow the converse from a rank-one successful Choi operator to scalarity of every successful Kraus operator, then from a spanning Kraus family to centrality on arbitrary matrices. Understand why mixed preparations, independent control ancillas, general accepted effects, and final herald-dependent unitary corrections do not remove the lower bound.
+**Understanding target:** Relate the anticommutator of two commutators to scalar matrices in dimension two, verify one nonzero evaluation, and specify the eight occupied orders and normalized signed herald. Explain what the exact lower-degree certificate establishes.
 
-**Dependencies and story role:** [M05](#m05), [M06](#m06), [M09](#m09), [M16](#m16). Completes the reverse implication needed for an exact characterization.
+**Dependencies and story role:** M14–M16. Makes construction and minimality concrete in the smallest target dimension.
 
-**Conceptual connection:** Positivity forbids cancellation between different Kraus histories even though order amplitudes can cancel within a history. The fixed-channel lower bound allows complete knowledge of the channel; it is not merely a limitation of one universal controller.
+**Conceptual connection:** Four channel calls and eight order alternatives are different resource counts; the construction does not prove eight alternatives minimal.
 
-**Sources:** [Watrous positive Choi representation](WATROUS_BRIDGE.md#source-map); [rank-one converse](../science/query_threshold.md#2-the-rank-one-choi-argument); [general controls](../science/query_threshold.md#3-general-control-states-and-successful-events); [final corrections](../science/query_threshold.md#4-final-unitary-corrections-do-not-lower-the-count).
+**Source pointers:** Watrous operator and Choi foundations; [qubit polynomial and certificate](../science/qubit.md); [worked depolarizing example](WATROUS_BRIDGE.md#worked-example).
 
 <a id="m18"></a>
 
-### M18. The minimum degree becomes a call threshold
+### M18. Qutrit and all-dimensional realizations
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What exactly does $`m_\star(\mathcal N)=c(d)`$ determine?
+**Central question:** How do inherited central polynomials become finite exact protocols beyond a qubit?
 
-**Understanding target:** Combine both theorem directions to identify the minimum positive number of compulsory calls for every fixed full-rank channel. Explain $`c(2)=4`$, $`c(3)=8`$, the upper bound $`c(4)\le13`$, and
+**Understanding target:** Explain the degree-eight qutrit construction, its 2,880-word support and nonidentity witness, and distinguish the local centrality proof from imported degree minimality. Place the general existence and Regev constructions alongside their separate degree and probability costs.
 
-```math
-2d-1\le c(d)\le(d-1)^2+4,\qquad d>2.
-```
+**Dependencies and story role:** M14–M17. Extends the same mechanism while retaining the provenance of the algebraic ingredients.
 
-Understand the lower-bound connection between central polynomials and polynomial identities through $`[P,X_{m+1}]`$. An exact minimum does not establish feasibility at every larger compulsory degree. For an entire $`k`$-qubit target, the lower bound is $`2^{k+1}-1`$ original calls.
+**Conceptual connection:** A universal realization theorem turns algebraic identities into channel capabilities without making all dimensions equally economical.
 
-**Dependencies and story role:** [M10](#m10), [M12](#m12), [M16](#m16), [M17](#m17). Turns the local construction and converse into the global query statement.
-
-**Conceptual connection:** Algebraic degree becomes an operational invariant, while efficiency, success probability, and control complexity remain separate questions.
-
-**Sources:** [Research ingredients beyond Watrous](WATROUS_BRIDGE.md#source-boundaries); [exact query characterization](../science/query_threshold.md#theorem-2-exact-query-characterization); [degree bounds](../science/query_threshold.md#7-a-dimension-dependent-lower-bound); [degree provenance](../references/RELATED_WORK.md#central-polynomials).
+**Source pointers:** Watrous §§1.1.2–1.1.3 and §2.2.2; [qutrit construction](../science/qutrit.md); [general existence](../science/polynomial_realization.md#4-why-finite-dimensional-constructions-exist); [Regev probability](../science/probability.md#regev-construction).
 
 <a id="m19"></a>
 
-### M19. Four calls for a qubit
+### M19. Probability is part of the exact result
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How does the abstract mechanism become an explicit, minimal qubit protocol?
+**Central question:** What does a perfect accepted channel cost when most attempts fail?
 
-**Understanding target:** Connect the anticommutator of two commutators,
+**Understanding target:** Use coefficient normalization and exact depolarizing contractions to interpret qubit success 3/64 and qutrit success 1/43,740. Separate p, calls per attempt, occupied orders, register size, and m/p for independent fresh-pair trials.
 
-```math
-P_2=\{[X_1,X_2],[X_3,X_4]\},
-```
+**Dependencies and story role:** M12, M17 and M18. Converts existence into an explicitly charged operational statement.
 
-to eight signed order words and normalization $`L=8`$. Explain centrality using traceless $`2\times2`$ matrices and identify a nonzero Pauli evaluation. Distinguish the exact matrix-unit certificate excluding degrees one through three from sampled numerical checks.
+**Conceptual connection:** A perfect normalized branch can coexist with a large expected cost; a failed unknown input is not assumed reusable.
 
-**Dependencies and story role:** [M01](#m01), [M15](#m15), [M16](#m16), [M18](#m18). Supplies the smallest complete example of the characterization.
-
-**Conceptual connection:** The protocol realizes an inherited central polynomial and a known qubit superswitch branch. Its explicit controller gives a concrete instance of the general theorem.
-
-**Sources:** [Watrous operator foundations and worked example](WATROUS_BRIDGE.md#worked-example); [qubit construction and certificate](../science/qubit.md); [superswitch antecedent](../references/RELATED_WORK.md#kechrimparis2025).
+**Source pointers:** Watrous §§1.2.2 and 2.3.2; [success probability](../science/probability.md#qubit-success-probability); [resource accounting](../science/probability.md#resource-accounting).
 
 <a id="m20"></a>
 
-### M20. Eight calls for a qutrit
+### M20. Noise floors, batching and the near-identity boundary
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What establishes an explicit finite exact protocol beyond the qubit case?
+**Central question:** Why can weaker slot noise make a fixed exact filter rarer, and how can a larger batch help?
 
-**Understanding target:** Explain how the Drensky–Kasparian placement formula specifies 2,880 signed words of degree eight. Connect the exterior-algebra centrality argument, the scalar trace formula, and the exact nonzero matrix-unit witness to its channel realization. The polynomial is already multilinear, so no extra polarization factor or physical identity slot is introduced.
+**Understanding target:** Distinguish a CP full-rank noise floor from a controller-noise floor. Explain the minimum-call suppression law near identity and the matching fixed-dimension expected-call scaling obtained by contiguous batching. Retain its fixed-batch, fresh-input and known-noise assumptions.
 
-**Dependencies and story role:** [M10](#m10), [M15](#m15), [M16](#m16), [M18](#m18). Extends the explicit mechanism to a qutrit while keeping its proof dependencies visible.
+**Dependencies and story role:** M15, M16 and M19. Integrates probability with call-count optimization rather than treating minimum calls as the only cost.
 
-**Conceptual connection:** The repository supplies the degree-eight construction and its centrality proof. Excluding all lower qutrit degrees is an imported algebraic theorem, not a conclusion of the finite coefficient or sampled-matrix checks. Controller support 2,880 is sufficient, not proven minimal.
+**Conceptual connection:** Batching changes the effective slot strength while still charging every original traversal; it does not optimize routing overhead or establish communication capacity.
 
-**Sources:** [Boundary between textbook and research algebra](WATROUS_BRIDGE.md#source-boundaries); [qutrit construction](../science/qutrit.md); [imported qutrit minimum](../science/qutrit.md#5-why-eight-calls-are-optimal); [primary polynomial source](../references/RELATED_WORK.md#central-polynomials).
+**Source pointers:** Watrous §1.2.2 and §2.2.2; [CP noise floor](../science/probability.md#cp-noise-floor); [near-identity suppression](../science/probability.md#noise-approaching-the-identity); [expected charged calls](../science/probability.md#expected-charged-calls).
 
 <a id="m21"></a>
 
-### M21. Evaluating specified controllers
+### M21. Which changes leave the theorem’s model?
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How are exact success probabilities obtained for the actual controller coefficients?
+**Central question:** Which physical resources would invalidate a transfer of the exact recovery theorem?
 
-**Understanding target:** Relate $`p=L^{-2}\sum_{\boldsymbol a}|\lambda_{\boldsymbol a}|^2`$ to two useful calculation routes: qubit Pauli-vector covariances, and matrix-unit contraction counts for depolarizing slots. Explain why the general nonunital qubit formula contains a transpose rather than an adjoint. Understand the independent all-word and scalar-trace calculations of the qutrit probability.
+**Understanding target:** Explain the correlated-noise and rank-deficient boundary examples, classical-order comparison, and randomizing wrappers. Keep an unknown input, inaccessible environments and compulsory raw traversals visible when comparing protocols.
 
-**Dependencies and story role:** [M04](#m04), [M15](#m15), [M19](#m19), [M20](#m20). Quantifies the two explicit protocols after establishing their exactness.
+**Dependencies and story role:** M13, M16 and M20. Closes the ideal-control story by testing the assumptions on which its characterization depends.
 
-**Conceptual connection:** The displayed controllers give $`p(\Delta_2)=3/64`$ and $`p(\Delta_3)=1/43740`$. These are exact values for specified preparations and effects, not global probability optima. Agreement of independent contractions checks normalization and transcription.
+**Conceptual connection:** A valid theorem transfer requires matching access and resources; equal marginal channels or a convenient Kraus formula do not suffice.
 
-**Sources:** [Watrous Kraus and measurement foundations](WATROUS_BRIDGE.md#source-map); [general qubit probability](../science/probability.md#qubit-success-probability); [depolarizing contractions](../science/probability.md#exact-depolarizing-contractions); [qutrit probability](../science/probability.md#eight-call-qutrit-probability).
+**Source pointers:** Watrous §§2.2.2 and 3.3.2; [interpretation and boundary cases](../science/interpretation.md); [raw-slot access](../science/noisy_routing_model.md#shared-access).
 
 <a id="m22"></a>
 
-### M22. An all-dimensional construction and its cost
+### M22. Physical controller noise and the shared channel family
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What does an explicit construction in every dimension reveal beyond existence?
+**Central question:** Why do order labels alone fail to specify a locally noisy controller?
 
-**Understanding target:** Connect the Regev polynomial's double alternation and determinant evaluation to an explicitly normalized controller of degree $`2d^2`$. Explain how Cauchy–Binet turns its Kraus-tuple probability into a constant times $`\det(J_{\mathcal N})^2`$. Full Choi rank is necessary and sufficient for this particular family's positive success, without classifying other controllers.
+**Understanding target:** Specify the four raw qubit slots, the eight matrix words, the physical code assignment [0,1,2,3,4,6,5,7], and the measure-Z/prepare-tilted-axis channel with depolarizing admixture. Distinguish global dephasing eta from independent physical-bit dephasing gamma and explain why per-slot wrappers alter the task.
 
-**Dependencies and story role:** [M04](#m04), [M10](#m10), [M15](#m15), [M18](#m18), [M21](#m21). Extends quantitative understanding from two small dimensions to a general family.
+**Dependencies and story role:** M07–M08, M13 and M21. Introduces the matched noisy experiment with an operational encoding rather than a mere relabeling.
 
-**Conceptual connection:** An all-dimensional exact formula can exhibit severe probability and control-support growth. This family is generally not query minimal and gives no practical-rate or uniform efficiency guarantee.
+**Conceptual connection:** Schur noise weights interference by physical Hamming distance, so scalar controller coherence does not identify all useful order correlations.
 
-**Sources:** [Watrous matrix and channel foundations](WATROUS_BRIDGE.md#source-map); [Regev construction and probability](../science/probability.md#regev-construction); [direct Procesi determinant source and version qualification](../references/RELATED_WORK.md#regev-procesi).
+**Source pointers:** Watrous §§2.2.2 and 4.1.3; [channel family](../science/noisy_routing_model.md#channel-family); [physical codebook](../science/noisy_routing_model.md#physical-codebook).
 
 <a id="m23"></a>
 
-### M23. Two consequences of a CP noise floor
+### M23. All allowed controllers have one positive-matrix budget
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How can the same positive noise component guarantee quantum success and obstruct exact classical-order recovery?
+**Central question:** How can mixed preparations, ancillary registers and final instruments be optimized without guessing a controller?
 
-**Understanding target:** Use $`\eta_j=d\,\lambda_{\min}(J_{\mathcal N_j})>0`$ to decompose each full-rank channel into a depolarizer and a residual channel. For a fixed exact controller, retaining the all-depolarizing contribution gives a positive lower bound on success. In a classical composition, every term containing a depolarizer is a replacer, giving a strictly positive gap from identity.
+**Understanding target:** Interpret the exact feasible set H_x positive semidefinite with their sum bounded by diag(t), where t is a probability vector. Explain the converse realization, symmetry reduction to I/8, and the Gram formulas for acceptance and Bell reward. Distinguish arbitrary complex branches from real attaining branches with input-independent success.
 
-**Dependencies and story role:** [M04](#m04), [M08](#m08), [M11](#m11), [M16](#m16). Moves from the exact examples in M21 to structural guarantees and a comparison within the same access model.
+**Dependencies and story role:** M05–M06, M11 and M22. Replaces a chosen postselection with a complete optimization domain.
 
-**Conceptual connection:** Positivity controls both arguments, but coherent order and a classical mixture retain different conditional operations. The gap concerns accepted-channel exactness; it does not establish superior throughput or a no-go theorem for circuits with protected target memory.
+**Conceptual connection:** Positive-matrix feasibility charges the entire outcome instrument; ancillas do not enlarge this domain. Real and Y-symmetry reductions justify an attaining recovery channel rather than assuming all branches normalize linearly.
 
-**Sources:** [Watrous positive-map and distance foundations](WATROUS_BRIDGE.md#source-map); [CP noise-floor bound](../science/probability.md#cp-noise-floor); [quantitative classical-order gap](../science/interpretation.md#a-quantitative-gap-from-the-identity).
+**Source pointers:** Watrous §§1.2.3, 2.3.2 and 3.2; [controller feasibility](../science/controller_optimization.md#controller-feasibility); [real-controller reduction](../science/controller_optimization.md#real-controller-reduction).
 
 <a id="m24"></a>
 
-### M24. Exact recovery near the identity boundary
+### M24. A strictly positive Schur floor excludes exact recovery
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why can a minimum-call exact branch become rarer as the supplied channel approaches identity?
+**Central question:** Why does any nonzero diagonal acceptance obstruct an exact unitary branch under the specified controller noise?
 
-**Understanding target:** For $`\mathcal N_\epsilon=(1-\epsilon)\mathrm{id}+\epsilon\Delta`$, explain why a minimum-degree central polynomial vanishes when any argument is identity. Therefore, for $`0<\epsilon\le1`$,
+**Understanding target:** Use the CP lower bound from a strictly positive Schur kernel and full Choi rank of composed raw slots to rule out a nonzero rank-one accepted Choi operator. State the finite-call scope and the excluded access to noise flags or coherence restoration.
 
-```math
-p_{\mathcal C}(\mathcal N_\epsilon)
-=\epsilon^{c(d)}p_{\mathcal C}(\Delta),
-\qquad m=c(d).
-```
+**Dependencies and story role:** M05, M16 and M22–M23. Separates the noiseless exact mechanism from its mathematically precise noisy obstruction.
 
-Relate the same law for the optimized probability to the common full-rank controller class. Understand the binomial-tail upper bound for arbitrary fixed $`m`$, without inferring achievability at every such degree.
+**Conceptual connection:** The crucial fact is unavoidable diagonal contribution, not a claim that every imaginable controller noise destroys exactness.
 
-**Dependencies and story role:** [M09](#m09), [M17](#m17), [M18](#m18), [M23](#m23). Reveals a singular resource consequence of requiring exactness.
-
-**Conceptual connection:** At $`\epsilon=0`$, the supplied channel is identity and deterministic success is possible. The feasible controller class changes, so the optimized full-rank law does not extend to that endpoint.
-
-**Sources:** [Watrous mixture and channel foundations](WATROUS_BRIDGE.md#source-map); [noise approaching identity](../science/probability.md#noise-approaching-the-identity); [resource bridge](WATROUS_BRIDGE.md#resource-scaling).
+**Source pointers:** Watrous §§1.1.3, 2.2.2 and 4.1.3; [strict Schur obstruction](../science/noisy_recovery_obstruction.md#strict-schur-obstruction).
 
 <a id="m25"></a>
 
-### M25. Optimizing expected original-channel calls
+### M25. The complete orthogonal recovery frontier
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Can spending more calls in one attempt reduce the total calls needed for a successful fresh pair?
+**Central question:** When does a simple physical readout attain the optimum over every allowed controller?
 
-**Understanding target:** Explain the matching fixed-dimension scaling
+**Understanding target:** Explain physical Walsh diagonalization of the orthogonal-axis acceptance and corrected reward matrices. Reduce the optimization to fractional knapsack with mode capacities b_j/8, rewards a_j/8, and modes sorted by a_j/b_j; include partial acceptance of the boundary mode and zero-capacity cases.
 
-```math
-\mathcal Q_d(\epsilon)
-=\inf_{\text{exact fixed-batch protocols}}\frac{m}{p}
-=\Theta_d(1/\epsilon),
-\qquad 0<\epsilon\le1.
-```
+**Dependencies and story role:** M22–M23. Turns the controller feasible set into an exact acceptance–fidelity tradeoff with an explicit attaining measurement.
 
-The binomial bound gives $`m/p\ge c(d)/\epsilon`$. Contiguous blocks of $`k=\lceil1/\epsilon\rceil`$ original calls give effective noise bounded away from zero, after which a central controller supplies the upper bound. Count all original calls, including failed attempts, rather than counting a block as one original use.
+**Conceptual connection:** An upper bound and a physical three-X readout attain the same curve, so the result is a full frontier for this architecture rather than only a good herald.
 
-**Dependencies and story role:** [M12](#m12), [M18](#m18), [M23](#m23), [M24](#m24). Separates minimum calls per attempt from optimal mean calls.
-
-**Conceptual connection:** The result concerns repeated fixed batches on fresh entangled pairs, known or comparably bounded $`\epsilon`$, and unmodified channel slots. Any explicit central degree suffices for a constructive upper bound. Dimension-dependent constants can be large; routing remains charged separately.
-
-**Sources:** [Watrous bridge to resource scaling](WATROUS_BRIDGE.md#resource-scaling); [expected charged calls and proof](../science/probability.md#expected-charged-calls); [resource accounting](../science/probability.md#resource-accounting).
+**Source pointers:** Watrous §§1.2.3 and 2.3.1–2.3.2; [frontier theorem](../science/recovery_frontier.md#frontier-theorem); [controller reduction](../science/controller_optimization.md#real-controller-reduction).
 
 <a id="m26"></a>
 
-### M26. Correlated and rank-deficient boundaries
+### M26. Herald choice depends on noise geometry
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Which conclusions fail when full rank or independence is removed?
+**Central question:** Why can matching a controller’s scalar coherence fail to match its best recovery outcome?
 
-**Understanding target:** Follow the correlated qubit example in which each marginal channel has full Choi rank, yet four slots share one random unitary, every order has the same product, and the overall target channel is depolarizing. Contrast rank-deficient examples: finite-order unitary channels can recover by ordinary composition, while repeated complete dephasing cannot be repaired by order control.
+**Understanding target:** Compare the inherited P2 branch and the alternative Q branch under global and physical local dephasing. Keep success probability and corrected fidelity together, distinguish a selected-branch comparison from the full frontier, and explain the reversal of the preferred branch at the stated parameters.
 
-**Dependencies and story role:** [M05](#m05), [M07](#m07), [M16](#m16), [M17](#m17), [M23](#m23). Uses concrete alternatives to locate the assumptions of the general theorem.
+**Dependencies and story role:** M19, M22 and M25. Exposes which physical correlations the optimized frontier uses.
 
-**Conceptual connection:** Full-rank marginals do not replace joint independence. Conversely, full Choi rank is a sufficient hypothesis for the universal result and the converse, not a necessary condition for every recoverable individual channel.
+**Conceptual connection:** A scalar summary can agree while Schur kernels weight the same order pairs differently; fidelity alone also omits acceptance cost.
 
-**Sources:** [Watrous channel foundations and access boundaries](WATROUS_BRIDGE.md#conceptual-gaps); [exact correlated counterexample](../science/interpretation.md#correlated-instances); [rank-deficient boundaries](../science/interpretation.md#rank-deficient-channels).
+**Source pointers:** Watrous §§3.2 and 4.1.3; [exact frontier and branch evaluations](../science/recovery_frontier.md); [physical noise conventions](../science/noisy_routing_model.md#physical-codebook).
 
 <a id="m27"></a>
 
-### M27. Randomizing wrappers change the resource
+### M27. Tilted readout optimality without commutation
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What does the all-channel wrapper corollary add to the full-rank result?
+**Central question:** How can the same readout remain globally optimal after the reward matrices cease to commute?
 
-**Understanding target:** Explain how a finite unitary 1-design supplies an output depolarizer, giving $`\Delta\circ\mathcal N=\Delta`$ for every original CPTP channel. A central controller can then succeed on the composite slots. Every original slot is still traversed, but the attached randomizers are additional target operations and must be charged as resources.
+**Understanding target:** For epsilon=1/100 and physical gamma=4/5, explain the diagonal-envelope upper bound, the two coupled Walsh blocks, and the exact polynomial margin. Distinguish the interval in t=tan(delta/2), abs(t) at most 1/5, from an interval stated directly in the angle delta. Explain why Bernstein positivity certifies the entire interval.
 
-**Dependencies and story role:** [M03](#m03), [M13](#m13), [M16](#m16), [M25](#m25), [M26](#m26). Separates an augmented corollary from the original conversion problem.
+**Dependencies and story role:** M23 and M25–M26. Generalizes the optimality argument through an operator majorant rather than an unjustified continuity claim.
 
-**Conceptual connection:** The original channel becomes informationally irrelevant in this construction. The unaugmented small-noise lower bound therefore does not survive the resource change. Randomizer environments must remain attached consistently to their slots across coherent orders.
+**Conceptual connection:** Noncommutation alone does not give a collective-measurement advantage; a common dominating diagonal reward can still be tight.
 
-**Sources:** [Watrous Sections 4.1.1–4.1.2 on mixed unitaries and Weyl operators](WATROUS_BRIDGE.md#source-map); [depolarization notation](WATROUS_BRIDGE.md#notation); [randomizing wrappers](../science/interpretation.md#randomizing-wrappers).
+**Source pointers:** Watrous §§1.1.3 and 1.2.3; [tilted optimality theorem and certificate](../science/tilted_readout.md#tilted-optimality); [verification guide](../verification/README.md).
 
 <a id="m28"></a>
 
-### M28. Exact algebra with imperfect control
+### M28. Recovery and retained entanglement separate in a robust experiment
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why does universality over noisy channels not automatically imply robustness to control errors?
+**Central question:** What can a matched channel-and-noise comparison actually conclude about C:T entanglement and R:T recovery?
 
-**Understanding target:** Distinguish changing an independent channel inside the model from changing routing, controller amplitudes, or target interactions. If the actual accepted operation differs from $`p\,\mathrm{id}`$ by diamond norm at most $`\delta<p`$, explain the bound $`2\delta/(p-\delta)`$ on the conditional trace norm error for every reference-inclusive input.
+**Understanding target:** Explain the sister result: for abs(delta) at most .2 radians, the specified unconditional three-call C:T outputs are separable on occupied 3-by-2 support, while the fixed four-call P2 branch yields NPT R:T output with positive acceptance bounds. Preserve the different calls, controller bits, bipartitions and conditional endpoints.
 
-**Dependencies and story role:** [M11](#m11), [M12](#m12), [M16](#m16), [M21](#m21). Connects ideal exactness and small success probabilities to implementation accuracy.
+**Dependencies and story role:** M11–M12, M22, M24 and M27. Connects the recovery track to its sister through a proved comparison of specified protocols.
 
-**Conceptual connection:** Normalized success can depend nonlinearly on the input through its probability. The conditional estimate is pointwise, not a diamond distance between normalized channels. It motivates a separate control-accuracy analysis without establishing a fault-tolerance threshold or efficient physical router.
+**Conceptual connection:** Retained controller–target entanglement is not a recovery certificate. This experiment does not optimize equal resources or classify all retained protocols.
 
-**Sources:** [Watrous Sections 3.2.1 and 3.3.2](WATROUS_BRIDGE.md#source-map); [conditional-error derivation](../science/interpretation.md#ideal-control-and-conditional-error); [routing and control resources](../science/probability.md#resource-accounting).
+**Source pointers:** Watrous §§3.2, 6.1.1 and 6.2.3; [uniform separation](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation); [operational meaning](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#operational-meaning).
 
 <a id="m29"></a>
 
-### M29. Finite exact recovery in the communication landscape
+### M29. Proof, certificate, evaluation and attribution
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Which operational capability survives once earlier mechanisms and their access assumptions are accounted for?
+**Central question:** Which parts of the scientific account are analytical theorems, exact finite certificates or numerical crosschecks?
 
-**Understanding target:** Locate finite exact identity heralding and its minimum-use characterization for each fixed full-rank channel relative to central-polynomial resetting with returned probes, the known qubit superswitch branch, finite-error cyclic transmission approaching identity, and compilation with coherent environment access. Explain why these statements can share algebra while supplying different channel resources or guarantees.
+**Understanding target:** Trace the degree imports, inherited qubit branch, controller reduction, exact coefficient reconstruction, Bernstein positivity and rational CT/RT certificates to their proper sources. Explain what the independent rebuild verifies and why Bell fidelity at most one half does not prove separability of every possible complex-controller Choi output.
 
-**Dependencies and story role:** [M13](#m13), [M18](#m18), [M20](#m20), [M23](#m23), [M25](#m25), [M26](#m26), [M28](#m28). Places the combined capability and its cost in a physically matched comparison.
+**Dependencies and story role:** M16–M18 and M23–M28. Integrates evidence and attribution before the final scientific synthesis.
 
-**Conceptual connection:** The surviving consequence is a finite exact successful channel with a characterized minimum within the declared architecture. Its proof combines inherited identities with channel realization and a converse. Exact coefficients and numerical checks support specified implementations; they do not replace the general proofs or the imported qutrit lower bound.
+**Conceptual connection:** Finite exact obligations can support a uniform theorem when combined with its analytical argument; numerical agreement and bounded literature search retain narrower meanings.
 
-**Sources:** [Watrous bridge and its research boundaries](WATROUS_BRIDGE.md#source-boundaries); [physical comparisons and primary sources](../references/RELATED_WORK.md#physical-comparisons); [proof and verification roles](../science/README.md#verification-route); [operational interpretation](../science/interpretation.md).
+**Source pointers:** Watrous positivity and fidelity foundations; [source boundaries](WATROUS_BRIDGE.md#source-boundaries); [related work](../references/RELATED_WORK.md); [verification commands](../verification/README.md).
 
 <a id="m30"></a>
 
-### M30. The integrated operational theorem
+### M30. The complete capability, frontier and resource statement
 
 **Phase:** Narrative/innovation. **Phase synthesis.**
 
-**Central question:** How do the mechanism, converse, examples, costs, and boundaries form one complete scientific result?
+**Central question:** What does coherent order enable, what does controller noise forbid, and what is the charged operational conclusion?
 
-**Understanding target:** Give a connected account of independent ordinary full-rank slots, compulsory traversals, an initially independent controller, and inaccessible environments. For repeated independent uses of any fixed full-rank channel $`\mathcal N`$, connect the exact successful branch and the minimum-use statement:
+**Understanding target:** Connect ideal exact recovery and its central-degree threshold to the strict-noise no-go, the attainable noisy recovery frontier, tilted robustness and the specified entanglement comparison. State the independent raw-slot model, final-only corrections and fresh-input accounting in one coherent explanation, without inferring unassisted capacity or unrestricted controller–target impossibility.
 
-```math
-\mathcal E_{\mathrm{succ}}=p\,\mathrm{id}_d,\qquad p>0,
-\qquad
-m_\star(\mathcal N)=c(d).
-```
+**Dependencies and story role:** M13–M29. Phase synthesis: combines construction, converse, noisy optimization, sister connection and evidence boundaries.
 
-Connect this theorem to the explicit four- and eight-call protocols, the classical-order exactness gap, and the distinct expected-call optimization. Preserve the positive-minimum qualifier, the imported qutrit minimality, the unproved equality at $`d=4`$, and the $`\epsilon>0`$ domain of the small-noise laws.
+**Conceptual connection:** The common mathematical foundation supports distinct scientific tasks; it is the access model, endpoint, error and success convention together that determine what transfers.
 
-**Dependencies and story role:** [M14](#m14) through [M29](#m29), integrated with the complete specification in [M13](#m13). Closes the narrative by relating every principal conclusion to the assumptions and proof ingredients that support it.
-
-**Conceptual connection:** Perfect accepted entanglement from fresh trials is an operational consequence under the supplied switch access. Correlated uses, added target resources, control errors, routing overhead, and unknown-input failure prevent broader conclusions without further analysis. Minimum calls, positive probability, efficient implementation, and unassisted capacity remain different claims.
-
-**Sources:** [Watrous-to-project proof route](WATROUS_BRIDGE.md#proof-route); [scientific overview](../science/README.md); [model and result map](../science/model.md#7-result-map); [query theorem](../science/query_threshold.md#theorem-2-exact-query-characterization); [probability and resources](../science/probability.md); [interpretation and boundaries](../science/interpretation.md).
+**Source pointers:** Watrous channel, instrument, fidelity and separability sections through the [bridge](WATROUS_BRIDGE.md); [scientific route](../science/README.md); [shared access](../science/noisy_routing_model.md#shared-access); [verification](../verification/README.md).

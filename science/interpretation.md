@@ -217,6 +217,16 @@ The normalized successful transformation can depend nonlinearly on its input thr
 
 This is a conditioning estimate, not a hardware fault-tolerance threshold. It shows why a small positive accepted probability needs a separate control-accuracy account. The [resource analysis](probability.md) also distinguishes noisy-call counts from the synthesis and coherence costs of many order states.
 
+## Noisy exactness and useful recovery
+
+The ideal central-polynomial theorem and a noisy accepted Bell state describe different endpoints. Under the [strict Schur assumptions](noisy_recovery_obstruction.md#strict-schur-obstruction), every nonzero accepted branch contains an unavoidable full-Choi-rank diagonal component, so no final target unitary can make it exact. The [frontier](recovery_frontier.md) nevertheless quantifies useful approximate recovery, charging the accepted probability instead of retaining only its best conditional fidelity.
+
+The physical geometry of controller noise also matters. A single scalar controller coherence or fidelity does not determine the best herald: the [global/local comparison](recovery_frontier.md) exhibits a branch-ranking reversal even at matched scalar coherence. The actual three-bit codebook is therefore a load-bearing part of the stated local-noise theorem.
+
+For the same raw channel family and per-bit phase noise, [Quantum Order Entanglement proves](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) a robust specified-protocol distinction: three-call retained $C:T$ outputs are separable while the fixed four-call accepted $R:T$ pair remains NPT. This compares different bipartitions, conditioning, controller sizes and call counts. It gives neither an optimized equal-resource separation nor a no-go theorem for all retained-controller protocols.
+
+Bell fidelity above one half is a sufficient two-qubit entanglement witness. A lower optimized Bell fidelity does not show that every complex-controller output is separable. Likewise, a retained $C:T$ witness on a known target input does not certify recovery of an unknown input. These inference boundaries join the two tracks without conflating their tasks.
+
 ## Relation to established communication results
 
 Coherent-order communication activation is an established phenomenon. In particular, cyclic-order protocols already provide higher-dimensional heralded transmission with an error that decreases as more channels are used. Central-polynomial quantum resetting also predates this channel model.

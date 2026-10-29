@@ -52,3 +52,15 @@ From the root, install verification/requirements.txt and run:
 python3 verification/run_checks.py
 
 The verification guide documents the optional exhaustive all-word probability calculation. Do not treat stored numerical residuals as substitutes for checking a changed implementation.
+
+## Shared noisy-control science
+
+- science/noisy_routing_model.md: raw tilted measure–prepare family, actual physical codebook, inaccessible independent noise and normalized Bell objectives.
+- science/controller_optimization.md: exact multi-outcome H feasibility, ancilla reduction, symmetry, correction sectors and attaining real input-independent controllers.
+- science/noisy_recovery_obstruction.md: strict Schur lower bound forces unavoidable diagonal acceptance; full Choi rank excludes exact unitary recovery.
+- science/recovery_frontier.md: full orthogonal acceptance–corrected-fidelity frontier, Walsh proof, global and local coefficients, deterministic acceptance and branch-ranking reversal.
+- science/tilted_readout.md: noncommuting diagonal-envelope proof and exact Bernstein certificate for |tan(delta/2)|<=1/5 at epsilon=.01,gamma=.8.
+- verification/audit_verify.py and verification/certificates/: portable independent rebuild of all shared exact obligations.
+- Sister proof: https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md
+
+The retained C:T / accepted R:T comparison has a smaller angular interval |delta|<=.2 radians, different call/controller costs and fixed protocols. Arbitrary complex-controller success may depend on the input; an optimal real representative attains the required input-independent Bell frontier. Bell fidelity<=1/2 does not classify all such outputs as separable. Physical code [0,1,2,3,4,6,5,7] is essential to the local-noise theorem. The inherited nested architecture and Pauli branch require accurate attribution. There is one shared Watrous anchor and one 30-milestone map per distinct project, not an additional sister curriculum.

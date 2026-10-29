@@ -164,3 +164,9 @@ Each proof has one main location.
 | Antecedents and the distinction between channel access and coherent Kraus access | [Related work](../references/RELATED_WORK.md) |
 
 Bibliographic records are collected in [references.bib](../references/references.bib).
+
+## 8. Noisy-controller specialization
+
+The [shared noisy-routing model](noisy_routing_model.md) retains the raw-slot access above and adds an unobserved Schur map on the actual order register, immediately before or after routing. It defines the tilted entanglement-breaking qubit family, the inherited eight-order architecture, physical routing codes, global versus per-bit phase noise, and Bell-input normalization. All noisy-frontier claims refer to that specialization. The [controller characterization](controller_optimization.md) gives its exact physical feasible set and explains why arbitrary complex controllers need not have input-independent acceptance, although an optimal real representative does.
+
+The sister entanglement repository writes its three-slot words chronologically and orders tensor factors as controller then target. Here matrix words act rightmost first. The [shared comparison](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#specified-protocols) translates both conventions explicitly before using either construction.
