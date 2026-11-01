@@ -198,14 +198,14 @@ F_{\mathrm{all}}(q)=\frac{6+3q+3q^2+4q^3}{24},
 \qquad q=0.9^r.
 ```
 
-A strict routing-time saving at an interior common error exists precisely for $`1\le r<r_*`$, where
+A strict routing-time saving at an interior common error exists precisely for $`1\le r\lt r_*`$, where
 
 ```math
 r_*=\frac12+\frac{69}{8}\bigl(F_{\mathrm{all}}(0.9^{r_*})-\tfrac12\bigr),
 ```
 
 ```math
-1.14647049186791<r_*<1.14647049186792.
+1.14647049186791\lt r_*\lt1.14647049186792.
 ```
 
 The support difference is strictly decreasing in $`r`$; stronger dephasing and a larger three-call price preserve the exclusion beyond the crossing. Ratios below $`3/2`$ here are conditional prices, not implementations of three identical serial slots of duration $`\tau`$ when $`T_2=2\tau`$. The serial schedule has $`r=3/2`$, so the fixed $`x=0.9`$ comparison encoding saves neither calls nor charged routing time. The [all-assignment converse](all_encoding_cost_bound.md) strengthens this fixed-benchmark conclusion to every permitted injective encoding.

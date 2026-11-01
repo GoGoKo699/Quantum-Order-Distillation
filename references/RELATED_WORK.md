@@ -100,7 +100,7 @@ An output rotation after every supplied slot converts this particular raw family
 
 **Arindam Mitra, Himanshu Badhani and Sibasish Ghosh**, *Improvement in quantum communication using quantum switch*, **Physica Scripta 98**, 045101 (2023). [DOI](https://doi.org/10.1088/1402-4896/acbcf7); [arXiv:2108.14001v6](https://arxiv.org/abs/2108.14001), revised 10 April 2023.
 
-Section III.D, Example 3, Eqs. (52)–(54), applies depolarizing noise to the two-order controller of an exactly recoverable Pauli-channel switch. After outcome-dependent correction the effective target channel is $`(1+t)\mathrm{id}/2+(1-t)\operatorname{Ad}_Z/2`$, rather than the identity for $`t<1`$. This is prior noisy-controller recovery analysis. It does not optimize the six-order physical-bit assignments, arbitrary controller instruments, or a randomized one/two/three-call cost at a common diamond-error tolerance.
+Section III.D, Example 3, Eqs. (52)–(54), applies depolarizing noise to the two-order controller of an exactly recoverable Pauli-channel switch. After outcome-dependent correction the effective target channel is $`(1+t)\mathrm{id}/2+(1-t)\mathrm{Ad}_Z/2`$, rather than the identity for $`t<1`$. This is prior noisy-controller recovery analysis. It does not optimize the six-order physical-bit assignments, arbitrary controller instruments, or a randomized one/two/three-call cost at a common diamond-error tolerance.
 
 **Otavio A. D. Molitor, André H. A. Malavazi, Roberto Dobal Baldijão, Alexandre C. Orthey Jr., Ismael L. Paiva and Pedro R. Dieguez**, *Quantum switch instabilities with an open control*, **Communications Physics 7**, 373 (2024). [DOI](https://doi.org/10.1038/s42005-024-01843-y); [published full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC11576514/); [arXiv:2405.09631v1](https://arxiv.org/abs/2405.09631v1).
 
@@ -223,8 +223,10 @@ An independent published statement of the same evaluation is **Claudio Procesi**
 
 ```math
 R_d(X;Y)=a_d\det[X_1,\ldots,X_{d^2}]
-                    \det[Y_1,\ldots,Y_{d^2}]I_d,
-\qquad
+                    \det[Y_1,\ldots,Y_{d^2}]I_d.
+```
+
+```math
 a_d=\frac{(-1)^{d-1}C_d^2}{(d!)^2(2d-1)},
 \qquad
 C_d=\frac{\prod_{j=1}^{d}(2j-1)!}{\prod_{j=1}^{d-1}j!}.
