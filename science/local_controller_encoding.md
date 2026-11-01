@@ -31,11 +31,11 @@ In the comparison encoding, each bit says whether the first member of the named 
 
 ```math
 L_{\pi\sigma}(q)=q^{d_H(c_\pi,c_\sigma)},\qquad
-q=e^{-\gamma T_3},\qquad
-\mathcal L_C=\tfrac\gamma2\sum_{k=1}^3(\mathrm{Ad}_{Z_k}-\mathrm{id}).
+q=e^{-\kappa T_3},\qquad
+\mathcal L_C=\tfrac\kappa2\sum_{k=1}^3(\mathrm{Ad}_{Z_k}-\mathrm{id}).
 ```
 
-The two-order controller uses one physical bit, with $`x=e^{-\gamma T_2}`$. The routing primitive is diagonal in order labels, so the declared phase noise commutes with routing and can be placed immediately after it. In the comparison encoding, Hamming distance is Kendall distance. Slot relabeling permutes and complements comparison bits, preserving that metric; reversing a word complements all three bits. These symmetries are specific to this encoding.
+Here $`\kappa`$ is a dephasing rate; it is distinct from the dimensionless local phase factor $`\gamma`$ in the four-call family. The two-order controller uses one physical bit, with $`x=e^{-\kappa T_2}`$. The routing primitive is diagonal in order labels, so the declared phase noise commutes with routing and can be placed immediately after it. In the comparison encoding, Hamming distance is Kendall distance. Slot relabeling permutes and complements comparison bits, preserving that metric; reversing a word complements all three bits. These symmetries are specific to this encoding.
 
 The charged serial schedule is $`T_m=m\tau`$. Its routing windows are also the controller exposure windows. Preparation, measurement and correction are ideal and their overhead is uncharged. Gate faults, loss, leakage, a gate-level router and measured laboratory elapsed time remain unverified. Calls and charged routing time per accepted fresh target are $`\mathbb E[m]/p`$ and $`\mathbb E[T_m]/p`$ respectively.
 
@@ -212,7 +212,7 @@ The support difference is strictly decreasing in $`r`$; stronger dephasing and a
 
 ## 5. Exact comparison-encoding activation at lower noise
 
-For $`T_m=m\tau`$, write $`t=e^{-\gamma\tau}`$, $`x=t^2`$ and $`q=t^3`$. On $`x\in[0.9,1]`$, all four support coefficients against the optimal one/two-call affine bound are nonnegative. Their sum exceeds three exactly when
+For $`T_m=m\tau`$, write $`t=e^{-\kappa\tau}`$, $`x=t^2`$ and $`q=t^3`$. On $`x\in[0.9,1]`$, all four support coefficients against the optimal one/two-call affine bound are nonnegative. Their sum exceeds three exactly when
 
 ```math
 P(t)=4t^{11}+24t^9+3t^8+18t^6+3t^5+18t^3-54t^2-12>0.

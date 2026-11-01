@@ -12,8 +12,8 @@ Use the [same access and accepted target-only output contract](local_controller_
 A three-call encoding injectively maps $`012,021,102,120,201,210`$ into six of the eight physical three-bit computational words. The other two words are unoccupied. Its noise kernel is $`L_{ij}=q^{d_H(c_i,c_j)}`$. Two orders use one physical control bit. The declared exposure and charged routing windows are $`T_m=m\tau`$, with
 
 ```math
-x=e^{-2\gamma\tau}=\frac9{10},\qquad
-q=e^{-3\gamma\tau}=x^{3/2}=\sqrt{\frac{729}{1000}}.
+x=e^{-2\kappa\tau}=\frac9{10},\qquad
+q=e^{-3\kappa\tau}=x^{3/2}=\sqrt{\frac{729}{1000}}.
 ```
 
 Write $`\epsilon=\frac12\lVert\Lambda-\mathrm{id}\rVert_\diamond`$ and $`C=\mathbb E[m]/p`$. These are fresh-target trial costs. Gate-level routing, preparation/readout overhead, loss and gate faults are uncharged and unverified.

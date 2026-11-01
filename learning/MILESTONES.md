@@ -492,7 +492,7 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 **Conceptual connection:** Retained controller–target entanglement is not a recovery certificate. This experiment does not optimize equal resources or classify all retained protocols.
 
-**Source pointers:** Watrous §§3.2, 6.1.1 and 6.2.3; [uniform separation](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation); [operational meaning](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#operational-meaning).
+**Source pointers:** Watrous §§3.2, 6.1.1 and 6.2.3; begin with the local [bridge explanation of the comparison](WATROUS_BRIDGE.md#noise-obstruction-bridge) and [operational boundaries](../science/interpretation.md#noisy-exactness-and-useful-recovery). For the complete sister proof, see [uniform separation](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) and its [operational meaning](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#operational-meaning).
 
 <a id="m29"></a>
 
