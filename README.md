@@ -91,6 +91,22 @@ The [randomized-call theorem](science/randomized_call_cost.md#convex-call-cost) 
 
 This benchmark averages corrected fine labels into the accepted target-only channel and requires input-independent aggregate acceptance. Fine outcomes may individually depend on the input. Its rank-two channel, six orders and global noise differ from the full-rank four-call physical-local-noise family above. The [unequal-noise criterion](science/randomized_call_cost.md#unequal-noise) and [conditional duration model](science/randomized_call_cost.md#duration-model) state exactly when the extra call remains useful; equal visibility across architectures is a model choice, rather than a hardware consequence.
 
+## Physical encoding and the usefulness of an extra call
+
+The [encoded local-noise analysis](science/local_controller_encoding.md) replaces one global visibility with independent phase damping on an explicit physical controller. Coherences decay with the Hamming distance between assigned codewords. For a pairwise-comparison encoding, it gives a matching high-coherence recovery frontier and a duration-dependent cost threshold.
+
+The [all-assignment cost theorem](science/all_encoding_cost_bound.md) then answers the calibrated question over every injective assignment of the six orders to three-bit computational words, allowing nonuniform preparation, ancillary controllers and continuous final unitary corrections.
+
+| Noise and resource model; half-diamond error at most $`3/8`$ | Supported conclusion |
+|---|---|
+| Global logical visibilities $`\eta_2=\eta_3=0.9`$ | Exact randomized cost $`183/62`$ versus $`101/32`$: approximately 6.48% saving. |
+| Independent local phase damping, $`x=0.9`$, $`q=x^{3/2}`$, charged windows $`T_m=m\tau`$ | All 20,160 injective six-label assignments obey cost at least $`101/32`$. The one/two-call mixture attains it; any positive three-call trial share is strictly suboptimal. |
+| Same local noise law and schedule, $`x=0.9604`$, specified alternative encoding | A certified construction costs approximately 2.823333 versus the optimal one/two-call baseline 2.889770: approximately 2.2990% saving. Global encoding optimality at this different point is not claimed. |
+
+The exclusion uses 97 exact symmetry classes and 388 rational positive-matrix certificates. Its [standard-library verifier](verification/encoding_bound/README.md) covers every allowed controller strategy in that assignment model, rather than testing only a finite correction menu. The [local-controller checks](verification/local_controller/README.md) reproduce the encoding-specific frontier and positive construction.
+
+These are rank-two-channel recovery and fresh-trial cost results. They retain their own scope alongside the full-rank central-polynomial theorem and four-call physical-noise frontier. The charged routing windows omit gate and readout overhead; neither cost model is a hardware validation. Retained controller–target entanglement and accepted reference–target recovery remain distinct tasks.
+
 ## Read the science
 
 Start with the [scientific overview](science/README.md) for the connected argument, or choose a specific question:
@@ -104,6 +120,7 @@ Start with the [scientific overview](science/README.md) for the connected argume
 | How likely is success, and what does it cost? | [Probability and resources](science/probability.md) |
 | What is the optimal noisy-controller recovery tradeoff? | [Controller characterization](science/controller_optimization.md), [frontier](science/recovery_frontier.md), and [tilted theorem](science/tilted_readout.md) |
 | When does controller noise exclude exact recovery? | [Strict Schur obstruction](science/noisy_recovery_obstruction.md) |
+| How do physical codewords and duration change recovery cost? | [Encoded local noise](science/local_controller_encoding.md) and [all-assignment cost bound](science/all_encoding_cost_bound.md) |
 | What is the physical meaning, and which assumptions are essential? | [Interpretation and boundaries](science/interpretation.md) |
 | Which ingredients and capabilities were already known? | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 

@@ -9,7 +9,9 @@ from fractions import Fraction
 import json
 import math
 from pathlib import Path
+import subprocess
 import sys
+import tempfile
 
 import numpy as np
 
@@ -111,6 +113,67 @@ def verify_depolarizing_histograms(exhaustive):
             'exhaustive_qutrit_pairs_recomputed':exhaustive}
 
 
+def run_exact_program(program, result_name, output_dir):
+    """Run a certificate in isolation, leaving committed records unchanged."""
+    destination=output_dir/Path(program).stem
+    command=[sys.executable,str(HERE/program),'--output-dir',str(destination)]
+    completed=subprocess.run(command,capture_output=True,text=True)
+    if completed.returncode:
+        raise AssertionError(f'{program} failed:\n{completed.stdout}\n{completed.stderr}')
+    return json.loads((destination/result_name).read_text())
+
+
+def verify_encoding_bound(output_dir):
+    prefix='encoding_bound/'
+    result=run_exact_program(prefix+'encoding_certificate/verify_certificate.py',
+                             'exact_verification.json',output_dir)
+    coverage=run_exact_program(prefix+'encoding_orbits/verify_coverage.py',
+                               'coverage_status.json',output_dir)
+    reduction=run_exact_program(prefix+'encoding_certificate_audit/verify_reduction.py',
+                                'reduction_audit.json',output_dir)
+    baseline=run_exact_program(prefix+'encoding_certificate_audit/verify_baseline.py',
+                               'baseline_audit.json',output_dir)
+    assert result['status']==coverage['status']==reduction['status']==baseline['status']=='PASS'
+    assert result['certificate_count']==97 and result['exact_positive_matrix_checks']==388
+    assert coverage['raw_encodings_covered']==20160 and coverage['combined_classes']==97
+    assert result['common_support_bound']=='27/10'
+    assert baseline['expected_calls_per_acceptance']=='101/32'
+    return {'certificate_count':result['certificate_count'],
+            'exact_positive_matrix_checks':result['exact_positive_matrix_checks'],
+            'common_support_bound':result['common_support_bound'],
+            'minimum_exact_DD_margin':result['minimum_exact_DD_margin'],
+            'uniform_operator_perturbation_bound':result['uniform_operator_perturbation_bound'],
+            'raw_encodings_covered':coverage['raw_encodings_covered'],
+            'cube_classes':coverage['cube_classes'],
+            'combined_classes':coverage['combined_classes'],
+            'independent_Burnside_count':coverage['independent_Burnside_count'],
+            'baseline':baseline,
+            'candidate_SHA256':result['candidate_SHA256'],
+            'factor_SHA256':result['factor_SHA256']}
+
+
+def verify_local_controller(output_dir):
+    prefix='local_controller/'
+    spectral=run_exact_program(prefix+'verify_spectral.py','audit.json',output_dir)
+    flags=run_exact_program(prefix+'exact_flags.py','pairwise_exact_flags.json',output_dir)
+    thresholds=run_exact_program(prefix+'certify_thresholds.py','certified_thresholds.json',output_dir)
+    alternative=run_exact_program(prefix+'physical_proportional_certificate.py',
+                                  'physical_proportional_certificate.json',output_dir)
+    # Coefficients and the constructive witness must agree exactly with the
+    # committed rational records; random checks only supplement the proof.
+    compare(flags,load_result(prefix+'pairwise_exact_flags.json'))
+    compare(alternative,load_result(prefix+'physical_proportional_certificate.json'))
+    compare(thresholds,load_result(prefix+'certified_thresholds.json'))
+    assert spectral['antisymmetric_cross_kernel_nonzeros']==12
+    assert spectral['antisymmetric_cross_kernel_Hamming_support']==2
+    assert alternative['achieved_error']=='3/8'
+    assert Fraction(alternative['timecost_in_tau_units'])<Fraction(alternative['baseline12'])
+    return {'spectral':spectral,
+            'exact_flag_cubic_coefficients_agree':True,
+            'thresholds':thresholds,
+            'alternative_encoding':alternative}
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--exhaustive',action='store_true',
@@ -160,14 +223,22 @@ def main():
     checks['regev_identity']=regev_identity_checks.verify()
     print('PASS: exact Regev matrix-unit evaluations, random tuples, and Cauchy--Binet normalization',flush=True)
 
+    with tempfile.TemporaryDirectory(prefix='quantum-order-certificates-') as temporary:
+        output_dir=Path(temporary)
+        checks['all_encoding_cost_bound']=verify_encoding_bound(output_dir)
+        print('PASS: exact 20,160-encoding coverage, 388 positive-matrix checks, and 101/32 cost witness',flush=True)
+        checks['local_controller']=verify_local_controller(output_dir)
+        print('PASS: exact pairwise local-noise spectral identities, flag maps, thresholds, and alternative encoding',flush=True)
+
     report={'passed':True,'python_version':sys.version.split()[0],
             'numpy_version':np.__version__,
             'random_seeds':{'probability_and_construction':20261028,
-                            'independent_access_model':202610280314},
+                            'independent_access_model':202610280314,
+                            'local_controller_supplementary':29102026},
             'checks':checks}
     if args.report:
         args.report.write_text(json.dumps(report,indent=2)+'\n')
-    print('All eight verification groups passed.',flush=True)
+    print(f'All {len(checks)} verification groups passed.',flush=True)
 
 
 if __name__=='__main__':

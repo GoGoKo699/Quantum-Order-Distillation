@@ -72,3 +72,13 @@ The retained C:T / accepted R:T comparison has a smaller angular interval |delta
 - verification/native_benchmark/README.md: separate pinned dependencies, exact invariance/phase audit and numerical closure checks; no inaccurate SDP boundary is used as a certificate.
 
 Fine labels are corrected then averaged into a target-only accepted channel; aggregate E=pLambda is input independent, individual fine pieces need not be. Rank-deficient M, six orders and scalar global noise are distinct from the fullrank eight-order physical-local-noise Bellfrontier. Half-diamond equality is proved for native attaining mixtures, not assumed for arbitrary switched channels. At eta2=eta3=.9,e=3/8, randomizedfreshtrial cost183/62 improves exact <=2 baseline101/32. This is an expectedcall benchmark, not hardware/capacity certification.
+
+
+## Encoded local-control recovery cost
+
+- science/local_controller_encoding.md: physical Hamming-distance dephasing for the rank-two benchmark; comparison-code high-coherence frontier and converse; declared proportional durations; lower-noise alternative encoding with a certified 2.2990% attained saving.
+- science/all_encoding_cost_bound.md: exact all-20,160-assignment exclusion at x=.9,q=x^(3/2),epsilon=3/8,Tm=m*tau. Nonuniform preparation, complex ancillary controls and continuous final unitary corrections are included. The common witness cap27/10 gives C>=101/32+(3/10)t3/P; the optimum uses only one/two-call trials.
+- verification/encoding_bound/README.md: one-command standard-library exact verification, rational matrices/factors, symmetry coverage and independent baseline checks.
+- verification/local_controller/README.md: exact spectral identities, native flag coefficients, threshold brackets and the attained alternative-code construction.
+
+The encoding quantifier is injective six-order assignments to six computational words, with two words unoccupied. Redundant eight-word, noncomputational or protected encoding models are outside this theorem. The cost certificate also closes the common-error interval3/22<=epsilon<=1/2; it does not rule out accuracy extension below3/22. Lower-noise x=.9604 is a different operating point and its positive construction remains valid. Target half-diamond recovery, retained C:T entanglement and unassisted capacity are distinct quantities. The two/four-call full-rank family and its physical gamma=.8 calibration remain separate.

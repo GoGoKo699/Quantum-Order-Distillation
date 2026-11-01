@@ -22,7 +22,7 @@ The **13 + 17 allocation** reflects the meeting of channel mathematics, polynomi
 | [M14](#m14)–[M18](#m18) | Physical construction, full-rank converse, qubit and qutrit realizations |
 | [M19](#m19)–[M21](#m21) | Success cost, batching, model boundaries and a native three-call benchmark |
 | [M22](#m22)–[M27](#m27) | Physical noise, complete controller feasibility, no-go and attaining frontiers |
-| [M28](#m28)–[M30](#m30) | Robust sister comparison, randomized cost, unequal noise and whole-project synthesis |
+| [M28](#m28)–[M30](#m30) | Robust sister comparison, randomized cost, physical encoding and whole-project synthesis |
 
 The [proof route](WATROUS_BRIDGE.md#proof-route) and [scientific overview](../science/README.md) supply direct specialist routes.
 
@@ -496,19 +496,19 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 <a id="m29"></a>
 
-### M29. Randomized call cost and unequal controller noise
+### M29. Randomized call cost, physical encoding and duration
 
 **Phase:** Narrative/innovation.
 
 **Central question:** Which randomized one-, two- and three-call trials minimize expected calls at a fixed external error tolerance?
 
-**Understanding target:** Form the lower convex cost envelope from the native frontier vertices and convert accepted fractions into attempt probabilities. Explain the exact optimum over the stated fresh-trial class, including the one-/two-call baseline, separate coherences eta2 and eta3, and the distinction between a new accuracy and savings at a common error. Use the equal-.9, error-3/8 example to interpret cost 183/62 versus 101/32. Treat scalar logical dephasing over duration as a conditional model and recompute the objective if time replaces call count. Connect each bound and certificate to its analytical proof, exact rebuild and inherited ingredients.
+**Understanding target:** Form the lower convex cost envelope from native frontier vertices and convert accepted fractions into attempt probabilities. Explain the equal-global-coherence .9, error-3/8 costs 183/62 and 101/32, while keeping separate coherences and achievable accuracy distinct from common-error savings. Then replace scalar logical noise by the Hamming-distance Schur kernel of a physical three-bit encoding. For proportional declared windows T_m=m tau, explain why x=.9 and q=x^(3/2) give exact cost 101/32 for all 20,160 injective six-label computational encodings: the exact certificate imposes a positive penalty for any raw three-call weight. Contrast that calibrated closure with a constructive 2.2990% gain from another encoding at x=.9604; a full lower-noise all-encoding phase diagram remains open. Connect each claim to its controller reduction, exact certificate and resource assumptions.
 
 **Dependencies and story role:** M11–M12, M19–M21 and M23–M28. Integrates acceptance, error, noise and charged resources before the final scientific synthesis.
 
-**Conceptual connection:** The fair comparison fixes the external error and includes failed fresh trials. Equal coherence at different call counts, native routing hardware cost and local multibit noise cannot be inferred from the call-count optimum.
+**Conceptual connection:** A fair comparison fixes the external error and charges failed fresh trials. Physical code geometry determines which coherences survive. A fixed-noise all-encoding converse and a gain at a different, lower-noise point can both hold; routing-time savings follow from proportional declared prices, while hardware overhead needs separate accounting.
 
-**Source pointers:** Watrous §§1.2.2–1.2.3 and 3.3.2; [convex call-cost theorem](../science/randomized_call_cost.md#convex-call-cost); [unequal-noise criterion](../science/randomized_call_cost.md#unequal-noise); [conditional duration model](../science/randomized_call_cost.md#duration-model); [attribution](../references/RELATED_WORK.md); [verification](../verification/README.md).
+**Source pointers:** Watrous §§1.2.2–1.2.3, 3.3.2 and 4.1.3; [convex call-cost theorem](../science/randomized_call_cost.md#convex-call-cost); [unequal-noise criterion](../science/randomized_call_cost.md#unequal-noise); [conditional logical duration model](../science/randomized_call_cost.md#duration-model); [physical encoding and local-noise frontier](../science/local_controller_encoding.md); [all-encoding cost theorem](../science/all_encoding_cost_bound.md); [attribution](../references/RELATED_WORK.md); [verification](../verification/README.md).
 
 <a id="m30"></a>
 
@@ -518,7 +518,7 @@ as a polynomial linear in each variable separately, with every variable occurrin
 
 **Central question:** What does coherent order enable, what does controller noise forbid, and what is the charged operational conclusion?
 
-**Understanding target:** Connect ideal exact recovery and its central-degree threshold to the strict-noise no-go, the attainable noisy recovery frontier, tilted robustness, the six-order native half-diamond frontier, randomized one-/two-/three-call cost closure, and the specified entanglement comparison. State the independent raw-slot model, final-only corrections and fresh-input accounting in one coherent explanation, without inferring unassisted capacity or unrestricted controller–target impossibility.
+**Understanding target:** Connect ideal exact recovery and its full-Choi-rank central-degree threshold to the strict-noise no-go, attainable noisy frontier, tilted robustness, rank-two native half-diamond benchmark and specified entanglement comparison. Explain how randomized call cost depends on global versus encoded local noise, including the exact calibrated all-encoding closure and the separate lower-noise construction. State independent raw slots, final-only unitary corrections, aggregate input-independent acceptance and fresh-input accounting together. Keep the unresolved accuracy extension below error 3/22 and lower-noise all-encoding optimization visible; infer neither unassisted capacity nor unrestricted controller–target impossibility.
 
 **Dependencies and story role:** M13–M29. Phase synthesis: combines construction, converse, noisy optimization, sister connection and evidence boundaries.
 

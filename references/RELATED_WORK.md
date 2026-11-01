@@ -14,7 +14,9 @@ The [polynomial realization](../science/polynomial_realization.md) and [query th
 | [Das and Bandyopadhyay (2022)](#das-bandyopadhyay2022) | A quantum switch of two switches can improve the probability of heralded perfect qubit communication. | More switches improving communication is established; the fixed-channel three-call converse and randomized call-cost envelope are the narrower questions here. |
 | [Kechrimparis, Moran and Kwon (2025)](#kechrimparis2025) | Recursive superswitches distill qubit channels; the paper also defines the general permutation switch. | Supplies the channel-level architecture and the inherited four-call qubit branch. |
 | [Kechrimparis et al. (2024)](#kechrimparis2024) | Four-slot nested switching and a Pauli-specific branch reduction for state discrimination. | Supplies the eight-order architecture; its branch-exclusivity assumption must be checked before transfer to raw non-Pauli slots. |
+| [Mitra, Badhani and Ghosh (2023)](#mitra2023) | Depolarizing noise on a two-order controller changes a corrected identity channel into a noisy channel. | Noisy-control recovery analysis is established; the independent physical-bit encoding and fresh-trial cost optimizations are different questions. |
 | [Molitor et al. (2024)](#molitor2024) | Two-slot switching with dissipative control noise and outcome-dependent shielding. | Establishes the importance of control noise and rules out an unrestricted claim that every noisy controller destroys exactness. |
+| [Wu et al. (2025)](#wu2025) | General fixed-channel switch communication gain and an analytic Pauli-channel classical-capacity formula. | The communication task and available output differ from accepted target-only recovery at a common diamond error and paid success probability. |
 | [Regula and Takagi (2021)](#regula-takagi2021) | An accepted unwanted positive component obstructs perfect probabilistic distillation. | Supplies the obstruction principle; the routing-specific argument proves that nonzero acceptance cannot eliminate the diagonal component. |
 | [Shen et al. (2026)](#shen2026) | A coherent Stinespring oracle with a specified environment basis permits Kraus-polynomial synthesis. | The returned environment is an additional resource; channel-only compilation is treated separately. |
 
@@ -37,6 +39,32 @@ The [native three-call frontier](../science/native_three_call_frontier.md) addre
 The [randomized call-cost theorem](../science/randomized_call_cost.md) then gives the exact expected-call optimum across fresh one-, two- and three-call trials, with a matched protocol and convex-hull converse. Its unequal-noise and duration conclusions use the specified scalar logical-dephasing law. They neither price an unmeasured router implementation nor assert a physical multiqubit-noise advantage. The result is for this fixed channel and trial model, rather than a general channel-family or capacity theorem.
 
 This three-call benchmark does not contradict the four-call minimum for full-Choi-rank qubit slots: its fixed channel has deficient Choi rank. It is also distinct from the four-call eight-order Bell-fidelity frontier with physical local controller noise. The call set, slot family, error criterion and noise model must remain attached to each statement. These comparisons establish the precise relation to the cited mechanisms without a claim of priority from a narrow search.
+
+<a id="encoded-local-noise"></a>
+
+## Encoded physical noise and the finite call-cost boundary
+
+The standard generalized permutation switch is inherited; see **Lorenzo M. Procopio et al.**, *Communication Enhancement through Quantum Coherent Control of N Channels in an Indefinite Causal-Order Scenario*, **Entropy 21**, 1012 (2019), [DOI](https://doi.org/10.3390/e21101012), [arXiv:1902.01807v3](https://arxiv.org/abs/1902.01807v3). Neither six coherent orders nor the independent-dephasing kernel $`L_{\pi\sigma}=q^{d_H(c(\pi),c(\sigma))}`$ is a new resource principle. The latter follows by tensoring the single-bit phase-damping channel. Which order is assigned to which physical word changes that kernel.
+
+The [local-encoding theorem](../science/local_controller_encoding.md) treats the same rank-two channel as the logical-noise benchmark, with six order labels injected into three physical bits. It determines the full controller frontier in the stated regime for the pairwise-comparison encoding. Its separately certified alternate encoding at $`x=0.9604`$, $`q=0.941192`$ attains a $`2.299\%`$ call-cost saving over the **optimal randomized one/two-call baseline**, at $`\epsilon=3/8`$ and declared durations $`T_m=m\tau`$. This is an attained protocol, not an optimum over all encodings at that noise value.
+
+The [all-encoding theorem](../science/all_encoding_cost_bound.md) supplies a complementary global statement at $`x=0.9`$, $`q=x^{3/2}`$ and the same error and duration conventions. It covers all $`20{,}160`$ injections, arbitrary finite mixed/ancillary complex controllers, final controller instruments, continuous target-unitary corrections and classical trial randomization. With $`t_3`$ the raw three-call trial share, it proves
+
+```math
+C^*_{123}(3/8)=C^*_{12}(3/8)=\frac{101}{32},
+\qquad
+\mathbb E[m]\ge\frac{101}{32}p+\frac3{10}t_3.
+```
+
+Thus every positive three-call share is strictly suboptimal at this calibrated benchmark. The proof combines the inherited controller/Gram reduction with an encoding-orbit enumeration and rational positive-semidefinite certificates; the enumeration covers a finite computational encoding class, while the analytic reductions cover the continuous controller and correction variables. It is stronger than testing a chosen measurement or a finite correction menu, and narrower than a complete physical-noise phase diagram.
+
+These local-noise statements do not transfer the earlier $`6.48\%`$ saving at equal logical visibilities $`\eta_2=\eta_3=0.9`$ to physical bits: those are different noise channels. They also do not classify redundant eight-word, noncomputational or protected encodings, target filters, larger call counts, or gate-level implementation costs. Only the corrected accepted aggregate must equal $`p\Lambda`$ with input-independent $`p`$; fine outcomes and randomized architecture components may have input-dependent acceptance. Charged resources are fresh-trial noisy calls and the declared routing windows.
+
+<a id="wu2025"></a>
+
+**Zhen Wu, James Fullwood, Zhihao Ma, Si-Qi Zhou, Qi Zhao and Giulio Chiribella**, *General communication enhancement via the quantum switch*, **Physical Review A 111**, 012605 (2025). [DOI](https://doi.org/10.1103/PhysRevA.111.012605); [arXiv:2407.02726v1](https://arxiv.org/html/2407.02726v1).
+
+Equations (1)–(4) define a switch output retaining the controller and its communication gain relative to definite composition. The paper proves a necessary condition for gain and establishes its Pauli-channel capacity results; its broad sufficiency statement is a conjecture. Such gain does not imply a specified half-diamond recovery error or a lower expected cost per accepted fresh target. Conversely, the finite recovery-cost exclusion above does not rule out their communication gain.
 
 <a id="kechrimparis2025"></a>
 
@@ -68,6 +96,12 @@ An output rotation after every supplied slot converts this particular raw family
 
 ## Controller noise and its operational placement
 
+<a id="mitra2023"></a>
+
+**Arindam Mitra, Himanshu Badhani and Sibasish Ghosh**, *Improvement in quantum communication using quantum switch*, **Physica Scripta 98**, 045101 (2023). [DOI](https://doi.org/10.1088/1402-4896/acbcf7); [arXiv:2108.14001v6](https://arxiv.org/abs/2108.14001), revised 10 April 2023.
+
+Section III.D, Example 3, Eqs. (52)–(54), applies depolarizing noise to the two-order controller of an exactly recoverable Pauli-channel switch. After outcome-dependent correction the effective target channel is $`(1+t)\mathrm{id}/2+(1-t)\operatorname{Ad}_Z/2`$, rather than the identity for $`t<1`$. This is prior noisy-controller recovery analysis. It does not optimize the six-order physical-bit assignments, arbitrary controller instruments, or a randomized one/two/three-call cost at a common diamond-error tolerance.
+
 **Otavio A. D. Molitor, André H. A. Malavazi, Roberto Dobal Baldijão, Alexandre C. Orthey Jr., Ismael L. Paiva and Pedro R. Dieguez**, *Quantum switch instabilities with an open control*, **Communications Physics 7**, 373 (2024). [DOI](https://doi.org/10.1038/s42005-024-01843-y); [published full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC11576514/); [arXiv:2405.09631v1](https://arxiv.org/abs/2405.09631v1).
 
 This paper treats a two-slot switch whose control interacts with a thermal environment through a collisional model. Its conditional states and success probabilities respond differently to the bath: in the zero-temperature limit, a selected conditional state can be shielded while its probability decreases. Control noise therefore does not justify a universal impossibility claim by itself.
@@ -95,6 +129,8 @@ Matrix Fejér–Riesz factorization is an inherited tool for representing a posi
 <a id="retained-and-accepted-entanglement"></a>
 
 ## Retained and accepted entanglement
+
+The sister project's general [order-support criterion](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/order_criterion.md) characterizes universal inability to entangle retained $`C:T`$ by commutation of the relative-order group. Its nonabelian converse constructs a suitable repeated channel; it does not assert that every fixed channel is entangling. This is distinct from the full-rank exact-recovery minimum and from the fixed-channel cost optima here. For example, completely depolarizing slots can remain $`C:T`$ separable for every order support while permitting four-call heralded qubit identity. Neither retained NPT nor its absence is therefore a general recovery certificate.
 
 The sister project [Quantum Order Entanglement](https://github.com/GoGoKo699/Quantum-Order-Entanglement) owns the complete [noisy protocol-separation proof](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md). It compares a specified unconditional three-order controller–target output with the accepted reference–target output of the fixed four-call recovery branch. The channel family and per-bit noise strength agree; the bipartitions, call counts, controller sizes and conditioning differ. This is not an optimized equal-resource separation or a classification of all retained-controller protocols.
 

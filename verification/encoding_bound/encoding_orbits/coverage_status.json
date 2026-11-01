@@ -1,0 +1,2071 @@
+{
+  "status": "PASS",
+  "raw_encodings_covered": 20160,
+  "cube_classes": 420,
+  "combined_classes": 97,
+  "saved_certificates": 97,
+  "certificate_format": "rational_candidate_json",
+  "duplicate_or_missing_classes": 0,
+  "orbit_size_histogram": {
+    "48": 3,
+    "144": 49,
+    "288": 45
+  },
+  "exact_transform_reconstructions": 20160,
+  "kernel_certificate": {
+    "target_coordinate_kernels": 16,
+    "slot_actions": 6,
+    "exact_entry_invariances": 3456,
+    "result": "all 16 full target-Choi coordinate kernels invariant under left physical-slot relabeling"
+  },
+  "independent_Burnside_count": {
+    "identity_domain_contribution": 20160,
+    "transposition_domain_contribution": 7488,
+    "three_cycle_domain_contribution": 288,
+    "fixed_point_sum": 27936,
+    "group_order": 288,
+    "orbit_count": 97,
+    "free_cube_involutions": 13,
+    "cube_order_three_actions": 8
+  },
+  "scope": "Exact encoding coverage and symmetry only; numerical/rational dual validity is checked separately.",
+  "dual_mapping": [
+    {
+      "certificate_source": "certificate_candidates.json#0",
+      "codes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "class_index": 0,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#1",
+      "codes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "class_index": 1,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#2",
+      "codes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      "class_index": 2,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#3",
+      "codes": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "class_index": 3,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#4",
+      "codes": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "class_index": 4,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#5",
+      "codes": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        4
+      ],
+      "class_index": 5,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#6",
+      "codes": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        5
+      ],
+      "class_index": 6,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#7",
+      "codes": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        5
+      ],
+      "class_index": 7,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#8",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "class_index": 8,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#9",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        6
+      ],
+      "class_index": 9,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#10",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        7
+      ],
+      "class_index": 10,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#11",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        3
+      ],
+      "class_index": 11,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#12",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "class_index": 12,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#13",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "class_index": 13,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#14",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        3
+      ],
+      "class_index": 14,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#15",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        5
+      ],
+      "class_index": 15,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#16",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7
+      ],
+      "class_index": 16,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#17",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        3
+      ],
+      "class_index": 17,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#18",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        5
+      ],
+      "class_index": 18,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#19",
+      "codes": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        6
+      ],
+      "class_index": 19,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#20",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "class_index": 20,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#21",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        6
+      ],
+      "class_index": 21,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#22",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        7
+      ],
+      "class_index": 22,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#23",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        4,
+        3
+      ],
+      "class_index": 23,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        4,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#24",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        4,
+        6
+      ],
+      "class_index": 24,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        4,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#25",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        4,
+        7
+      ],
+      "class_index": 25,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        4,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#26",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        3
+      ],
+      "class_index": 26,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#27",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        4
+      ],
+      "class_index": 27,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#28",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7
+      ],
+      "class_index": 28,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#29",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        3
+      ],
+      "class_index": 29,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#30",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        4
+      ],
+      "class_index": 30,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#31",
+      "codes": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        6
+      ],
+      "class_index": 31,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#32",
+      "codes": [
+        0,
+        1,
+        2,
+        6,
+        4,
+        3
+      ],
+      "class_index": 32,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        6,
+        4,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#33",
+      "codes": [
+        0,
+        1,
+        2,
+        6,
+        4,
+        5
+      ],
+      "class_index": 33,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        6,
+        4,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#34",
+      "codes": [
+        0,
+        1,
+        2,
+        6,
+        5,
+        7
+      ],
+      "class_index": 34,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        6,
+        5,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#35",
+      "codes": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        5
+      ],
+      "class_index": 35,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#36",
+      "codes": [
+        0,
+        1,
+        2,
+        7,
+        3,
+        6
+      ],
+      "class_index": 36,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        7,
+        3,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#37",
+      "codes": [
+        0,
+        1,
+        2,
+        7,
+        4,
+        3
+      ],
+      "class_index": 37,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        7,
+        4,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#38",
+      "codes": [
+        0,
+        1,
+        2,
+        7,
+        4,
+        5
+      ],
+      "class_index": 38,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        7,
+        4,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#39",
+      "codes": [
+        0,
+        1,
+        2,
+        7,
+        5,
+        6
+      ],
+      "class_index": 39,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        7,
+        5,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#40",
+      "codes": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        3
+      ],
+      "class_index": 40,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#41",
+      "codes": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        4
+      ],
+      "class_index": 41,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#42",
+      "codes": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5
+      ],
+      "class_index": 42,
+      "canonical_representative": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#43",
+      "codes": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "class_index": 43,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#44",
+      "codes": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        7
+      ],
+      "class_index": 44,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#45",
+      "codes": [
+        0,
+        1,
+        3,
+        2,
+        6,
+        4
+      ],
+      "class_index": 45,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        2,
+        6,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#46",
+      "codes": [
+        0,
+        1,
+        3,
+        2,
+        6,
+        5
+      ],
+      "class_index": 46,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        2,
+        6,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#47",
+      "codes": [
+        0,
+        1,
+        3,
+        2,
+        7,
+        4
+      ],
+      "class_index": 47,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        2,
+        7,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#48",
+      "codes": [
+        0,
+        1,
+        3,
+        4,
+        2,
+        5
+      ],
+      "class_index": 48,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        4,
+        2,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#49",
+      "codes": [
+        0,
+        1,
+        3,
+        4,
+        2,
+        7
+      ],
+      "class_index": 49,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        4,
+        2,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#50",
+      "codes": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        2
+      ],
+      "class_index": 50,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#51",
+      "codes": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        5
+      ],
+      "class_index": 51,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#52",
+      "codes": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "class_index": 52,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#53",
+      "codes": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        2
+      ],
+      "class_index": 53,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#54",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        2,
+        4
+      ],
+      "class_index": 54,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        2,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#55",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        2,
+        6
+      ],
+      "class_index": 55,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        2,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#56",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        2,
+        7
+      ],
+      "class_index": 56,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        2,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#57",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        4,
+        2
+      ],
+      "class_index": 57,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        4,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#58",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        4,
+        6
+      ],
+      "class_index": 58,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        4,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#59",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        4,
+        7
+      ],
+      "class_index": 59,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        4,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#60",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        2
+      ],
+      "class_index": 60,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#61",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        2
+      ],
+      "class_index": 61,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#62",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        4
+      ],
+      "class_index": 62,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#63",
+      "codes": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        6
+      ],
+      "class_index": 63,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#64",
+      "codes": [
+        0,
+        1,
+        3,
+        6,
+        2,
+        7
+      ],
+      "class_index": 64,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        6,
+        2,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#65",
+      "codes": [
+        0,
+        1,
+        3,
+        6,
+        4,
+        7
+      ],
+      "class_index": 65,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        6,
+        4,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#66",
+      "codes": [
+        0,
+        1,
+        3,
+        6,
+        7,
+        2
+      ],
+      "class_index": 66,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        6,
+        7,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#67",
+      "codes": [
+        0,
+        1,
+        3,
+        6,
+        7,
+        4
+      ],
+      "class_index": 67,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        6,
+        7,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#68",
+      "codes": [
+        0,
+        1,
+        3,
+        7,
+        6,
+        4
+      ],
+      "class_index": 68,
+      "canonical_representative": [
+        0,
+        1,
+        3,
+        7,
+        6,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#69",
+      "codes": [
+        0,
+        1,
+        6,
+        3,
+        7,
+        2
+      ],
+      "class_index": 69,
+      "canonical_representative": [
+        0,
+        1,
+        6,
+        3,
+        7,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#70",
+      "codes": [
+        0,
+        1,
+        6,
+        3,
+        7,
+        4
+      ],
+      "class_index": 70,
+      "canonical_representative": [
+        0,
+        1,
+        6,
+        3,
+        7,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#71",
+      "codes": [
+        0,
+        1,
+        7,
+        2,
+        6,
+        3
+      ],
+      "class_index": 71,
+      "canonical_representative": [
+        0,
+        1,
+        7,
+        2,
+        6,
+        3
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#72",
+      "codes": [
+        0,
+        1,
+        7,
+        2,
+        6,
+        5
+      ],
+      "class_index": 72,
+      "canonical_representative": [
+        0,
+        1,
+        7,
+        2,
+        6,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#73",
+      "codes": [
+        0,
+        1,
+        7,
+        3,
+        6,
+        4
+      ],
+      "class_index": 73,
+      "canonical_representative": [
+        0,
+        1,
+        7,
+        3,
+        6,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#74",
+      "codes": [
+        0,
+        3,
+        1,
+        2,
+        4,
+        7
+      ],
+      "class_index": 74,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        2,
+        4,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#75",
+      "codes": [
+        0,
+        3,
+        1,
+        2,
+        5,
+        6
+      ],
+      "class_index": 75,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        2,
+        5,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#76",
+      "codes": [
+        0,
+        3,
+        1,
+        4,
+        2,
+        5
+      ],
+      "class_index": 76,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        4,
+        2,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#77",
+      "codes": [
+        0,
+        3,
+        1,
+        4,
+        2,
+        7
+      ],
+      "class_index": 77,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        4,
+        2,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#78",
+      "codes": [
+        0,
+        3,
+        1,
+        4,
+        5,
+        2
+      ],
+      "class_index": 78,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        4,
+        5,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#79",
+      "codes": [
+        0,
+        3,
+        1,
+        4,
+        5,
+        6
+      ],
+      "class_index": 79,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        4,
+        5,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#80",
+      "codes": [
+        0,
+        3,
+        1,
+        6,
+        2,
+        4
+      ],
+      "class_index": 80,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        6,
+        2,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#81",
+      "codes": [
+        0,
+        3,
+        1,
+        6,
+        2,
+        5
+      ],
+      "class_index": 81,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        6,
+        2,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#82",
+      "codes": [
+        0,
+        3,
+        1,
+        6,
+        4,
+        2
+      ],
+      "class_index": 82,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        6,
+        4,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#83",
+      "codes": [
+        0,
+        3,
+        1,
+        6,
+        4,
+        7
+      ],
+      "class_index": 83,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        6,
+        4,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#84",
+      "codes": [
+        0,
+        3,
+        1,
+        6,
+        5,
+        2
+      ],
+      "class_index": 84,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        6,
+        5,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#85",
+      "codes": [
+        0,
+        3,
+        1,
+        6,
+        7,
+        4
+      ],
+      "class_index": 85,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        6,
+        7,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#86",
+      "codes": [
+        0,
+        3,
+        1,
+        7,
+        2,
+        4
+      ],
+      "class_index": 86,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        7,
+        2,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#87",
+      "codes": [
+        0,
+        3,
+        1,
+        7,
+        4,
+        2
+      ],
+      "class_index": 87,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        7,
+        4,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#88",
+      "codes": [
+        0,
+        3,
+        1,
+        7,
+        5,
+        2
+      ],
+      "class_index": 88,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        7,
+        5,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#89",
+      "codes": [
+        0,
+        3,
+        1,
+        7,
+        5,
+        6
+      ],
+      "class_index": 89,
+      "canonical_representative": [
+        0,
+        3,
+        1,
+        7,
+        5,
+        6
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#90",
+      "codes": [
+        0,
+        3,
+        4,
+        7,
+        5,
+        2
+      ],
+      "class_index": 90,
+      "canonical_representative": [
+        0,
+        3,
+        4,
+        7,
+        5,
+        2
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#91",
+      "codes": [
+        0,
+        3,
+        5,
+        2,
+        4,
+        1
+      ],
+      "class_index": 91,
+      "canonical_representative": [
+        0,
+        3,
+        5,
+        2,
+        4,
+        1
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#92",
+      "codes": [
+        0,
+        3,
+        5,
+        2,
+        4,
+        7
+      ],
+      "class_index": 92,
+      "canonical_representative": [
+        0,
+        3,
+        5,
+        2,
+        4,
+        7
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#93",
+      "codes": [
+        0,
+        3,
+        5,
+        2,
+        6,
+        1
+      ],
+      "class_index": 93,
+      "canonical_representative": [
+        0,
+        3,
+        5,
+        2,
+        6,
+        1
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#94",
+      "codes": [
+        0,
+        3,
+        5,
+        6,
+        4,
+        1
+      ],
+      "class_index": 94,
+      "canonical_representative": [
+        0,
+        3,
+        5,
+        6,
+        4,
+        1
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#95",
+      "codes": [
+        0,
+        7,
+        1,
+        6,
+        2,
+        5
+      ],
+      "class_index": 95,
+      "canonical_representative": [
+        0,
+        7,
+        1,
+        6,
+        2,
+        5
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    },
+    {
+      "certificate_source": "certificate_candidates.json#96",
+      "codes": [
+        0,
+        7,
+        1,
+        6,
+        3,
+        4
+      ],
+      "class_index": 96,
+      "canonical_representative": [
+        0,
+        7,
+        1,
+        6,
+        3,
+        4
+      ],
+      "sha256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3"
+    }
+  ]
+}

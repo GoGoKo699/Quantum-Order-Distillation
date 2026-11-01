@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "certificate_count": 97,
+  "exact_positive_matrix_checks": 388,
+  "common_support_bound": "27/10",
+  "required_advantage_threshold": "3",
+  "q_interval": [
+    "8538149/10000000",
+    "170763/200000"
+  ],
+  "q_squared": "729/1000",
+  "uniform_operator_perturbation_bound": "3/100000",
+  "minimum_exact_DD_margin": "503251611580961/512000000000000000",
+  "minimum_exact_DD_margin_decimal": 0.0009829133038690644,
+  "kernel_checks": {
+    "full_Choi_kernel_entry_invariances": 3456,
+    "max_variable_coefficient": "61/16",
+    "forbidden_ordered_cross_kernel_identities": 10
+  },
+  "coverage": {
+    "all_injective_assignments": 20160,
+    "combined_classes": 97,
+    "orbit_sizes": {
+      "48": 3,
+      "144": 49,
+      "288": 45
+    }
+  },
+  "baseline": {
+    "one_call_spectral_maximum": "1/2",
+    "two_call_diagonal_support_cap": "2",
+    "raw_trial_probabilities": [
+      "21/61",
+      "40/61"
+    ],
+    "acceptance": "32/61",
+    "accepted_Bell_fidelity": "5/8",
+    "half_diamond_error": "3/8",
+    "cost": "101/32"
+  },
+  "candidate_SHA256": "a263f1be8da3dd70f73f002a4a203a15b288e78ecc3f9ef92fab5aa7768910d3",
+  "factor_SHA256": "82139893bb7c79fd70bedff0fbd0890b51d4a22c48cdae282236e5967b468d07",
+  "runtime_seconds": 2.273,
+  "conclusion": "Exact C123(3/8)=101/32 for injective six-label computational-basis assignments; final target unitary corrections; declared local phase noise."
+}
