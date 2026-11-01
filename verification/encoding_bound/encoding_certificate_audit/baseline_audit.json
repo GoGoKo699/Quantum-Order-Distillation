@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "exact_two_call_cross_kernel_zeros": 24,
+  "H_x": "[[1,x/2],[x/2,1]]",
+  "M_I_Y_V": "[[1,x],[x,1]]/4",
+  "M_U": "[[1,-x],[-x,1]]/4",
+  "K2": "[[2,-2],[-2,2]]=4 Pminus",
+  "K2_diagonal_ceiling": "2",
+  "WI_eigenvalues_plus_minus": [
+    "-229/80",
+    "-301/80"
+  ],
+  "WU_eigenvalues_plus_minus": [
+    "-85/8",
+    "4"
+  ],
+  "two_minus_probability": "11/40",
+  "two_minus_Bell_numerator": "19/80",
+  "raw_trial_one_two_probabilities": [
+    "21/61",
+    "40/61"
+  ],
+  "acceptance": "32/61",
+  "accepted_Bell_fidelity": "5/8",
+  "half_diamond_error": "3/8",
+  "expected_calls_per_acceptance": "101/32",
+  "scope": "One/two-call support converse covers arbitrary preparation, ancillas and unitary target correction; matching protocol attains baseline."
+}

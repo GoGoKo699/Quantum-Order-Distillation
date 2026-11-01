@@ -176,3 +176,34 @@ the selected directory. The guide separates exact identities, exact priority
 cost constants, finite numerical LP/Choi checks, and analytical continuum
 claims. This benchmark does not use the four-call physical local-noise
 certificate bundle above.
+
+## Physical local-noise encodings and the all-encoding cost bound
+
+The [local-controller certificate guide](local_controller/README.md) covers
+the pairwise three-bit encoding, its exact complex-controller spectral
+frontier for `q ≥ q₀`, rigorous routing-time thresholds, and an exact
+alternative-encoding advantage at lower noise. Its authoritative proof is
+[local controller noise and encoding](../science/local_controller_encoding.md).
+
+The [all-encoding certificate guide](encoding_bound/README.md) covers the
+fixed benchmark `x = 9/10`, `q² = 729/1000`. It checks all 20,160 injective
+six-label computational encodings through 97 symmetry classes and 388 exact
+positive-matrix certificates. The common three-call support ceiling is
+`27/10`, and the matching mixed one-/two-call cost is `101/32` at error
+`3/8`. See the [complete all-encoding cost proof](../science/all_encoding_cost_bound.md)
+for continuous-unitary scope, the strict three-call penalty and the common
+error interval.
+
+Both packages are included in the default suite:
+
+```bash
+python3 verification/run_checks.py --report /tmp/quantum-order-checks.json
+```
+
+The default still requires only the standard library and NumPy. It runs ten
+verification groups and places regenerated certificate records in temporary
+directories, leaving committed JSON files unchanged. The package guides give
+standalone commands and explain the distinction between exact finite matrix
+checks and the analytical reductions. These local phase-noise results use the
+rank-two channel; they are separate from the full-rank four-call family and
+the global logical-noise benchmark described above.

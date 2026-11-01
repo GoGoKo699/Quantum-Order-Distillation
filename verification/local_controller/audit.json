@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "exact_polynomial_kernel_decompositions": 8,
+  "exact_S3_distance_checks": 216,
+  "cross_convention": "Mtheta=c\u00b2 MU+s\u00b2 MV+cs Crot; Crot\u00b2=3/16(O+E)",
+  "cross_dephasing_identity": "Crot(q)=q Crot(1)",
+  "critical_polynomial": "8q^4+2q^3+q^2+q-6",
+  "critical_root_bracket": [
+    "405577828025501/500000000000000",
+    "202788914012751/250000000000000"
+  ],
+  "determinant_endpoint_identity": "(uO-vO)(cE-uE)-3q\u00b2/16=q\u00b2(8q\u2074+2q\u00b3+q\u00b2+q-6)/32",
+  "scope": "Exact simultaneous unitary-correction witness domination for q>=qcrit. Does not assert fourflag optimality belowqcrit or arbitrary CPTP targetrecovery.",
+  "supplementary_complex_Gram_SU2_checks": 320,
+  "q_grid": [
+    0.85,
+    0.875,
+    0.9,
+    0.925,
+    0.95,
+    0.975,
+    1.0,
+    0.8538149682454624
+  ],
+  "max_positive_witness_violation": 0.0,
+  "antisymmetric_cross_kernel_nonzeros": 12,
+  "antisymmetric_cross_kernel_Hamming_support": 2,
+  "complex_cross_identity": "chi_q=q Re(chi_1)+i q\u00b2 Im(chi_1)",
+  "complex_cross_bound": "|chi_q|\u00b2<=q\u00b2|chi_1|\u00b2<=3q\u00b2 o e/16",
+  "stronger_spectral_conclusion": "lambda_max J(G o L)<=c_T t+c_S s+c_O o+c_E e for all complex G>=0 and q>=qcrit",
+  "contract_note": "Report may retain unitary target-correction scope; no broader recovery claim needed."
+}

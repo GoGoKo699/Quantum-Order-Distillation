@@ -83,15 +83,31 @@ At the orthogonal point with $`\epsilon=0.01`$ and $`\gamma=0.8`$ (a 10% indepen
 
 An arbitrary complex controller can have input-dependent acceptance. The [reduction proof](science/controller_optimization.md#real-controller-reduction) establishes that a real, input-independent representative attains the Bell-input optimum. The physical encoding is part of the local-noise theorem; merely relabeling the words in lexical binary order changes the noise model.
 
-The sister repository [Quantum Order Entanglement](https://github.com/GoGoKo699/Quantum-Order-Entanglement) owns the [robust retained-$`C:T`$/accepted-$`R:T`$ comparison](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation). It uses the same raw channel family and per-bit noise, with distinct specified protocols and explicit success costs. The two repositories share this foundation and the Watrous anchor while keeping their original scientific questions.
+The [robust retained-$`C:T`$/accepted-$`R:T`$ comparison](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) uses this raw channel family and per-bit noise with specified three-call retained and four-call accepted protocols. Their different bipartitions, resources and conditioning remain explicit.
 
 ## A complete three-call benchmark and randomized cost
 
 For the fixed rank-deficient channel $`K_0=|+\rangle\langle0|`$, $`K_1=|-\rangle\langle1|`$, the [native three-call theorem](science/native_three_call_frontier.md#native-three-call-frontier) solves the complete success–half-diamond-error frontier using all six order labels and global logical controller dephasing. Four projector flags, final corrections and fractional acceptance attain the converse over arbitrary mixed, ancillary and complex controllers.
 
-The [randomized-call theorem](science/randomized_call_cost.md#convex-call-cost) then gives the exact optimum across fresh one-, two- and three-call trial types. At global visibilities $`\eta_2=\eta_3=0.9`$ and half-diamond error at most $`3/8`$, choose one-call trials with probability $`1/21`$ and the stated three-call trials with probability $`20/21`$. The accepted probability is $`62/63`$, and the expected calls per accepted trial are $`183/62`$, compared with the optimal at-most-two-call cost $`101/32`$: a saving of approximately 6.48%.
+The [randomized-call theorem](science/randomized_call_cost.md#convex-call-cost) gives the exact optimum across fresh one-, two- and three-call trial types. It determines when an extra call lowers expected calls per accepted output at a fixed half-diamond error, including unequal logical visibilities. The table below compares its equal-visibility benchmark with physical local noise; the full account gives the attaining trial probabilities and success costs.
 
 This benchmark averages corrected fine labels into the accepted target-only channel and requires input-independent aggregate acceptance. Fine outcomes may individually depend on the input. Its rank-two channel, six orders and global noise differ from the full-rank four-call physical-local-noise family above. The [unequal-noise criterion](science/randomized_call_cost.md#unequal-noise) and [conditional duration model](science/randomized_call_cost.md#duration-model) state exactly when the extra call remains useful; equal visibility across architectures is a model choice, rather than a hardware consequence.
+
+## Physical encoding and the usefulness of an extra call
+
+The [encoded local-noise analysis](science/local_controller_encoding.md) replaces one global visibility with independent phase damping on an explicit physical controller. Coherences decay with the Hamming distance between assigned codewords. For a pairwise-comparison encoding, it gives a matching high-coherence recovery frontier and a duration-dependent cost threshold.
+
+The [all-assignment cost theorem](science/all_encoding_cost_bound.md) then answers the calibrated question over every injective assignment of the six orders to three-bit computational words, allowing nonuniform preparation, ancillary controllers and continuous final unitary corrections.
+
+| Noise and resource model; half-diamond error at most $`3/8`$ | Supported conclusion |
+|---|---|
+| Global logical visibilities $`\eta_2=\eta_3=0.9`$ | Exact randomized cost $`183/62`$ versus $`101/32`$: approximately 6.48% saving. |
+| Independent local phase damping, $`x=0.9`$, $`q=x^{3/2}`$, charged windows $`T_m=m\tau`$ | All 20,160 injective six-label assignments obey cost at least $`101/32`$. The one/two-call mixture attains it; any positive three-call trial share is strictly suboptimal. |
+| Same local noise law and schedule, $`x=0.9604`$, specified alternative encoding | A certified construction costs approximately 2.823333 versus the optimal one/two-call baseline 2.889770: approximately 2.2990% saving. Global encoding optimality at this different point is not claimed. |
+
+The exclusion uses 97 exact symmetry classes and 388 rational positive-matrix certificates. Its [standard-library verifier](verification/encoding_bound/README.md) covers every allowed controller strategy in that assignment model, rather than testing only a finite correction menu. The [local-controller checks](verification/local_controller/README.md) reproduce the encoding-specific frontier and positive construction.
+
+These are rank-two-channel recovery and fresh-trial cost results. They retain their own scope alongside the full-rank central-polynomial theorem and four-call physical-noise frontier. The charged routing windows omit gate and readout overhead; neither cost model is a hardware validation. Retained controller–target entanglement and accepted reference–target recovery remain distinct tasks.
 
 ## Read the science
 
@@ -106,6 +122,7 @@ Start with the [scientific overview](science/README.md) for the connected argume
 | How likely is success, and what does it cost? | [Probability and resources](science/probability.md) |
 | What is the optimal noisy-controller recovery tradeoff? | [Controller characterization](science/controller_optimization.md), [frontier](science/recovery_frontier.md), and [tilted theorem](science/tilted_readout.md) |
 | When does controller noise exclude exact recovery? | [Strict Schur obstruction](science/noisy_recovery_obstruction.md) |
+| How do physical codewords and duration change recovery cost? | [Encoded local noise](science/local_controller_encoding.md) and [all-assignment cost bound](science/all_encoding_cost_bound.md) |
 | What is the physical meaning, and which assumptions are essential? | [Interpretation and boundaries](science/interpretation.md) |
 | Which ingredients and capabilities were already known? | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 

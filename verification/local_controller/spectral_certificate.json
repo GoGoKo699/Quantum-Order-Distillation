@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "exact_polynomial_kernel_decompositions": 8,
+  "exact_S3_distance_checks": 216,
+  "cross_convention": "Mtheta=c\u00b2 MU+s\u00b2 MV+cs Crot; Crot\u00b2=3/16(O+E)",
+  "cross_dephasing_identity": "Crot(q)=q Crot(1)",
+  "critical_polynomial": "8q^4+2q^3+q^2+q-6",
+  "critical_root_bracket": [
+    "405577828025501/500000000000000",
+    "202788914012751/250000000000000"
+  ],
+  "determinant_endpoint_identity": "(uO-vO)(cE-uE)-3q\u00b2/16=q\u00b2(8q\u2074+2q\u00b3+q\u00b2+q-6)/32",
+  "scope": "Exact simultaneous unitary-correction witness domination for q>=qcrit. Does not assert fourflag optimality belowqcrit or arbitrary CPTP targetrecovery."
+}

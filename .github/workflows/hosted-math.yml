@@ -1,0 +1,98 @@
+name: Hosted GitHub mathematics
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hosted-math-${{ github.repository }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      (github.repository == 'GoGoKo699/Quantum-Order-Distillation' ||
+       github.repository == 'GoGoKo699/Quantum-Order-Entanglement')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      SOURCE_REPOSITORY: ${{ github.repository }}
+      SOURCE_REVISION: ${{ github.event.pull_request.head.sha }}
+      OBSERVED_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - name: Check out the exact public PR head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '24'
+
+      - name: Verify source and canonical helper pins
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SOURCE_REVISION"
+          test "$(git hash-object --no-filters .github/hosted-math/capture_hosted_math.cjs)" = bd075f4bc53029230fad1b18c6b07d603d45f44f
+          test "$(git hash-object --no-filters .github/hosted-math/check_rendered_math.py)" = 1d3bf9810d0dfadb844a48b354af80f9b66924bc
+          test "$(git hash-object --no-filters .github/hosted-math/check_completion.py)" = b28074fe334551aec1a1b519856674c540d5015d
+          mkdir -p "$RUNNER_TEMP/hosted-math-bundle"
+          python3 - <<'PY'
+          import datetime, json, os, pathlib, subprocess
+          git = lambda *args: subprocess.check_output(['git', '--no-replace-objects', *args], text=True).strip()
+          record = {
+              'repository': os.environ['SOURCE_REPOSITORY'],
+              'commit': os.environ['SOURCE_REVISION'],
+              'tree': git('rev-parse', 'HEAD^{tree}'),
+              'run_url': os.environ['OBSERVED_RUN_URL'],
+              'observed_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'helper_release': 'GoGoKo699/Guinevere@4bb89a974ca83a82db8fa868c3bf43e854a025a2',
+              'route': 'GitHub Actions; anonymous public commit-pinned Chromium; contents:read',
+              'scope': 'All tracked Markdown pages; both 1440px and 760px viewports',
+              'visual_review': 'Required separately after artifact download; not performed by this job'
+          }
+          target = pathlib.Path(os.environ['RUNNER_TEMP']) / 'hosted-math-bundle' / 'provenance.json'
+          target.write_text(json.dumps(record, indent=2) + '\n')
+          PY
+
+      - name: Install temporary capture dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --prefix "$RUNNER_TEMP/hosted-math-deps" --ignore-scripts --no-audit --no-fund playwright@1.56.1 mathjax-full@3.2.1
+          node "$RUNNER_TEMP/hosted-math-deps/node_modules/playwright/cli.js" install --with-deps chromium --only-shell
+          sudo apt-get install -y fonts-lmodern fonts-stix
+          fc-cache -f
+          fc-match math
+          fc-match 'Latin Modern Math'
+          fc-match 'STIX Math'
+
+      - name: Capture and compare every tracked Markdown page
+        shell: bash
+        run: |
+          set -euo pipefail
+          export NODE_PATH="$RUNNER_TEMP/hosted-math-deps/node_modules"
+          node .github/hosted-math/capture_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE" \
+            --repository "$SOURCE_REPOSITORY" \
+            --revision "$SOURCE_REVISION" \
+            --output "$RUNNER_TEMP/hosted-math-bundle/hosted" \
+            --python python3 \
+            2>&1 | tee "$RUNNER_TEMP/hosted-math-bundle/capture.log"
+
+      - name: Retain complete evidence, including failed captures
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: hosted-math-${{ github.event.pull_request.head.sha }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/hosted-math-bundle/
+          if-no-files-found: error
+          retention-days: 14

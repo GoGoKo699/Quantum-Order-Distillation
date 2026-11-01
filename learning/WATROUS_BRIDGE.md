@@ -376,6 +376,7 @@ The bridge explains the conceptual transitions. Each scientific claim has an aut
 | Which readout attains the complete noisy recovery frontier? | [Orthogonal frontier](../science/recovery_frontier.md#frontier-theorem); [certified tilted interval](../science/tilted_readout.md#tilted-optimality) |
 | How does this connect to retained entanglement? | [Specified-protocol uniform separation](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation) |
 | What is optimal for the original rank-deficient slot with three calls, and across randomized call counts? | [Native half-diamond frontier](../science/native_three_call_frontier.md#native-three-call-frontier); [randomized call-cost closure](../science/randomized_call_cost.md#convex-call-cost) |
+| How do physical order encodings change this benchmark? | [Encoded local-noise frontier and construction](../science/local_controller_encoding.md); [exact calibrated all-encoding cost theorem](../science/all_encoding_cost_bound.md) |
 | Which computations can be reproduced, and what do they establish? | [Verification guide](../verification/README.md) |
 
 The control-error distinction is especially relevant when success is small. A small error in the unnormalized accepted operation can become larger after conditioning. The bound on the conditional trace norm error in the linked proof is $`2\delta/(p-\delta)`$ when the operation error is at most $`\delta\lt p`$ in diamond norm. It is an input-by-input bound including references, rather than a diamond distance between generally nonlinear normalized transformations.
@@ -486,7 +487,7 @@ The angle $`\delta`$ is in radians. The conclusion optimizes the final correctio
 
 Third, the sister project keeps the *same raw channel family and per-bit noise* but compares different outputs. Its specified three-call experiment retains C and T unconditionally, while the four-call P2 experiment measures C and accepts a Bell pair across R:T. Exact rational grid certificates plus a Stinespring continuity bound prove a uniform separation on the smaller angular interval $`|\delta|\le .2`$ radians. This interval is stated in $`\delta`$, not in $`t`$. The proof and its full resource comparison live in [Entanglement’s uniform theorem](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md#uniform-separation).
 
-The three-call occupied 3-by-2 output is PPT and therefore separable for all three physical encodings. The four-call accepted R:T output is NPT, with $`.035\lt p\lt .095`$ and $`F>101/190`$. Calls, controller bits, bipartitions and conditional endpoints differ. The theorem concerns those experiments, not every retained protocol or an optimized equal-resource comparison. It establishes a connection between the tracks without making retained entanglement a recovery certificate.
+The three-call occupied 3-by-2 output is PPT and therefore separable for every assignment of its three orders to three occupied two-bit codewords. The four-call accepted R:T output is NPT, with $`.035\lt p\lt .095`$ and $`F>101/190`$. Calls, controller bits, bipartitions and conditional endpoints differ. The theorem concerns those experiments, not every retained protocol or an optimized equal-resource comparison. It establishes a connection between the tracks without making retained entanglement a recovery certificate.
 
 Watrous supplies positive operators, instruments, Schur maps, norms and separability language. The controller-feasibility theorem, tight frontiers, envelope certificate and rational-grid interpolation are the missing project arguments. The [verification guide](../verification/README.md) distinguishes independent exact reconstruction, interval certificates and numerical evaluations from the analytical proofs that connect them.
 
@@ -494,7 +495,7 @@ Watrous supplies positive operators, instruments, Schur maps, norms and separabi
 
 ## 10. A native three-call benchmark and exact fresh-trial cost
 
-**Milestones M19–M21 and M29–M30.** The original measure-Z/prepare-X slot also supports a complete recovery benchmark of its own. Here the slot has Kraus operators $`K_0=|+\rangle\langle0|`$ and $`K_1=|-\rangle\langle1|`$, with no depolarizing admixture. It is rank deficient. Three independent compulsory slots have **all six** order labels available. Global order-basis dephasing with coherence $`\eta_3`$ acts immediately after routing and before final controller processing. These choices differ from the four-call, eight-order, full-rank physical-local-noise frontier above and from the sister’s retained three-order experiment.
+**Milestones M19–M21 and M29–M30.** The original measure-Z/prepare-X slot also supports a complete recovery benchmark of its own. Here the slot has Kraus operators $`K_0=|+\rangle\langle0|`$ and $`K_1=|-\rangle\langle1|`$, with no depolarizing admixture, and $`\mathcal N^2=\Delta`$ is completely depolarizing. It is rank deficient, so its three-call behavior does not contradict the full-Choi-rank central-polynomial threshold. Three independent compulsory slots have **all six** order labels available. Global order-basis dephasing with coherence $`\eta_3`$ acts immediately after routing and before final controller processing. These choices differ from the four-call, eight-order, full-rank physical-local-noise frontier above and from the sister’s retained three-order experiment.
 
 The accepted output is a target-only channel: average the corrected fine outcome label, retain the overall acceptance flag, and require the total accepted map to have the form $`\mathcal E=p\Lambda`$ with input-independent $`p`$. Arbitrary fine outcomes in the converse may have input-dependent probabilities. The error variable here is
 
@@ -550,6 +551,43 @@ The accepted fractions are $`3/62`$ and $`59/62`$, which differ from the attempt
 
 Equal retained coherence at different call counts is an assumption, not a consequence of equal hardware noise. The [unequal-noise analysis](../science/randomized_call_cost.md#unequal-noise) treats $`\eta_2`$ and $`\eta_3`$ independently and separates extending the achievable accuracy from lowering cost at a common external tolerance. At $`\eta_2=.9`$, accuracy extends for $`\eta_3>6/7`$, while common-error cost improves only for $`\eta_3>79/91`$. The fixed-tolerance optimum retains its stated external $`e`$ when comparing these effects.
 
-If a scalar logical dephasing model additionally gives $`\eta_m=\exp(-\kappa T_m)`$, the same slice’s cost saving requires $`T_3/T_2\lt1.3421693427`$. A duration ratio of 3/2 loses the gain at $`\eta_2=.9`$; it can retain cost gain at larger $`\eta_2`$, above approximately .91999108053509. The [duration model](../science/randomized_call_cost.md#duration-model) states the exact threshold and assumptions. Physical local noise on a multibit controller generally has pair-dependent factors and requires its own analysis. Charging elapsed time instead of noisy calls also changes the LP objective; a call-cost saving alone is not a hardware-duration claim.
+If a scalar logical dephasing model additionally gives $`\eta_m=\exp(-\kappa T_m)`$, the same slice’s cost saving requires $`T_3/T_2\lt1.3421693427`$. A duration ratio of 3/2 loses the gain at $`\eta_2=.9`$; it can retain cost gain at larger $`\eta_2`$, above approximately .91999108053509. The [duration model](../science/randomized_call_cost.md#duration-model) states the exact threshold and assumptions. Physical local noise on a multibit controller has pair-dependent factors, leading to the distinct analysis below. Charging elapsed time instead of noisy calls changes the LP objective unless the declared prices are proportional.
 
-The analytical controller and mixture proofs, exact invariant-kernel checks, and numerical evaluations have distinct roles. The [verification guide](../verification/README.md) documents the native benchmark reconstruction and the limits of numerical SDP corroboration alongside the earlier joint certificates. Watrous supplies the channel, instrument, norm, probability and optimization foundations; the native frontier, finite closure and unequal-noise thresholds are project arguments.
+### Physical bits make the code assignment part of the experiment
+
+Encode the matrix-product words 012, 021, 102, 120, 201, 210 into six distinct three-bit computational words $`c_i`$. Independent identical phase damping retains a coherence between labels i and j by
+
+```math
+L_{ij}(q)=q^{d_H(c_i,c_j)}.
+```
+
+The Hamming distance counts physical bits on which those words differ. Watrous's Schur-map framework explains positivity of this entrywise noise; the code assignment determines which interference terms it suppresses. Thus a permutation of physical codewords can change the experiment even when the six logical orders stay the same.
+
+The [pairwise encoding theorem](../science/local_controller_encoding.md) fixes the code 000, 001, 100, 110, 011, 111 in that order. Its exact four-projector half-diamond frontier holds for $`q\ge q_0=0.811155656051003\ldots`$, where $`8q_0^4+2q_0^3+q_0^2+q_0-6=0`$. The O, E, T and Sign corrections are respectively $`(X-Z)/\sqrt2`$, Y, I and Y. In particular, the Sign correction differs from the global-noise table above. The theorem again requires only aggregate scaled trace preservation; its converse includes nonuniform preparations, complex and ancillary control, and continuous final unitary corrections.
+
+For physical per-bit dephasing rate $`\kappa`$ and declared routing and exposure windows $`T_m=m\tau`$, put $`x=e^{-\kappa T_2}`$ and $`q=e^{-\kappa T_3}=x^{3/2}`$. At $`x=.9`$, the local model has $`q=\sqrt{729/1000}`$, rather than equal global logical coherence .9 at both call counts. This resource-matched point has a stronger conclusion than a test of the pairwise code.
+
+### An exact all-encoding bound at the calibrated point
+
+There are $`8\cdot7\cdot6\cdot5\cdot4\cdot3=20{,}160`$ injective assignments of six labels to three-bit computational words. The [all-encoding theorem](../science/all_encoding_cost_bound.md) reduces them to 97 symmetry classes and verifies 388 exact positive-semidefinite matrix obligations. A common three-call support bound of $`27/10\lt3`$ gives, at external error $`e\le3/8`$,
+
+```math
+\mathbb E[m]\ \ge\ \frac{101}{32}p+\frac3{10}t_3,
+```
+
+where $`p`$ is aggregate acceptance and $`t_3`$ the raw probability of choosing a three-call trial. Every positive three-call weight incurs a strict cost penalty. The exact optimum $`C=101/32`$ is attained using raw one- and two-call probabilities $`21/61`$ and $`40/61`$. Acceptance is $`32/61`$ and mean calls per attempt $`101/61`$. The accepted channel has Bell overlap $`5/8`$ and half-diamond error $`3/8`$. The same certificate closes the common-error interval:
+
+```math
+C^*_{123}(e)=1+\frac{69}{4}\left(\frac12-e\right),
+\qquad \frac3{22}\le e\le\frac12.
+```
+
+The bound covers all these injective computational encodings, arbitrary nonuniform order populations, mixed/complex/ancillary controllers, unrestricted final controller instruments and continuous target-unitary corrections. Individual fine probabilities can depend on input; the averaged accepted operation must still be $`p\Lambda`$ with input-independent $`p`$. It does not cover redundant eight-word encodings, noncomputational or protected encodings, dynamic protection, extra calls or postselected target filters. It does not decide whether three calls extend accuracy below $`3/22`$.
+
+### A different encoding can help at a lower-noise point
+
+A fixed-point converse is not a full noise phase diagram. With the same proportional schedule but $`e^{-\kappa\tau}=49/50`$, hence $`x=.9604`$ and $`q=.941192`$, the alternate code 000, 011, 101, 010, 100, 001 admits an exactly certified error-$`3/8`$ protocol. Its cost is approximately 2.823332899 versus the optimal one-/two-call 2.889769765, a **2.2990%** saving in calls and in declared routing time. This is a construction, not an optimum over all encodings. The pairwise code above activates only for $`x>.9763304783204344`$ on $`x\in[.9,1]`$, illustrating why physical code geometry matters. The lower-noise all-encoding optimum remains open.
+
+The accepted Bell overlap $`5/8>1/2`$ certifies reference–target entanglement. It is a different endpoint from retained controller–target entanglement and does not certify causal nonseparability. The proportional windows specify a resource model; preparation, readout, correction overhead, gate faults, loss and a physical router remain unvalidated.
+
+The analytical reductions, exact finite matrix certificates and numerical searches have distinct roles. The [verification guide](../verification/README.md) explains their reconstruction and limits. Watrous supplies the channel, instrument, norm, Schur-map and optimization foundations; the native frontiers, cost closure and encoding certificates are project arguments.
