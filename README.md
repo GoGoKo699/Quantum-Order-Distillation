@@ -2,6 +2,8 @@
 
 **How many uses of a noisy quantum channel are needed to herald an exact identity channel by controlling only their order?**
 
+**Sister project:** [Quantum Order Entanglement](https://github.com/GoGoKo699/Quantum-Order-Entanglement) studies retained controller–target entanglement from coherent order. This repository studies heralded channel recovery and its costs. The [shared-noise comparison](https://github.com/GoGoKo699/Quantum-Order-Entanglement/blob/main/science/noisy_separation.md) connects the two tasks while keeping their outputs, resources and conditioning explicit.
+
 For a finite-dimensional channel with full Choi rank, the answer is an invariant from polynomial identity theory: the minimum degree of a nonidentity multilinear central polynomial. This repository develops the construction, proves its converse in a precise access model, and separates the minimum number of calls from the probability and cost of success.
 
 The target traverses every independent channel slot once in each coherent order. The order control starts independently of the unknown input, and success is read from that control. The noise environments are inaccessible. The [model](science/model.md) specifies these assumptions and the scope of the supplied generalized switch.
